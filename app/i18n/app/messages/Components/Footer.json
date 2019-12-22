@@ -1,0 +1,77 @@
+[
+  {
+    "id": "Components.Footer.warning",
+    "description": "币市有风险，投资需谨慎",
+    "defaultMessage": "Risks in cryptocurrency trading. Be cautious to your investment."
+  },
+  {
+    "id": "Components.Footer.about",
+    "description": "关于",
+    "defaultMessage": "About"
+  },
+  {
+    "id": "Components.Footer.aboutUs",
+    "description": "关于我们",
+    "defaultMessage": "About us"
+  },
+  {
+    "id": "Components.Footer.contactUs",
+    "description": "联系我们",
+    "defaultMessage": "Contact us"
+  },
+  {
+    "id": "Components.Footer.tokenListing",
+    "description": "上币申请",
+    "defaultMessage": "Token Listing"
+  },
+  {
+    "id": "Components.Footer.Announcements",
+    "description": "公告",
+    "defaultMessage": "Announcements"
+  },
+  {
+    "id": "Components.Footer.information",
+    "description": "条款说明",
+    "defaultMessage": "Information"
+  },
+  {
+    "id": "Components.Footer.termsOfService",
+    "description": "服务条款",
+    "defaultMessage": "Terms of Service"
+  },
+  {
+    "id": "Components.Footer.privacyPolicy",
+    "description": "隐私政策",
+    "defaultMessage": "Privacy Policy"
+  },
+  {
+    "id": "Components.Footer.support",
+    "description": "用户支持",
+    "defaultMessage": "Support"
+  },
+  {
+    "id": "Components.Footer.helpCenter",
+    "description": "帮助中心",
+    "defaultMessage": "Help Center"
+  },
+  {
+    "id": "Components.Footer.feedback",
+    "description": "问题反馈",
+    "defaultMessage": "Feedback"
+  },
+  {
+    "id": "Components.Footer.fees",
+    "description": "费率标准",
+    "defaultMessage": "Fees Schedule"
+  },
+  {
+    "id": "Components.Footer.apiDocuments",
+    "description": "API 文档",
+    "defaultMessage": "API Document"
+  },
+  {
+    "id": "Components.Footer.findUs",
+    "description": "联系我们",
+    "defaultMessage": "Find us"
+  }
+]

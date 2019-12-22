@@ -1,0 +1,37 @@
+[
+  {
+    "id": "User.SecurityPane.SecurityCard.securitySetting",
+    "description": "安全设置",
+    "defaultMessage": "Security Setting"
+  },
+  {
+    "id": "User.SecurityPane.SecurityCard.securityInstruction",
+    "description": "为了您的资产安全，修改登录密码、手机后，24 小时内不能提现",
+    "defaultMessage": "The withdrawal will be frozen for 24 hours after you modified your login password, binded mobile phone"
+  },
+  {
+    "id": "User.SecurityPane.SecurityCard.password",
+    "description": "登录密码",
+    "defaultMessage": "Sign in Password"
+  },
+  {
+    "id": "User.SecurityPane.SecurityCard.passwordStrengthHigh",
+    "description": "密码强度：高",
+    "defaultMessage": "Password Strength: High"
+  },
+  {
+    "id": "User.SecurityPane.SecurityCard.passwordStrengthMedium",
+    "description": "密码强度：中",
+    "defaultMessage": "Password Strength: Medium"
+  },
+  {
+    "id": "User.SecurityPane.SecurityCard.passwordStrengthLow",
+    "description": "密码强度：低",
+    "defaultMessage": "Password Strength: Low"
+  },
+  {
+    "id": "User.SecurityPane.SecurityCard.bindInstruction",
+    "description": "提现，修改密码，及安全设置时用以收取验证码",
+    "defaultMessage": "Used for receiving SMS code of withdrawal, password modification and security setting"
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "id": "Asset.Cfd.DepositDialog.deposit",
+    "description": "{symbol} 充值",
+    "defaultMessage": "{symbol} Deposit"
+  },
+  {
+    "id": "Asset.Cfd.DepositDialog.availableMargin",
+    "description": "可用保证金：{available}",
+    "defaultMessage": "Available Margin: {available}"
+  },
+  {
+    "id": "Asset.Cfd.DepositDialog.positionMargin",
+    "description": "已用保证金：{margin}",
+    "defaultMessage": "Position Margin: {margin}"
+  },
+  {
+    "id": "Asset.Cfd.DepositDialog.warningPhase1",
+    "description": "不要向 {symbol} 地址充值除 {symbol} 之外的资产，否则将无法找回",
+    "defaultMessage": "Any other assets deposited to {symbol} address will be irretrievable"
+  },
+  {
+    "id": "Asset.Cfd.DepositDialog.warningPhase2",
+    "description": "{symbol} 充值需要 {confirms} 个网络确认才能到账",
+    "defaultMessage": "Deposit to {symbol} address requires {confirms} confirmation"
+  },
+  {
+    "id": "Asset.Cfd.DepositDialog.warningPhase3",
+    "description": "{symbol} 最小充值金额为：{min}，少于此金额本平台将不会确认到账",
+    "defaultMessage": "The minimum deposit amount is {min} {symbol}. Any deposit less than {min} {symbol} will not be credited"
+  },
+  {
+    "id": "Asset.Cfd.DepositDialog.depositAddress",
+    "description": "{symbol} 充值地址",
+    "defaultMessage": "{symbol} Deposit Address"
+  },
+  {
+    "id": "Asset.Cfd.DepositDialog.copied",
+    "description": "{symbol} 充值地址已拷贝至粘贴板",
+    "defaultMessage": "{symbol} deposit address have been copied to clipborad"
+  }
+]

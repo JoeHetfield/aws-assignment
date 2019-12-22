@@ -1,0 +1,147 @@
+[
+  {
+    "id": "SignInDialog.SignUpForm.signupWithMobile",
+    "description": "手机注册",
+    "defaultMessage": "Mobile"
+  },
+  {
+    "id": "SignInDialog.SignUpForm.signupWithEmail",
+    "description": "邮箱注册",
+    "defaultMessage": "Email"
+  },
+  {
+    "id": "SignInDialog.SignUpForm.confirmPassword",
+    "description": "确认密码",
+    "defaultMessage": "Confirm Password"
+  },
+  {
+    "id": "SignInDialog.SignUpForm.invitationCode",
+    "description": "邀请码",
+    "defaultMessage": "Invitation Code"
+  },
+  {
+    "id": "SignInDialog.SignUpForm.agree",
+    "description": "我已阅读并同意",
+    "defaultMessage": "I have read and agree with"
+  },
+  {
+    "id": "SignInDialog.SignUpForm.termOfService",
+    "description": "服务条款",
+    "defaultMessage": "Terms of Service"
+  },
+  {
+    "id": "SignInDialog.SignUpForm.privacyPolicy",
+    "description": "隐私政策",
+    "defaultMessage": "Privacy Policy"
+  },
+  {
+    "id": "SignInDialog.SignUpForm.and",
+    "description": "与",
+    "defaultMessage": "and"
+  },
+  {
+    "id": "SignInDialog.SignUpForm.mobileVerificationCodeHint",
+    "description": "输入国家地区和手机号以获取验证码",
+    "defaultMessage": "Enter your country and mobile to get code"
+  },
+  {
+    "id": "SignInDialog.SignUpForm.emailVerificationCodeHint",
+    "description": "输入电子邮箱地址以获取验证码",
+    "defaultMessage": "Enter your Email to get code"
+  },
+  {
+    "id": "SignInDialog.SignUpForm.passwordHint",
+    "description": "6-20 位，包含数字及字母",
+    "defaultMessage": "Alphanumeric, 6-20 characters long"
+  },
+  {
+    "id": "SignInDialog.SignUpForm.confirmPasswordHint",
+    "description": "请再次输入密码",
+    "defaultMessage": "Please entry the password again"
+  },
+  {
+    "id": "SignInDialog.SignUpForm.emptyCountries",
+    "description": "请选择国家和地区",
+    "defaultMessage": "Please choose your country or area"
+  },
+  {
+    "id": "SignInDialog.SignUpForm.emptyMobile",
+    "description": "请输入手机号",
+    "defaultMessage": "Please enter mobile Number"
+  },
+  {
+    "id": "SignInDialog.SignUpForm.invalidMobile",
+    "description": "请输入有效的手机号",
+    "defaultMessage": "Please enter valid mobile Number"
+  },
+  {
+    "id": "SignInDialog.SignUpForm.emptyEmail",
+    "description": "请输入邮件地址",
+    "defaultMessage": "Please enter email address"
+  },
+  {
+    "id": "SignInDialog.SignUpForm.invalidEmail",
+    "description": "请输入有效的邮件地址",
+    "defaultMessage": "Please enter valid email address"
+  },
+  {
+    "id": "SignInDialog.SignUpForm.emptyVerificationCode",
+    "description": "请输入验证码",
+    "defaultMessage": "Please enter verification code"
+  },
+  {
+    "id": "SignInDialog.SignUpForm.invalidVerificationCode",
+    "description": "请输入验证码",
+    "defaultMessage": "Please enter valid verification code"
+  },
+  {
+    "id": "SignInDialog.SignUpForm.emptyPassword",
+    "description": "请输入密码",
+    "defaultMessage": "Please enter password"
+  },
+  {
+    "id": "SignInDialog.SignUpForm.tooShortPassword",
+    "description": "密码最少 6 位",
+    "defaultMessage": "Password needs at least 6 charaters"
+  },
+  {
+    "id": "SignInDialog.SignUpForm.tooLongPassword",
+    "description": "密码过长",
+    "defaultMessage": "Please enter valid password"
+  },
+  {
+    "id": "SignInDialog.SignUpForm.passwordUnmatch",
+    "description": "两次输入的密码不一致",
+    "defaultMessage": "Not identical with password"
+  },
+  {
+    "id": "SignInDialog.SignUpForm.emptyInvitationCode",
+    "description": "请输入邀请码",
+    "defaultMessage": "Please enter invitation code"
+  },
+  {
+    "id": "SignInDialog.SignUpForm.mustAgree",
+    "description": "您必须同意服务条款",
+    "defaultMessage": "You must aggree with the term of service"
+  },
+  {
+    "id": "SignInDialog.SignUpForm.success",
+    "description": "注册成功，请登录",
+    "defaultMessage": "Sign up succeed, please sign in"
+  },
+  {
+    "id": "SignInDialog.SignUpForm.china",
+    "description": "中国",
+    "defaultMessage": "China"
+  },
+  {
+    "id": "SignInDialog.SignUpForm.us",
+    "description": "美国",
+    "defaultMessage": "US"
+  },
+  {
+    "id": "SignInDialog.SignUpForm.denmark",
+    "description": "丹麦",
+    "defaultMessage": "Denmark"
+  }
+]

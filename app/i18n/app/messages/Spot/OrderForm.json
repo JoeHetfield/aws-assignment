@@ -1,0 +1,112 @@
+[
+  {
+    "id": "Spot.OrderForm.title",
+    "description": "卖出",
+    "defaultMessage": "Sell"
+  },
+  {
+    "id": "Spot.OrderForm.buy",
+    "description": "买入",
+    "defaultMessage": "Buy"
+  },
+  {
+    "id": "Spot.OrderForm.limit",
+    "description": "限价",
+    "defaultMessage": "Limit"
+  },
+  {
+    "id": "Spot.OrderForm.market",
+    "description": "市价",
+    "defaultMessage": "Market"
+  },
+  {
+    "id": "Spot.OrderForm.price",
+    "description": "价格",
+    "defaultMessage": "Price"
+  },
+  {
+    "id": "Spot.OrderForm.volume",
+    "description": "数量",
+    "defaultMessage": "Volume"
+  },
+  {
+    "id": "Spot.OrderForm.amount",
+    "description": "金额",
+    "defaultMessage": "Amount"
+  },
+  {
+    "id": "Spot.OrderForm.priceHint",
+    "description": "请输入价格",
+    "defaultMessage": "Please Enter the Price"
+  },
+  {
+    "id": "Spot.OrderForm.volumeHint",
+    "description": "请输入数量",
+    "defaultMessage": "Please Enter the Volume"
+  },
+  {
+    "id": "Spot.OrderForm.amountHint",
+    "description": "请输入金额",
+    "defaultMessage": "Please Enter the Amount"
+  },
+  {
+    "id": "Spot.OrderForm.bestPrice",
+    "description": "以市场最优价格成交",
+    "defaultMessage": "Best Market Price"
+  },
+  {
+    "id": "Spot.OrderForm.actualVolume",
+    "description": "以实际成交数量为准",
+    "defaultMessage": "Actual Filled Volume"
+  },
+  {
+    "id": "Spot.OrderForm.maxBidVolume",
+    "description": "最多购买：{max}",
+    "defaultMessage": "Max Purchase Volume: {max}"
+  },
+  {
+    "id": "Spot.OrderForm.maxAskVolume",
+    "description": "最多卖出：{max}",
+    "defaultMessage": "Max Sale Volume: {max}"
+  },
+  {
+    "id": "Spot.OrderForm.maxVolume",
+    "description": "最多购买：{max}",
+    "defaultMessage": "Max Purchase Volume: {max}"
+  },
+  {
+    "id": "Spot.OrderForm.minAmount",
+    "description": "最小交易量：{min}",
+    "defaultMessage": "Min Purchase Volume: {min}"
+  },
+  {
+    "id": "Spot.OrderForm.bid",
+    "description": "买入 {symbol}",
+    "defaultMessage": "Buy {symbol}"
+  },
+  {
+    "id": "Spot.OrderForm.ask",
+    "description": "卖出 {symbol}",
+    "defaultMessage": "Sell {symbol}"
+  },
+  {
+    "id": "Spot.OrderForm.success",
+    "description": "下单成功",
+    "defaultMessage": "Order placement succeed"
+  },
+  {
+    "id": "Spot.OrderForm.signin",
+    "description": "登录以交易",
+    "defaultMessage": "Sign In to Trade"
+  },
+  {
+    "id": "Spot.OrderForm.balance",
+    "description": "{symbol} 余额：{balance}",
+    "defaultMessage": "{symbo} Balance: {balance}"
+  },
+  {
+    "id": "Spot.OrderForm.type",
+    "description": "委托",
+    "defaultMessage": "Type"
+  }
+]

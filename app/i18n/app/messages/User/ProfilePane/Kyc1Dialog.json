@@ -1,0 +1,62 @@
+[
+  {
+    "id": "User.ProfilePane.Kyc1Dialog.basicVerification",
+    "description": "基本信息认证",
+    "defaultMessage": "Basic information verification"
+  },
+  {
+    "id": "User.ProfilePane.Kyc1Dialog.uploadInstruction",
+    "description": "请确保照片的内容完整并清晰可见，仅支持 JPG 格式的图片文件，大小不超过2M",
+    "defaultMessage": "Please make sure that the content of the photo is complete and clearly visible. Only supports image files in JPG format, and the size is not larger than 2M"
+  },
+  {
+    "id": "User.ProfilePane.Kyc1Dialog.uploadIdFront",
+    "description": "上传身份证正面照",
+    "defaultMessage": "Front side photo of identity card"
+  },
+  {
+    "id": "User.ProfilePane.Kyc1Dialog.uploadIdBack",
+    "description": "上传身份证背面照",
+    "defaultMessage": "Back side photo of identity card"
+  },
+  {
+    "id": "User.ProfilePane.Kyc1Dialog.selectImage",
+    "description": "请选择图片",
+    "defaultMessage": "Please Select Image"
+  },
+  {
+    "id": "User.ProfilePane.Kyc1Dialog.confirmInformation",
+    "description": "确认基本信息",
+    "defaultMessage": "Confirm Basic Verification Information"
+  },
+  {
+    "id": "User.ProfilePane.Kyc1Dialog.fullname",
+    "description": "姓名",
+    "defaultMessage": "Full Name"
+  },
+  {
+    "id": "User.ProfilePane.Kyc1Dialog.gender",
+    "description": "性别",
+    "defaultMessage": "Gender"
+  },
+  {
+    "id": "User.ProfilePane.Kyc1Dialog.IdNumber",
+    "description": "身份证号码",
+    "defaultMessage": "ID Number"
+  },
+  {
+    "id": "User.ProfilePane.Kyc1Dialog.expiredDate",
+    "description": "有效日期",
+    "defaultMessage": "Expired Date"
+  },
+  {
+    "id": "User.ProfilePane.Kyc1Dialog.submitInstruction",
+    "description": "身份认证一旦提交不可更改，您确定要提交基本信息认证吗？",
+    "defaultMessage": "The identity information cannot be changed after been submitted, are you sure to submit a basic information certification ?"
+  },
+  {
+    "id": "User.ProfilePane.Kyc1Dialog.succes",
+    "description": "基本信息认证通过",
+    "defaultMessage": "Basic information verification succeed"
+  }
+]

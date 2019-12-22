@@ -1,0 +1,77 @@
+[
+  {
+    "id": "Otc.OrdersTable.CanceledTable.createdDate",
+    "description": "下单时间",
+    "defaultMessage": "Created Date"
+  },
+  {
+    "id": "Otc.OrdersTable.CanceledTable.orderId",
+    "description": "订单号",
+    "defaultMessage": "Order ID"
+  },
+  {
+    "id": "Otc.OrdersTable.CanceledTable.type",
+    "description": "类型",
+    "defaultMessage": "Type"
+  },
+  {
+    "id": "Otc.OrdersTable.CanceledTable.token",
+    "description": "币种",
+    "defaultMessage": "Token"
+  },
+  {
+    "id": "Otc.OrdersTable.CanceledTable.price",
+    "description": "价格",
+    "defaultMessage": "Price"
+  },
+  {
+    "id": "Otc.OrdersTable.CanceledTable.volume",
+    "description": "数量",
+    "defaultMessage": "Volume"
+  },
+  {
+    "id": "Otc.OrdersTable.CanceledTable.amount",
+    "description": "金额",
+    "defaultMessage": "Amount"
+  },
+  {
+    "id": "Otc.OrdersTable.CanceledTable.status",
+    "description": "状态",
+    "defaultMessage": "Status"
+  },
+  {
+    "id": "Otc.OrdersTable.CanceledTable.canceledByBuyer",
+    "description": "买家取消",
+    "defaultMessage": "Canceled By Buyer"
+  },
+  {
+    "id": "Otc.OrdersTable.CanceledTable.canceledByService",
+    "description": "客服取消",
+    "defaultMessage": "Canceled By Customer Service"
+  },
+  {
+    "id": "Otc.OrdersTable.CanceledTable.canceledByTimeout",
+    "description": "超时取消",
+    "defaultMessage": "Canceled By Timeout"
+  },
+  {
+    "id": "Otc.OrdersTable.CanceledTable.purchase",
+    "description": "购买 {symbol}",
+    "defaultMessage": "Purchase {symbol}"
+  },
+  {
+    "id": "Otc.OrdersTable.CanceledTable.sale",
+    "description": "出售 {symbol}",
+    "defaultMessage": "Sale {symbol}"
+  },
+  {
+    "id": "Otc.OrdersTable.CanceledTable.priceAlt",
+    "description": "价格：{value}",
+    "defaultMessage": "Price: {value}"
+  },
+  {
+    "id": "Otc.OrdersTable.CanceledTable.volumeAlt",
+    "description": "数量：{value}",
+    "defaultMessage": "Volume: {value}"
+  }
+]

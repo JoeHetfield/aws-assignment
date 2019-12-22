@@ -1,0 +1,62 @@
+[
+  {
+    "id": "User.PaymentPane.BindWechatDialog.bindWechat",
+    "description": "绑定微信支付",
+    "defaultMessage": "Bind Wechat Pay"
+  },
+  {
+    "id": "User.PaymentPane.BindWechatDialog.uploadQr",
+    "description": "点击上传微信收款码",
+    "defaultMessage": "Click to upload Wechat QR code"
+  },
+  {
+    "id": "User.PaymentPane.BindWechatDialog.fullName",
+    "description": "姓名",
+    "defaultMessage": "Full Name"
+  },
+  {
+    "id": "User.PaymentPane.BindWechatDialog.wechatId",
+    "description": "微信号",
+    "defaultMessage": "Wechat ID"
+  },
+  {
+    "id": "User.PaymentPane.BindWechatDialog.emptyName",
+    "description": "请输入姓名",
+    "defaultMessage": "Please enter name"
+  },
+  {
+    "id": "User.PaymentPane.BindWechatDialog.tooLongName",
+    "description": "长度不能大于30个字符",
+    "defaultMessage": "Cannot be longer than 30 characters"
+  },
+  {
+    "id": "User.PaymentPane.BindWechatDialog.emptyWechatId",
+    "description": "请输入微信号",
+    "defaultMessage": "Please enter Wechat ID"
+  },
+  {
+    "id": "User.PaymentPane.BindWechatDialog.tooLongWechatId",
+    "description": "长度不能大于30个字符",
+    "defaultMessage": "Cannot be longer than 30 characters"
+  },
+  {
+    "id": "User.PaymentPane.BindWechatDialog.emptyWechatQr",
+    "description": "请上传微信支付收款码",
+    "defaultMessage": "Please upload Wechat QR code"
+  },
+  {
+    "id": "User.PaymentPane.BindWechatDialog.emptyVerificationCode",
+    "description": "请输入验证码",
+    "defaultMessage": "Please enter verification code"
+  },
+  {
+    "id": "User.PaymentPane.BindWechatDialog.invalidVerificationCode",
+    "description": "请输入正确的六位验证码",
+    "defaultMessage": "Please enter valid verification code"
+  },
+  {
+    "id": "User.PaymentPane.BindWechatDialog.success",
+    "description": "微信支付绑定成功",
+    "defaultMessage": "Wechat Pay binding succeed"
+  }
+]

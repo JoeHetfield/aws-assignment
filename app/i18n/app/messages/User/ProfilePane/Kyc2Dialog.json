@@ -1,0 +1,7 @@
+[
+  {
+    "id": "User.ProfilePane.Kyc2Dialog.scanQr",
+    "description": "扫描二维码完成认证",
+    "defaultMessage": "Scan QR code for verification"
+  }
+]

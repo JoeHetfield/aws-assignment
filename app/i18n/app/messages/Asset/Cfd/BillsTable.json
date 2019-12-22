@@ -1,0 +1,127 @@
+[
+  {
+    "id": "Asset.Cfd.BillsTable.bills",
+    "description": "账单",
+    "defaultMessage": "Bills"
+  },
+  {
+    "id": "Asset.Cfd.BillsTable.diposit",
+    "description": "充值",
+    "defaultMessage": "Diposit"
+  },
+  {
+    "id": "Asset.Cfd.BillsTable.withdraw",
+    "description": "提现",
+    "defaultMessage": "Withdraw"
+  },
+  {
+    "id": "Asset.Cfd.BillsTable.openPosition",
+    "description": "开仓",
+    "defaultMessage": "Open Position"
+  },
+  {
+    "id": "Asset.Cfd.BillsTable.liquidation",
+    "description": "平仓",
+    "defaultMessage": "Liquidation"
+  },
+  {
+    "id": "Asset.Cfd.BillsTable.transferIn",
+    "description": "转入",
+    "defaultMessage": "Transfer In"
+  },
+  {
+    "id": "Asset.Cfd.BillsTable.transferOut",
+    "description": "转出",
+    "defaultMessage": "Transfer Out"
+  },
+  {
+    "id": "Asset.Cfd.BillsTable.funding",
+    "description": "过夜费",
+    "defaultMessage": "Funding"
+  },
+  {
+    "id": "Asset.Cfd.BillsTable.commission",
+    "description": "手续费",
+    "defaultMessage": "Commission"
+  },
+  {
+    "id": "Asset.Cfd.BillsTable.selfCommissionReward",
+    "description": "自返佣",
+    "defaultMessage": "Self Commission Reward"
+  },
+  {
+    "id": "Asset.Cfd.BillsTable.lv1CommissionReward",
+    "description": "第一级返佣",
+    "defaultMessage": "Commission Reward Lv1"
+  },
+  {
+    "id": "Asset.Cfd.BillsTable.lv2CommissionReward",
+    "description": "第二级返佣",
+    "defaultMessage": "Commission Reward Lv2"
+  },
+  {
+    "id": "Asset.Cfd.BillsTable.settlement",
+    "description": "结算",
+    "defaultMessage": "Settlement"
+  },
+  {
+    "id": "Asset.Cfd.BillsTable.partnerPnl",
+    "description": "合伙人盈亏",
+    "defaultMessage": "Partner PnL"
+  },
+  {
+    "id": "Asset.Cfd.BillsTable.partnerFunding",
+    "description": "合伙人过夜费",
+    "defaultMessage": "Partner Funding"
+  },
+  {
+    "id": "Asset.Cfd.BillsTable.systemFunding",
+    "description": "系统过夜费",
+    "defaultMessage": "System funding"
+  },
+  {
+    "id": "Asset.Cfd.BillsTable.partnerCommission",
+    "description": "合伙人手续费",
+    "defaultMessage": "Partner Commission"
+  },
+  {
+    "id": "Asset.Cfd.BillsTable.distributorCommission",
+    "description": "分销商手续费",
+    "defaultMessage": "Distributor Commission"
+  },
+  {
+    "id": "Asset.Cfd.BillsTable.salesCommission",
+    "description": "业务员手续费",
+    "defaultMessage": "Sales Commission"
+  },
+  {
+    "id": "Asset.Cfd.BillsTable.systemCommission",
+    "description": "系统手续费",
+    "defaultMessage": "System Commission"
+  },
+  {
+    "id": "Asset.Cfd.BillsTable.transferOutPermanet",
+    "description": "出金",
+    "defaultMessage": "Transfer Out Permanet"
+  },
+  {
+    "id": "Asset.Cfd.BillsTable.plan",
+    "description": "计划委托",
+    "defaultMessage": "Plan Order"
+  },
+  {
+    "id": "Asset.Cfd.BillsTable.cancel",
+    "description": "撤单",
+    "defaultMessage": "Cancel Order"
+  },
+  {
+    "id": "Asset.Cfd.BillsTable.dateTime",
+    "description": "日期 / 时间",
+    "defaultMessage": "Date / Time"
+  },
+  {
+    "id": "Asset.Cfd.BillsTable.balance",
+    "description": "余额",
+    "defaultMessage": "Balance"
+  }
+]

@@ -1,0 +1,52 @@
+[
+  {
+    "id": "SignInDialog.SignInForm.forgotPassword",
+    "description": "忘记密码？",
+    "defaultMessage": "Forgot password ?"
+  },
+  {
+    "id": "SignInDialog.SignInForm.emptyAccount",
+    "description": "请输入手机号或邮箱",
+    "defaultMessage": "Please enter your mobile or email"
+  },
+  {
+    "id": "SignInDialog.SignInForm.invalidAccount",
+    "description": "请输入合法的手机号或邮箱",
+    "defaultMessage": "Please enter valid mobile or email"
+  },
+  {
+    "id": "SignInDialog.SignInForm.emptyPassword",
+    "description": "请输入密码",
+    "defaultMessage": "Please enter your password"
+  },
+  {
+    "id": "SignInDialog.SignInForm.invalidPassword",
+    "description": "请输入合法的密码",
+    "defaultMessage": "Please enter valid password"
+  },
+  {
+    "id": "SignInDialog.SignInForm.verification",
+    "description": "二次验证",
+    "defaultMessage": "2-Step Verification"
+  },
+  {
+    "id": "SignInDialog.SignInForm.switchMethod",
+    "description": "切换验证方式",
+    "defaultMessage": "Switch verification method"
+  },
+  {
+    "id": "SignInDialog.SignInForm.emptyVerificationCode",
+    "description": "请输入验证码",
+    "defaultMessage": "Please enter verification code"
+  },
+  {
+    "id": "SignInDialog.SignInForm.invalidVerificationCode",
+    "description": "请输入合法的验证码",
+    "defaultMessage": "Please enter valid verification code"
+  },
+  {
+    "id": "SignInDialog.SignInForm.welcome",
+    "description": "欢迎来到 Bitnomic",
+    "defaultMessage": "Welcome to Bitnomic"
+  }
+]

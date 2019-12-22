@@ -1,0 +1,52 @@
+[
+  {
+    "id": "Asset.Spot.DepositDialog.deposit",
+    "description": "{symbol} 充值",
+    "defaultMessage": "{symbol} Deposit"
+  },
+  {
+    "id": "Asset.Spot.DepositDialog.available",
+    "description": "可用提现余额：{available}",
+    "defaultMessage": "Available: {available}"
+  },
+  {
+    "id": "Asset.Spot.DepositDialog.frozen",
+    "description": "冻结中余额：{frozen}",
+    "defaultMessage": "Frozen: {frozen}"
+  },
+  {
+    "id": "Asset.Spot.DepositDialog.warningPhase1",
+    "description": "不要向 {symbol} 地址充值除 {symbol} 之外的资产，否则将无法找回",
+    "defaultMessage": "Any other assets deposited to {symbol} address will be irretrievable"
+  },
+  {
+    "id": "Asset.Spot.DepositDialog.warningPhase2",
+    "description": "{symbol} 充值需要 {confirms} 个网络确认才能到账",
+    "defaultMessage": "Deposit to {symbol} address requires {confirms} confirmation"
+  },
+  {
+    "id": "Asset.Spot.DepositDialog.warningPhase3",
+    "description": "{symbol} 最小充值金额为：{min}，少于此金额本平台将不会确认到账",
+    "defaultMessage": "The minimum deposit amount is {min} {symbol}. Any deposit less than {min} {symbol} will not be credited"
+  },
+  {
+    "id": "Asset.Spot.DepositDialog.depositAddress",
+    "description": "{symbol} 充值地址",
+    "defaultMessage": "{symbol} Deposit Address"
+  },
+  {
+    "id": "Asset.Spot.DepositDialog.copyAddress",
+    "description": "复制充值地址",
+    "defaultMessage": "Copy Deposit Address"
+  },
+  {
+    "id": "Asset.Spot.DepositDialog.copied",
+    "description": "{symbol} 充值地址已拷贝至粘贴板",
+    "defaultMessage": "{symbol} deposit address have been copied to clipborad"
+  },
+  {
+    "id": "Asset.Spot.DepositDialog.disabled",
+    "description": "{symbol} 暂时无法充值",
+    "defaultMessage": "Deposit of {symbol} is temporarily closed"
+  }
+]

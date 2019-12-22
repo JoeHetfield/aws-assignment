@@ -1,0 +1,62 @@
+[
+  {
+    "id": "User.PaymentPane.BindAlipayDialog.bindAlipay",
+    "description": "绑定支付宝",
+    "defaultMessage": "Bind Alipay"
+  },
+  {
+    "id": "User.PaymentPane.BindAlipayDialog.uploadQr",
+    "description": "点击上传支付宝收款码",
+    "defaultMessage": "Click to upload Alipay QR code"
+  },
+  {
+    "id": "User.PaymentPane.BindAlipayDialog.fullName",
+    "description": "姓名",
+    "defaultMessage": "Full Name"
+  },
+  {
+    "id": "User.PaymentPane.BindAlipayDialog.alipayId",
+    "description": "支付宝账号",
+    "defaultMessage": "Alipay ID"
+  },
+  {
+    "id": "User.PaymentPane.BindAlipayDialog.emptyName",
+    "description": "请输入姓名",
+    "defaultMessage": "Please enter name"
+  },
+  {
+    "id": "User.PaymentPane.BindAlipayDialog.tooLongName",
+    "description": "长度不能大于30个字符",
+    "defaultMessage": "Cannot be longer than 30 characters"
+  },
+  {
+    "id": "User.PaymentPane.BindAlipayDialog.emptyAlipayId",
+    "description": "请输入支付宝账号",
+    "defaultMessage": "Please enter Alipay ID"
+  },
+  {
+    "id": "User.PaymentPane.BindAlipayDialog.tooLongAlipayId",
+    "description": "长度不能大于30个字符",
+    "defaultMessage": "Cannot be longer than 30 characters"
+  },
+  {
+    "id": "User.PaymentPane.BindAlipayDialog.emptyAlipayQr",
+    "description": "请上传支付宝收款码",
+    "defaultMessage": "Please upload Alipay QR code"
+  },
+  {
+    "id": "User.PaymentPane.BindAlipayDialog.emptyVerificationCode",
+    "description": "请输入验证码",
+    "defaultMessage": "Please enter verification code"
+  },
+  {
+    "id": "User.PaymentPane.BindAlipayDialog.invalidVerificationCode",
+    "description": "请输入正确的六位验证码",
+    "defaultMessage": "Please enter valid verification code"
+  },
+  {
+    "id": "User.PaymentPane.BindAlipayDialog.success",
+    "description": "支付宝绑定成功",
+    "defaultMessage": "Alipay binding succeed"
+  }
+]

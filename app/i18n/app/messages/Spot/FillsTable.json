@@ -1,0 +1,22 @@
+[
+  {
+    "id": "Spot.FillsTable.fills",
+    "description": "最新成交",
+    "defaultMessage": "Latest Fills"
+  },
+  {
+    "id": "Spot.FillsTable.date",
+    "description": "时间",
+    "defaultMessage": "Date"
+  },
+  {
+    "id": "Spot.FillsTable.price",
+    "description": "价格",
+    "defaultMessage": "Price"
+  },
+  {
+    "id": "Spot.FillsTable.volume",
+    "description": "数量",
+    "defaultMessage": "Volume"
+  }
+]

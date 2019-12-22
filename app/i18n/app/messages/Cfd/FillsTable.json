@@ -1,0 +1,22 @@
+[
+  {
+    "id": "Cfd.FillsTable.latestFills",
+    "description": "最新成交",
+    "defaultMessage": "Latest Fills"
+  },
+  {
+    "id": "Cfd.FillsTable.date",
+    "description": "时间",
+    "defaultMessage": "Date"
+  },
+  {
+    "id": "Cfd.FillsTable.price",
+    "description": "价格",
+    "defaultMessage": "Price"
+  },
+  {
+    "id": "Cfd.FillsTable.quantity",
+    "description": "数量",
+    "defaultMessage": "Qty"
+  }
+]

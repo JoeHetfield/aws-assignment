@@ -1,0 +1,22 @@
+[
+  {
+    "id": "Home.MiddleBtnArea.quickBuy",
+    "description": "快捷买币",
+    "defaultMessage": "Quick To Buy Currency"
+  },
+  {
+    "id": "Home.MiddleBtnArea.depositWithdraw",
+    "description": "充值提现",
+    "defaultMessage": "Deposit Withdraw"
+  },
+  {
+    "id": "Home.MiddleBtnArea.joinCommunity",
+    "description": "加入社区",
+    "defaultMessage": "Join A Community"
+  },
+  {
+    "id": "Home.MiddleBtnArea.helpCenter",
+    "description": "帮助中心",
+    "defaultMessage": "Help Center"
+  }
+]

@@ -1,0 +1,52 @@
+[
+  {
+    "id": "Home.IndexesTable.performer",
+    "description": "涨幅榜",
+    "defaultMessage": "Performer"
+  },
+  {
+    "id": "Home.IndexesTable.turnover",
+    "description": "成交额榜",
+    "defaultMessage": "Turnover"
+  },
+  {
+    "id": "Home.IndexesTable.volume",
+    "description": "成交额",
+    "defaultMessage": "Volume"
+  },
+  {
+    "id": "Home.IndexesTable.symbol",
+    "description": "币种",
+    "defaultMessage": "Token Name"
+  },
+  {
+    "id": "Home.IndexesTable.lastPrice",
+    "description": "最新成交价",
+    "defaultMessage": "Last Price"
+  },
+  {
+    "id": "Home.IndexesTable.trend",
+    "description": "趋势",
+    "defaultMessage": "Trend"
+  },
+  {
+    "id": "Home.IndexesTable.dailyChange",
+    "description": "24h 涨跌幅",
+    "defaultMessage": "24h Change"
+  },
+  {
+    "id": "Home.IndexesTable.dailyHigh",
+    "description": "24h 最高价",
+    "defaultMessage": "24h High"
+  },
+  {
+    "id": "Home.IndexesTable.dailyLow",
+    "description": "24h 最低价",
+    "defaultMessage": "24h Low"
+  },
+  {
+    "id": "Home.IndexesTable.dailyVolume",
+    "description": "24h 交易量",
+    "defaultMessage": "24h Volume"
+  }
+]

@@ -1,0 +1,82 @@
+[
+  {
+    "id": "User.PaymentPane.BindBankCardDialog.bindBankCard",
+    "description": "绑定银行卡",
+    "defaultMessage": "Bind Bank Card"
+  },
+  {
+    "id": "User.PaymentPane.BindBankCardDialog.fullName",
+    "description": "姓名",
+    "defaultMessage": "Full Name"
+  },
+  {
+    "id": "User.PaymentPane.BindBankCardDialog.bankName",
+    "description": "开户行名称",
+    "defaultMessage": "Bank Name"
+  },
+  {
+    "id": "User.PaymentPane.BindBankCardDialog.branch",
+    "description": "开户行支行",
+    "defaultMessage": "Branch"
+  },
+  {
+    "id": "User.PaymentPane.BindBankCardDialog.bankCardNumber",
+    "description": "银行卡号",
+    "defaultMessage": "Bank Card Number"
+  },
+  {
+    "id": "User.PaymentPane.BindBankCardDialog.emptyName",
+    "description": "请输入姓名",
+    "defaultMessage": "Please enter name"
+  },
+  {
+    "id": "User.PaymentPane.BindBankCardDialog.tooLongName",
+    "description": "长度不能大于30个字符",
+    "defaultMessage": "Cannot be longer than 30 characters"
+  },
+  {
+    "id": "User.PaymentPane.BindBankCardDialog.emptyBankName",
+    "description": "请输入银行名称",
+    "defaultMessage": "Please enter bank name"
+  },
+  {
+    "id": "User.PaymentPane.BindBankCardDialog.tooLongBankName",
+    "description": "长度不能大于30个字符",
+    "defaultMessage": "Cannot be longer than 30 characters"
+  },
+  {
+    "id": "User.PaymentPane.BindBankCardDialog.emptyBranchName",
+    "description": "请输入开户行支行",
+    "defaultMessage": "Please enter branch name"
+  },
+  {
+    "id": "User.PaymentPane.BindBankCardDialog.tooLongBranchName",
+    "description": "长度不能大于30个字符",
+    "defaultMessage": "Cannot be longer than 30 characters"
+  },
+  {
+    "id": "User.PaymentPane.BindBankCardDialog.emptyBankCard",
+    "description": "请输入银行卡号",
+    "defaultMessage": "Please enter bank card"
+  },
+  {
+    "id": "User.PaymentPane.BindBankCardDialog.tooLongBankCard",
+    "description": "长度不能大于30个字符",
+    "defaultMessage": "Cannot be longer than 30 characters"
+  },
+  {
+    "id": "User.PaymentPane.BindBankCardDialog.emptyVerificationCode",
+    "description": "请输入验证码",
+    "defaultMessage": "Please enter verification code"
+  },
+  {
+    "id": "User.PaymentPane.BindBankCardDialog.invalidVerificationCode",
+    "description": "请输入正确的六位验证码",
+    "defaultMessage": "Please enter valid verification code"
+  },
+  {
+    "id": "User.PaymentPane.BindBankCardDialog.success",
+    "description": "银行卡绑定成功",
+    "defaultMessage": "Bank card binding succeed"
+  }
+]

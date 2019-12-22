@@ -1,0 +1,47 @@
+[
+  {
+    "id": "Spot.ChartArea.dailyHigh",
+    "description": "24H 高",
+    "defaultMessage": "24H High"
+  },
+  {
+    "id": "Spot.ChartArea.dailyHighAlt",
+    "description": "24H 高：{value}",
+    "defaultMessage": "24H High: {value}"
+  },
+  {
+    "id": "Spot.ChartArea.dailyLow",
+    "description": "24H 低",
+    "defaultMessage": "24H Low"
+  },
+  {
+    "id": "Spot.ChartArea.dailyLowAlt",
+    "description": "24H 低：{value}",
+    "defaultMessage": "24H Low: {value}"
+  },
+  {
+    "id": "Spot.ChartArea.dailyVolume",
+    "description": "24H 额",
+    "defaultMessage": "24H Volume"
+  },
+  {
+    "id": "Spot.ChartArea.dailyVolumeAlt",
+    "description": "24H 额：{value} {unit}",
+    "defaultMessage": "24H Volume: {value} {unit}"
+  },
+  {
+    "id": "Spot.ChartArea.realtimeChart",
+    "description": "分时图",
+    "defaultMessage": "Real Time Chart"
+  },
+  {
+    "id": "Spot.ChartArea.candlestickChart",
+    "description": "K 线图",
+    "defaultMessage": "Candlestick Chart"
+  },
+  {
+    "id": "Spot.ChartArea.indicator",
+    "description": "+指标",
+    "defaultMessage": "Indicator"
+  }
+]

@@ -1,0 +1,37 @@
+[
+  {
+    "id": "Otc.OrdersTable.ToolBar.ordersInfo",
+    "description": "订单信息",
+    "defaultMessage": "Orders Info"
+  },
+  {
+    "id": "Otc.OrdersTable.ToolBar.pendingOrders",
+    "description": "未完成订单",
+    "defaultMessage": "Pending Orders"
+  },
+  {
+    "id": "Otc.OrdersTable.ToolBar.filledOrders",
+    "description": "已完成订单",
+    "defaultMessage": "Filled Orders"
+  },
+  {
+    "id": "Otc.OrdersTable.ToolBar.canceledOrders",
+    "description": "已取消订单",
+    "defaultMessage": "Canceled Orders"
+  },
+  {
+    "id": "Otc.OrdersTable.ToolBar.publishedOffers",
+    "description": "广告单",
+    "defaultMessage": "Published Offers"
+  },
+  {
+    "id": "Otc.OrdersTable.ToolBar.tradingOpen",
+    "description": "接单中",
+    "defaultMessage": "In Trading"
+  },
+  {
+    "id": "Otc.OrdersTable.ToolBar.tradingClose",
+    "description": "已暂停接单",
+    "defaultMessage": "Trading Stopped"
+  }
+]

@@ -1,0 +1,177 @@
+[
+  {
+    "id": "Cfd.PositionsTable.realtimeChart",
+    "description": "分时图",
+    "defaultMessage": "Real Time"
+  },
+  {
+    "id": "Cfd.PositionsTable.candlestickChart",
+    "description": "K 线图",
+    "defaultMessage": "Candlestick"
+  },
+  {
+    "id": "Cfd.PositionsTable.positionInfo",
+    "description": "仓位信息",
+    "defaultMessage": "Position Info"
+  },
+  {
+    "id": "Cfd.PositionsTable.orderInfo",
+    "description": "订单信息",
+    "defaultMessage": "Order Info"
+  },
+  {
+    "id": "Cfd.PositionsTable.openedPosition",
+    "description": "当前仓位",
+    "defaultMessage": "Open Positions"
+  },
+  {
+    "id": "Cfd.PositionsTable.limitOrders",
+    "description": "指价委托",
+    "defaultMessage": "Limit Orders"
+  },
+  {
+    "id": "Cfd.PositionsTable.closedPosition",
+    "description": "已平仓仓位",
+    "defaultMessage": "Closed Positions"
+  },
+  {
+    "id": "Cfd.PositionsTable.cancelAll",
+    "description": "全部撤单",
+    "defaultMessage": "Cancel All Orders"
+  },
+  {
+    "id": "Cfd.PositionsTable.liquidateAll",
+    "description": "全部平仓",
+    "defaultMessage": "Liquidate All Positions"
+  },
+  {
+    "id": "Cfd.PositionsTable.createdDate",
+    "description": "创建时间",
+    "defaultMessage": "Create Date"
+  },
+  {
+    "id": "Cfd.PositionsTable.liquidateDate",
+    "description": "平仓时间",
+    "defaultMessage": "Liquidate Date"
+  },
+  {
+    "id": "Cfd.PositionsTable.cancelDate",
+    "description": "撤单时间",
+    "defaultMessage": "Cancel Date"
+  },
+  {
+    "id": "Cfd.PositionsTable.instrumentName",
+    "description": "合约名称",
+    "defaultMessage": "Instrument Name"
+  },
+  {
+    "id": "Cfd.PositionsTable.direction",
+    "description": "方向",
+    "defaultMessage": "Direction"
+  },
+  {
+    "id": "Cfd.PositionsTable.size",
+    "description": "数量",
+    "defaultMessage": "Size"
+  },
+  {
+    "id": "Cfd.PositionsTable.leverage",
+    "description": "杠杆",
+    "defaultMessage": "Leverage"
+  },
+  {
+    "id": "Cfd.PositionsTable.margin",
+    "description": "保证金",
+    "defaultMessage": "保证金"
+  },
+  {
+    "id": "Cfd.PositionsTable.entryPrice",
+    "description": "开仓价",
+    "defaultMessage": "Entry Price"
+  },
+  {
+    "id": "Cfd.PositionsTable.executePrice",
+    "description": "执行价",
+    "defaultMessage": "Execute Price"
+  },
+  {
+    "id": "Cfd.PositionsTable.stopProfitPrice",
+    "description": "止盈价",
+    "defaultMessage": "Stop Profit Price"
+  },
+  {
+    "id": "Cfd.PositionsTable.stopLossPrice",
+    "description": "止损价",
+    "defaultMessage": "Stop Loss Price"
+  },
+  {
+    "id": "Cfd.PositionsTable.unrealizedPnl",
+    "description": "浮动盈亏",
+    "defaultMessage": "Unrealized Pnl"
+  },
+  {
+    "id": "Cfd.PositionsTable.closePrice",
+    "description": "平仓价",
+    "defaultMessage": "Close Price"
+  },
+  {
+    "id": "Cfd.PositionsTable.liquidateBy",
+    "description": "平仓方式",
+    "defaultMessage": "Liquidate By"
+  },
+  {
+    "id": "Cfd.PositionsTable.realizedPnl",
+    "description": "盈亏",
+    "defaultMessage": "Profit / Loss"
+  },
+  {
+    "id": "Cfd.PositionsTable.commission",
+    "description": "手续费",
+    "defaultMessage": "Commission"
+  },
+  {
+    "id": "Cfd.PositionsTable.stopProfit",
+    "description": "止盈",
+    "defaultMessage": "Stop Profit"
+  },
+  {
+    "id": "Cfd.PositionsTable.stopLoss",
+    "description": "止损",
+    "defaultMessage": "Stop Loss"
+  },
+  {
+    "id": "Cfd.PositionsTable.manual",
+    "description": "手动平仓",
+    "defaultMessage": "Manual"
+  },
+  {
+    "id": "Cfd.PositionsTable.cancel",
+    "description": "撤单",
+    "defaultMessage": "Cancel"
+  },
+  {
+    "id": "Cfd.PositionsTable.liquidate",
+    "description": "平仓",
+    "defaultMessage": "Liquidate"
+  },
+  {
+    "id": "Cfd.PositionsTable.leverageUnit",
+    "description": "{leverage}倍杠杆",
+    "defaultMessage": "{leverage}x Leverage"
+  },
+  {
+    "id": "Cfd.PositionsTable.lotsUnit",
+    "description": "{quantity}手",
+    "defaultMessage": "{quantity} lots"
+  },
+  {
+    "id": "Cfd.PositionsTable.scoreBoard",
+    "description": "成绩单",
+    "defaultMessage": "Score Board"
+  },
+  {
+    "id": "Cfd.PositionsTable.lastPrice",
+    "description": "最新价",
+    "defaultMessage": "Last Price"
+  }
+]

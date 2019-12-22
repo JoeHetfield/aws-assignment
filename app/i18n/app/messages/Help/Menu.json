@@ -1,0 +1,152 @@
+[
+  {
+    "id": "Help.Menu.nomicCfd",
+    "description": "糯米合约交易指南",
+    "defaultMessage": "Nomic Contract 101"
+  },
+  {
+    "id": "Help.Menu.fundamental",
+    "description": "合约交易基础",
+    "defaultMessage": "Fundamental Knowledge of Contract Trading"
+  },
+  {
+    "id": "Help.Menu.userGuide",
+    "description": "新手教程",
+    "defaultMessage": "User Guide"
+  },
+  {
+    "id": "Help.Menu.otcPurchase",
+    "description": "C2C 交易（购买）",
+    "defaultMessage": "OTC Pruchase"
+  },
+  {
+    "id": "Help.Menu.otcSale",
+    "description": "C2C 交易（出售）",
+    "defaultMessage": "OTC Sale"
+  },
+  {
+    "id": "Help.Menu.cfdTrading",
+    "description": "如何交易（合约交易）",
+    "defaultMessage": "How to trade contracts"
+  },
+  {
+    "id": "Help.Menu.spotTrading",
+    "description": "如何交易（币币交易）",
+    "defaultMessage": "How to trade currency"
+  },
+  {
+    "id": "Help.Menu.deposit",
+    "description": "如何充值",
+    "defaultMessage": "How to deposit"
+  },
+  {
+    "id": "Help.Menu.withdraw",
+    "description": "如何提现",
+    "defaultMessage": "How to withdraw"
+  },
+  {
+    "id": "Help.Menu.register",
+    "description": "如何注册",
+    "defaultMessage": "How to register"
+  },
+  {
+    "id": "Help.Menu.basicVerification",
+    "description": "如何进行基本信息验证",
+    "defaultMessage": "How to verify basic idendity information"
+  },
+  {
+    "id": "Help.Menu.resetPassword",
+    "description": "如何重置密码",
+    "defaultMessage": "How to reset password"
+  },
+  {
+    "id": "Help.Menu.bindBankCard",
+    "description": "如何绑定银行卡",
+    "defaultMessage": "How to bind bank card"
+  },
+  {
+    "id": "Help.Menu.bindEmail",
+    "description": "如何绑定电子邮件",
+    "defaultMessage": "How to bind email"
+  },
+  {
+    "id": "Help.Menu.iphone",
+    "description": "iPhone 版 Bitnomic APP 下载安装指引教程",
+    "defaultMessage": "IPhone version bitnomic APP download and installation guide tutorial"
+  },
+  {
+    "id": "Help.Menu.agreement",
+    "description": "平台协议",
+    "defaultMessage": "Platform protocol"
+  },
+  {
+    "id": "Help.Menu.spot",
+    "description": "币币交易",
+    "defaultMessage": "Currency transaction"
+  },
+  {
+    "id": "Help.Menu.announcement",
+    "description": "Bitnomic 公告",
+    "defaultMessage": "Bitnomic announcement"
+  },
+  {
+    "id": "Help.Menu.newcurrency",
+    "description": "新币上线",
+    "defaultMessage": "New currency online"
+  },
+  {
+    "id": "Help.Menu.safe",
+    "description": "安全指南",
+    "defaultMessage": "Safety guide"
+  },
+  {
+    "id": "Help.Menu.question",
+    "description": "常见问题",
+    "defaultMessage": "Common problem"
+  },
+  {
+    "id": "Help.Menu.statement",
+    "description": "法律声明",
+    "defaultMessage": "Legal notices"
+  },
+  {
+    "id": "Help.Menu.terms",
+    "description": "隐私条款",
+    "defaultMessage": "Privacy policy"
+  },
+  {
+    "id": "Help.Menu.userAgreement",
+    "description": "用户协议",
+    "defaultMessage": "User agreement"
+  },
+  {
+    "id": "Help.Menu.instructions",
+    "description": "安全须知",
+    "defaultMessage": "Safety instructions"
+  },
+  {
+    "id": "Help.Menu.phishingAttack",
+    "description": "如何防止钓鱼攻击",
+    "defaultMessage": "How to prevent phishing attacks"
+  },
+  {
+    "id": "Help.Menu.antiVirus",
+    "description": "防病毒和木马指南",
+    "defaultMessage": "Antivirus and trojan guide"
+  },
+  {
+    "id": "Help.Menu.assetSecurity",
+    "description": "资产存放在 Bitnomic 是否安全",
+    "defaultMessage": "Is it safe to store assets in Bitnomic"
+  },
+  {
+    "id": "Help.Menu.strSecurity",
+    "description": "如何加强账户安全",
+    "defaultMessage": "How to strengthen account security"
+  },
+  {
+    "id": "Help.Menu.announcements",
+    "description": "活动公告",
+    "defaultMessage": "Announcements"
+  }
+]

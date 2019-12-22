@@ -1,0 +1,572 @@
+[
+  {
+    "id": "Common.ok",
+    "description": "确定",
+    "defaultMessage": "OK"
+  },
+  {
+    "id": "Common.cancel",
+    "description": "取消",
+    "defaultMessage": "Cancel"
+  },
+  {
+    "id": "Common.close",
+    "description": "关闭",
+    "defaultMessage": "Close"
+  },
+  {
+    "id": "Common.modify",
+    "description": "修改",
+    "defaultMessage": "Modify"
+  },
+  {
+    "id": "Common.buy",
+    "description": "买入",
+    "defaultMessage": "Buy"
+  },
+  {
+    "id": "Common.sell",
+    "description": "卖出",
+    "defaultMessage": "Sell"
+  },
+  {
+    "id": "Common.purchase",
+    "description": "购买",
+    "defaultMessage": "Purchase"
+  },
+  {
+    "id": "Common.sale",
+    "description": "出售",
+    "defaultMessage": "Sale"
+  },
+  {
+    "id": "Common.long",
+    "description": "做多",
+    "defaultMessage": "Long"
+  },
+  {
+    "id": "Common.short",
+    "description": "做空",
+    "defaultMessage": "Short"
+  },
+  {
+    "id": "Common.transferIn",
+    "description": "转入",
+    "defaultMessage": "Transfer In"
+  },
+  {
+    "id": "Common.transferOut",
+    "description": "转出",
+    "defaultMessage": "Transfer Out"
+  },
+  {
+    "id": "Common.deposit",
+    "description": "充值",
+    "defaultMessage": "Deposit"
+  },
+  {
+    "id": "Common.withdraw",
+    "description": "提现",
+    "defaultMessage": "Withdraw"
+  },
+  {
+    "id": "Common.transfer",
+    "description": "划转",
+    "defaultMessage": "Transfer"
+  },
+  {
+    "id": "Common.internalTransfer",
+    "description": "站内划转",
+    "defaultMessage": "Internal Transfer"
+  },
+  {
+    "id": "Common.confirmSave",
+    "description": "确认并保存",
+    "defaultMessage": "Confirm & Save"
+  },
+  {
+    "id": "Common.sendVerificationCode",
+    "description": "发送验证码",
+    "defaultMessage": "Get Code"
+  },
+  {
+    "id": "Common.prevStep",
+    "description": "上一步",
+    "defaultMessage": "Prev"
+  },
+  {
+    "id": "Common.nextStep",
+    "description": "下一步",
+    "defaultMessage": "Next"
+  },
+  {
+    "id": "Common.prevPage",
+    "description": "上一页",
+    "defaultMessage": "Prev"
+  },
+  {
+    "id": "Common.nextPage",
+    "description": "下一页",
+    "defaultMessage": "Next"
+  },
+  {
+    "id": "Common.warning",
+    "description": "注意：",
+    "defaultMessage": "Warning:"
+  },
+  {
+    "id": "Common.reveal",
+    "description": "显示",
+    "defaultMessage": "Reveal"
+  },
+  {
+    "id": "Common.bind",
+    "description": "绑定",
+    "defaultMessage": "Bind"
+  },
+  {
+    "id": "Common.binded",
+    "description": "已绑定",
+    "defaultMessage": "Binded"
+  },
+  {
+    "id": "Common.signin",
+    "description": "登录",
+    "defaultMessage": "Sign In"
+  },
+  {
+    "id": "Common.signup",
+    "description": "注册账号",
+    "defaultMessage": "Sign Up"
+  },
+  {
+    "id": "Common.signInOrUp",
+    "description": "登录 / 注册",
+    "defaultMessage": "Sign in / Sign up"
+  },
+  {
+    "id": "Common.registerNow",
+    "description": "立即注册",
+    "defaultMessage": "Register Now"
+  },
+  {
+    "id": "Common.registered",
+    "description": "已注册",
+    "defaultMessage": "Registered"
+  },
+  {
+    "id": "Common.signUpPrize",
+    "description": "注册就送1币",
+    "defaultMessage": "Sign Up And Give Away One Coin"
+  },
+  {
+    "id": "Common.signUpSlogan",
+    "description": "领取就能玩转起来",
+    "defaultMessage": "Collect And Play"
+  },
+  {
+    "id": "Common.signout",
+    "description": "退出登录",
+    "defaultMessage": "Sign Out"
+  },
+  {
+    "id": "Common.signoutConfirm",
+    "description": "您确定要退出吗？",
+    "defaultMessage": "Are you sure to sign out now?"
+  },
+  {
+    "id": "Common.backToSignin",
+    "description": "返回登录",
+    "defaultMessage": "Back to Sign In"
+  },
+  {
+    "id": "Common.signInToReview",
+    "description": "登录以查看",
+    "defaultMessage": "Sign in to review"
+  },
+  {
+    "id": "Common.signInToTrade",
+    "description": "登录以交易",
+    "defaultMessage": "Sign In to Trade"
+  },
+  {
+    "id": "Common.pleaseWait",
+    "description": "请稍候",
+    "defaultMessage": "Please wait"
+  },
+  {
+    "id": "Common.booting",
+    "description": "加载中，请稍候……",
+    "defaultMessage": "Loading... Please wait..."
+  },
+  {
+    "id": "Common.noRecords",
+    "description": "暂无数据",
+    "defaultMessage": "No Records Found"
+  },
+  {
+    "id": "Common.coolDown",
+    "description": "{seconds} 秒后可再次发送",
+    "defaultMessage": "Resend code after {seconds}s"
+  },
+  {
+    "id": "Common.countryAndArea",
+    "description": "国家地区",
+    "defaultMessage": "Country and Area"
+  },
+  {
+    "id": "Common.verificationCode",
+    "description": "验证码",
+    "defaultMessage": "Verification Code"
+  },
+  {
+    "id": "Common.mobile",
+    "description": "手机",
+    "defaultMessage": "Mobile"
+  },
+  {
+    "id": "Common.mobileNumber",
+    "description": "手机号",
+    "defaultMessage": "Mobile Phone Number"
+  },
+  {
+    "id": "Common.mobileVerificationCode",
+    "description": "手机验证码",
+    "defaultMessage": "Mobile Verification Code"
+  },
+  {
+    "id": "Common.mobileVerificationCodeSent",
+    "description": "验证码已发送至您的手机",
+    "defaultMessage": "Verification code have been send to your mobile"
+  },
+  {
+    "id": "Common.email",
+    "description": "邮箱",
+    "defaultMessage": "Email"
+  },
+  {
+    "id": "Common.emailAddress",
+    "description": "邮箱地址",
+    "defaultMessage": "Email Address"
+  },
+  {
+    "id": "Common.emailVerificationCode",
+    "description": "邮箱证码",
+    "defaultMessage": "Email Verification Code"
+  },
+  {
+    "id": "Common.emailVerificationCodeSent",
+    "description": "验证码已发送至您的邮箱",
+    "defaultMessage": "Verification code have been send to your mailbox"
+  },
+  {
+    "id": "Common.mobileOrEmail",
+    "description": "手机号 / 邮箱",
+    "defaultMessage": "Mobile or Email"
+  },
+  {
+    "id": "Common.password",
+    "description": "密码",
+    "defaultMessage": "Password"
+  },
+  {
+    "id": "Common.bankCard",
+    "description": "银行卡",
+    "defaultMessage": "Bank Card"
+  },
+  {
+    "id": "Common.bankCardInfo",
+    "description": "开户行：{name}，开户地址：{branch}，银行卡号：{cardNumber}",
+    "defaultMessage": "Bank Name: {name}, Branch: {branch}, Card No.: {cardNumber}"
+  },
+  {
+    "id": "Common.wechat",
+    "description": "微信",
+    "defaultMessage": "Wechat"
+  },
+  {
+    "id": "Common.wechatInfo",
+    "description": "微信用户名：{name}，微信支付号：{account}",
+    "defaultMessage": "Wechat Name: {name}, Account: {account}"
+  },
+  {
+    "id": "Common.alipay",
+    "description": "支付宝",
+    "defaultMessage": "Alipay"
+  },
+  {
+    "id": "Common.alipayInfo",
+    "description": "支付宝用户名：{name}，支付宝支付号：{account}",
+    "defaultMessage": "Alipay Name: {name}, Account: {account}"
+  },
+  {
+    "id": "Common.unpaid",
+    "description": "未支付",
+    "defaultMessage": "Not paid"
+  },
+  {
+    "id": "Common.high",
+    "description": "高",
+    "defaultMessage": "HIGH"
+  },
+  {
+    "id": "Common.medium",
+    "description": "中",
+    "defaultMessage": "MEDIUM"
+  },
+  {
+    "id": "Common.low",
+    "description": "低",
+    "defaultMessage": "LOW"
+  },
+  {
+    "id": "Common.home",
+    "description": "首页",
+    "defaultMessage": "Home"
+  },
+  {
+    "id": "Common.nomicky",
+    "description": "糯米宝",
+    "defaultMessage": "Nomicky"
+  },
+  {
+    "id": "Common.campaigns",
+    "description": "精彩活动",
+    "defaultMessage": "Campaigns"
+  },
+  {
+    "id": "Common.prevCampaigns",
+    "description": "往期活动",
+    "defaultMessage": "Previous Campaigns"
+  },
+  {
+    "id": "Common.otc",
+    "description": "C2C 交易",
+    "defaultMessage": "OTC"
+  },
+  {
+    "id": "Common.otcAbbr",
+    "description": "C2C ",
+    "defaultMessage": "OTC"
+  },
+  {
+    "id": "Common.cfd",
+    "description": "糯米合约",
+    "defaultMessage": "CFD"
+  },
+  {
+    "id": "Common.cfdAbbr",
+    "description": "合约",
+    "defaultMessage": "CFD"
+  },
+  {
+    "id": "Common.spot",
+    "description": "币币交易",
+    "defaultMessage": "SPOT"
+  },
+  {
+    "id": "Common.spotAbbr",
+    "description": "币币",
+    "defaultMessage": "SPOT"
+  },
+  {
+    "id": "Common.assets",
+    "description": "资产",
+    "defaultMessage": "Assets"
+  },
+  {
+    "id": "Common.assetsManagement",
+    "description": "资产管理",
+    "defaultMessage": "Assets"
+  },
+  {
+    "id": "Common.help",
+    "description": "帮助",
+    "defaultMessage": "Help"
+  },
+  {
+    "id": "Common.positions",
+    "description": "仓位",
+    "defaultMessage": "Positions"
+  },
+  {
+    "id": "Common.account",
+    "description": "账户",
+    "defaultMessage": "Account"
+  },
+  {
+    "id": "Common.accountInfo",
+    "description": "账号信息",
+    "defaultMessage": "Account Info"
+  },
+  {
+    "id": "Common.language",
+    "description": "语言",
+    "defaultMessage": "Language"
+  },
+  {
+    "id": "Common.userCenterHint",
+    "description": "您可以在用户中心完成这些手续",
+    "defaultMessage": "You can complete these requirements in User Center"
+  },
+  {
+    "id": "Common.gotoUserCenter",
+    "description": "前往用户中心",
+    "defaultMessage": "To User Center Now"
+  },
+  {
+    "id": "Common.kyc2Success",
+    "description": "高级用户信息认证已完成，点击这里回到首页",
+    "defaultMessage": "Advanced user information verification succeed. Click here to return to home."
+  },
+  {
+    "id": "Common.userGuide",
+    "description": "新手教程",
+    "defaultMessage": "User Guide"
+  },
+  {
+    "id": "Common.spotTrading",
+    "description": "如何交易",
+    "defaultMessage": "How to trade"
+  },
+  {
+    "id": "Common.contract",
+    "description": "合约交易",
+    "defaultMessage": "Contract Transaction"
+  },
+  {
+    "id": "Common.currency",
+    "description": "币币交易",
+    "defaultMessage": "Currency Transaction"
+  },
+  {
+    "id": "Common.howDeposit",
+    "description": "如何充值",
+    "defaultMessage": "How to deposit"
+  },
+  {
+    "id": "Common.register",
+    "description": "如何注册",
+    "defaultMessage": "How to register"
+  },
+  {
+    "id": "Common.basicVerification",
+    "description": "如何进行基本信息验证",
+    "defaultMessage": "How to verify basic idendity information"
+  },
+  {
+    "id": "Common.resetPassword",
+    "description": "如何重置密码",
+    "defaultMessage": "How to reset password"
+  },
+  {
+    "id": "Common.bindBankCard",
+    "description": "如何绑定银行卡",
+    "defaultMessage": "How to bind bank card"
+  },
+  {
+    "id": "Common.bindEmail",
+    "description": "如何绑定电子邮件",
+    "defaultMessage": "How to bind email"
+  },
+  {
+    "id": "Common.safe",
+    "description": "安全指南",
+    "defaultMessage": "Safety guide"
+  },
+  {
+    "id": "Common.question",
+    "description": "常见问题",
+    "defaultMessage": "Common problem"
+  },
+  {
+    "id": "Common.statement",
+    "description": "法律声明",
+    "defaultMessage": "Legal notices"
+  },
+  {
+    "id": "Common.terms",
+    "description": "隐私条款",
+    "defaultMessage": "Privacy policy"
+  },
+  {
+    "id": "Common.userAgreement",
+    "description": "用户协议",
+    "defaultMessage": "User agreement"
+  },
+  {
+    "id": "Common.instructions",
+    "description": "安全须知",
+    "defaultMessage": "Safety instructions"
+  },
+  {
+    "id": "Common.phishingAttack",
+    "description": "如何防止钓鱼攻击",
+    "defaultMessage": "How to prevent phishing attacks"
+  },
+  {
+    "id": "Common.antiVirus",
+    "description": "防病毒和木马指南",
+    "defaultMessage": "Antivirus and trojan guide"
+  },
+  {
+    "id": "Common.assetSecurity",
+    "description": "资产存放在 Bitnomic 是否安全",
+    "defaultMessage": "Is It Safe To Store Assets In Bitnomic"
+  },
+  {
+    "id": "Common.strSecurity",
+    "description": "如何加强账户安全",
+    "defaultMessage": "How To Strengthen Account Security"
+  },
+  {
+    "id": "Common.announcements",
+    "description": "活动公告",
+    "defaultMessage": "Upcoming Events"
+  },
+  {
+    "id": "Common.myInvitationCode",
+    "description": "我的邀请码",
+    "defaultMessage": "My Invitation Code"
+  },
+  {
+    "id": "Common.orderManagement",
+    "description": "订单管理",
+    "defaultMessage": "Order Management"
+  },
+  {
+    "id": "Common.fees",
+    "description": "费率标准",
+    "defaultMessage": "Fees Schedule"
+  },
+  {
+    "id": "Common.download",
+    "description": "推荐下载",
+    "defaultMessage": "Recommended Download"
+  },
+  {
+    "id": "Common.onlineService",
+    "description": "在线客服",
+    "defaultMessage": "Online Service"
+  },
+  {
+    "id": "Common.default",
+    "description": "默认",
+    "defaultMessage": "Default"
+  },
+  {
+    "id": "Common.authentication",
+    "description": "身份认证",
+    "defaultMessage": "Authentication"
+  },
+  {
+    "id": "Common.loginPassword",
+    "description": "登录密码",
+    "defaultMessage": "Login Password"
+  },
+  {
+    "id": "Common.PersonalCenter",
+    "description": "个人中心",
+    "defaultMessage": "Personal Center"
+  }
+]

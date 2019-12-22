@@ -1,0 +1,11 @@
+node_modules
+/app/assets
+/app/i18n
+/app/lib
+/app/utils/datafeeds.js
+/app/utils/trading_view.js
+/server
+/build
+/tmp
+coverage
+/.git

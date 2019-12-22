@@ -1,0 +1,47 @@
+[
+  {
+    "id": "Otc.OrdersTable.CancelConfirmDialog.paymentInfo",
+    "description": "支付信息",
+    "defaultMessage": "Payment Information"
+  },
+  {
+    "id": "Otc.OrdersTable.CancelConfirmDialog.tokenName",
+    "description": "卖出币种",
+    "defaultMessage": "Token Name"
+  },
+  {
+    "id": "Otc.OrdersTable.CancelConfirmDialog.orderId",
+    "description": "订单号",
+    "defaultMessage": "Order ID"
+  },
+  {
+    "id": "Otc.OrdersTable.CancelConfirmDialog.amount",
+    "description": "总金额",
+    "defaultMessage": "Total Amount"
+  },
+  {
+    "id": "Otc.OrdersTable.CancelConfirmDialog.volume",
+    "description": "数量",
+    "defaultMessage": "Volume"
+  },
+  {
+    "id": "Otc.OrdersTable.CancelConfirmDialog.paymentMethod",
+    "description": "支付方式",
+    "defaultMessage": "Payment Method"
+  },
+  {
+    "id": "Otc.OrdersTable.CancelConfirmDialog.cancelOrder",
+    "description": "取消订单",
+    "defaultMessage": "Cancel Order"
+  },
+  {
+    "id": "Otc.OrdersTable.CancelConfirmDialog.warningPhrase1",
+    "description": "确认取消后，您订单中的币将会释放给卖家。此次操作是不可逆的，请您再次确认是否取消订单；",
+    "defaultMessage": "After cancellation, the tokens of this order will be released to the seller. This operation is inreversible, please confirm again;"
+  },
+  {
+    "id": "Otc.OrdersTable.CancelConfirmDialog.warningPhrase2",
+    "description": "一天中累积取消订单超过3次，当天将不能再进行买卖，同时会降低您的信用权重，请您知晓。",
+    "defaultMessage": "Please aware that if your cancellation within one day sum up to 3 times, you won't be able to make new transaction for that day, and the credit of your account will be decreased."
+  }
+]
