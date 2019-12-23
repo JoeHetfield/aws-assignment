@@ -12,6 +12,18 @@ import Typography from 'components/Typography';
 import LoadingButton from 'components/LoadingButton';
 import { TextField, SelectField } from 'components/Form';
 
+import BooleanTemplate from './ValueTemplates/BooleanTemplate';
+import DecayTemplate from './ValueTemplates/DecayTemplate';
+import FloatTemplate from './ValueTemplates/FloatTemplate';
+import IntegerTemplate from './ValueTemplates/IntegerTemplate';
+import LocationTemplate from './ValueTemplates/LocationTemplate';
+import StringTemplate from './ValueTemplates/StringTemplate';
+import SinusoidalTemplate from './ValueTemplates/SinusoidalTemplate';
+import UuidTemplate from './ValueTemplates/UuidTemplate';
+import ShortidTemplate from './ValueTemplates/ShortidTemplate';
+import TimestampTemplate from './ValueTemplates/TimestampTemplate';
+import PickOneTemplate from './ValueTemplates/PickOneTemplate';
+
 const useStyles = makeStyles(({ spacing }) => ({
   root: {
     height: '100%',
@@ -48,6 +60,7 @@ const PayloadEditor = ({
   return (
     <Dialog
       open={open}
+      scroll="body"
       onClose={closeEditor}
       TransitionComponent={Slide.Up}
       classes={{
@@ -62,6 +75,7 @@ const PayloadEditor = ({
         initialValues={defaultValue}
       >
         {({
+          values,
           handleSubmit,
         }) => (
           <form
@@ -119,6 +133,35 @@ const PayloadEditor = ({
               helperText="Data type of the message attribute."
             />
 
+            {(() => {
+              switch (values.type) {
+                case 'bool':
+                  return <BooleanTemplate />;
+                case 'decay':
+                  return <DecayTemplate />;
+                case 'float':
+                  return <FloatTemplate />;
+                case 'int':
+                  return <IntegerTemplate />;
+                case 'location':
+                  return <LocationTemplate />;
+                case 'string':
+                  return <StringTemplate />;
+                case 'sinusoidal':
+                  return <SinusoidalTemplate />;
+                case 'uuid':
+                  return <UuidTemplate />;
+                case 'shortid':
+                  return <ShortidTemplate />;
+                case 'timestamp':
+                  return <TimestampTemplate />;
+                case 'pickOne':
+                  return <PickOneTemplate />;
+                default:
+                  return null;
+              }
+            })()}
+
             <Box
               display="flex"
               justifyContent="flex-end"
@@ -128,6 +171,7 @@ const PayloadEditor = ({
                 type="submit"
                 size="large"
                 label="save"
+                color="secondary"
               />
 
               <LoadingButton

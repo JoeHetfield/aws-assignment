@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Route, useRouteMatch } from "react-router-dom";
+import { Switch, Route, useRouteMatch } from 'react-router-dom';
 
 import Box from '@material-ui/core/Box';
 
@@ -10,9 +10,7 @@ import DeviceTypeList from './DeviceTypeList';
 import DeviceTypeEditor from './DeviceTypeEditor';
 
 const DeviceType = () => {
-  const { path, url } = useRouteMatch();
-
-  console.log(path, url)
+  const { url } = useRouteMatch();
 
   return (
     <Layout>

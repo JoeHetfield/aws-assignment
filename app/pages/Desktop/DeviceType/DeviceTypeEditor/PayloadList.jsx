@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { makeStyles } from '@material-ui/core/styles';
+import { createMuiTheme, makeStyles, ThemeProvider } from '@material-ui/core/styles';
+import reject from 'ramda/es/reject';
 
 import Box from '@material-ui/core/Box';
 import Table from '@material-ui/core/Table';
@@ -9,6 +10,8 @@ import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableContainer from '@material-ui/core/TableContainer';
+
+import pink from '@material-ui/core/colors/pink';
 
 import AddIcon from '@material-ui/icons/Add';
 import InfoIcon from '@material-ui/icons/Info';
@@ -26,11 +29,26 @@ const useStyles = makeStyles(({ spacing }) => ({
   },
 }));
 
+const theme = createMuiTheme({
+  palette: {
+    primary: pink,
+  },
+  typography: {
+    fontFamily: 'Roboto Condensed,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Helvetica,PingFang SC,Microsoft Yahei,Arial,sans-serif',
+  },
+});
+
 const PayloadList = ({
   payload,
   openEditor,
+  deletePayload,
 }) => {
   const classes = useStyles();
+
+  const _deletePayload = (id) => () => {
+    const findById = (item) => item._id_ === id;
+    deletePayload('spec.payload', reject(findById, payload));
+  };
 
   return (
     <>
@@ -57,6 +75,7 @@ const PayloadList = ({
         </Box>
 
         <Button
+          color="secondary"
           label="Add Attribute"
           variant="outlined"
           startIcon={<AddIcon />}
@@ -98,19 +117,33 @@ const PayloadList = ({
                   className={classes.actionCell}
                 >
 
-                  <Button
-                    size="small"
-                    label="Remove"
-                    startIcon={<DeleteIcon />}
-                  />
+                  <ThemeProvider theme={theme}>
+                    <Button
+                      size="small"
+                      label="Remove"
+                      color="primary"
+                      startIcon={<DeleteIcon />}
+                      onClick={_deletePayload(row._id_)}
+                    />
+                  </ThemeProvider>
 
                   <Box width={16} />
 
-                  <Button
-                    size="small"
-                    label="View Config"
-                    startIcon={<InfoIcon />}
-                  />
+                  { row.type === 'object' ? (
+                    <Button
+                      size="small"
+                      label="Add Attribute"
+                      startIcon={<AddIcon />}
+                      onClick={openEditor}
+                    />
+                  ) : (
+                    <Button
+                      color="secondary"
+                      size="small"
+                      label="View Config"
+                      startIcon={<InfoIcon />}
+                    />
+                  )}
 
                 </TableCell>
 
@@ -128,6 +161,7 @@ const PayloadList = ({
 PayloadList.propTypes = {
   payload: PropTypes.object.isRequired,
   openEditor: PropTypes.func.isRequired,
+  deletePayload: PropTypes.func.isRequired,
 };
 
 export default PayloadList;

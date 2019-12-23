@@ -54,7 +54,7 @@ const DeviceTypeList = () => {
   );
 
   const chipCellRenderer = ({ cellData }) => (
-    <Chip label={cellData} color="secondary" />
+    <Chip label={cellData} color={cellData === 'public' ? 'secondary' : 'default'} />
   );
 
   const textCellRenderer = ({ rowData, cellData }) => (
@@ -95,6 +95,7 @@ const DeviceTypeList = () => {
     <Button
       size="small"
       label="Edit"
+      color="secondary"
       startIcon={<EditIcon />}
       to={`/deviceType/${cellData}`}
       component={Link}
@@ -114,6 +115,7 @@ const DeviceTypeList = () => {
         <Box flex={1} />
 
         <Button
+          color="secondary"
           label="Add Device Type"
           startIcon={<AddIcon />}
           to="/deviceType/new"
@@ -123,6 +125,7 @@ const DeviceTypeList = () => {
         <Box width={24} />
 
         <Button
+          color="secondary"
           label="Refresh"
           startIcon={<RefreshIcon />}
           onClick={() => setLoading(true)}

@@ -1,8 +1,13 @@
 import React from 'react';
+import { useLocation, Link as RouterLink } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 
 import Box from '@material-ui/core/Box';
+import Link from '@material-ui/core/Link';
 import Paper from '@material-ui/core/Paper';
+import Breadcrumbs from '@material-ui/core/Breadcrumbs';
+
+import teal from '@material-ui/core/colors/teal';
 
 import Typography from 'components/Typography';
 
@@ -10,11 +15,18 @@ const useStyles = makeStyles(({ spacing }) => ({
   summary: {
     padding: spacing(2, 3),
     display: 'flex',
+    alignItems: 'center',
+  },
+  runningLabel: {
+    color: teal[500],
   },
 }));
 
 const Summary = () => {
   const classes = useStyles();
+
+  const { pathname } = useLocation();
+  const pathnames = pathname.split('/').filter((x) => x);
 
   return (
     <Paper
@@ -22,11 +34,49 @@ const Summary = () => {
       elevation={0}
       className={classes.summary}
     >
-      <Typography
-        className="pageTitle"
-        variant="h5"
-        message="Device Types"
-      />
+
+      <Box
+        display="flex"
+        flexDirection="column"
+      >
+        <Typography
+          gutterBottom
+          variant="h5"
+          className="pageTitle"
+          message="Device Types"
+        />
+
+        <Breadcrumbs>
+          <Link
+            to="/"
+            color="inherit"
+            component={RouterLink}
+          >
+            Home
+          </Link>
+          {pathnames.map((value, index) => {
+            const last = index === pathnames.length - 1;
+            const to = `/${pathnames.slice(0, index + 1).join('/')}`;
+
+            return last ? (
+              <Typography
+                key={to}
+                color="textPrimary"
+                message={value}
+              />
+            ) : (
+              <Link
+                to={to}
+                key={to}
+                color="inherit"
+                component={RouterLink}
+              >
+                {value}
+              </Link>
+            );
+          })}
+        </Breadcrumbs>
+      </Box>
 
       <Box flex={1} />
 
@@ -40,6 +90,7 @@ const Summary = () => {
           message="Devices"
         />
         <Typography
+          color="secondary"
           variant="h6"
           message="5 Total"
         />
@@ -57,7 +108,8 @@ const Summary = () => {
         />
         <Typography
           variant="h6"
-          message="0 Running"
+          message="3 Running"
+          className={classes.runningLabel}
         />
       </Box>
 

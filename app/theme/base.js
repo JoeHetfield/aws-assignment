@@ -9,7 +9,6 @@ const baseTheme = {
     secondary: blue,
   },
   typography: {
-    // fontSize: 12,
     fontFamily: 'Roboto Condensed,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Helvetica,PingFang SC,Microsoft Yahei,Arial,sans-serif',
   },
 };

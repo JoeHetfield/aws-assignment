@@ -193,17 +193,18 @@ const DeviceTypeEditor = () => {
             />
 
             <PayloadList
-              payload={values.spec.payload}
+              payload={values.spec.payload || []}
+              deletePayload={setFieldValue}
               openEditor={() => setEditorOpen(true)}
             />
 
             <PayloadSample
-              payload={values.spec.payload}
+              payload={values.spec.payload || []}
             />
 
             <PayloadEditor
               open={editorOpen}
-              payload={values.spec.payload}
+              payload={values.spec.payload || []}
               addPayload={setFieldValue}
               closeEditor={() => setEditorOpen(false)}
             />
@@ -216,16 +217,17 @@ const DeviceTypeEditor = () => {
               <LoadingButton
                 type="submit"
                 size="large"
-                isLoading={isSubmitting}
                 label="save"
+                color="secondary"
+                isLoading={isSubmitting}
               />
 
               <LoadingButton
                 size="large"
                 label="cancel"
-                disabled={isSubmitting}
                 to="/deviceType"
                 component={Link}
+                disabled={isSubmitting}
               />
 
             </Box>
