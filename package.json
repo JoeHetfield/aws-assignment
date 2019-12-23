@@ -10,7 +10,7 @@
     "profile": "webpack --config webpack.config.babel.js --profile --json > stats.json",
     "message": "babel-node ./tools/mergeMessage.js",
     "lint:js": "eslint . --ext .js,.jsx --fix",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
@@ -41,6 +41,7 @@
     "redux": "^4.0.4",
     "redux-thunk": "^2.3.0",
     "reselect": "^4.0.0",
+    "shortid": "^2.2.15",
     "text-mask-addons": "^3.8.0",
     "validator": "^12.1.0"
   },
@@ -63,12 +64,16 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.17.0",
     "eslint-plugin-react-hooks": "^2.3.0",
+    "faker": "^4.1.0",
     "favicons-webpack-plugin": "^1.0.2",
     "file-loader": "^5.0.2",
     "glob": "^7.1.6",
     "html-webpack-plugin": "^3.2.0",
     "html-webpack-template": "^6.2.0",
+    "jest": "^24.9.0",
+    "jest-cli": "^24.9.0",
     "mkdirp": "^0.5.1",
+    "puppeteer": "^2.0.0",
     "url-loader": "^3.0.0",
     "webpack": "^4.41.4",
     "webpack-cli": "^3.3.10",

@@ -1,29 +1,23 @@
-/* eslint-disable react/prop-types */
+/* eslint-disable no-param-reassign */
 import React, { useState, useEffect } from 'react';
-import { FormattedTime } from 'react-intl';
+import shortid from 'shortid';
 import { Link, useParams, useHistory } from 'react-router-dom';
 import { Formik, Field } from 'formik';
 import { makeStyles } from '@material-ui/core/styles';
 
 import Box from '@material-ui/core/Box';
-import Chip from '@material-ui/core/Chip';
 import Paper from '@material-ui/core/Paper';
-import Avatar from '@material-ui/core/Avatar';
-import Toolbar from '@material-ui/core/Toolbar';
 
-import AddIcon from '@material-ui/icons/Add';
-import EditIcon from '@material-ui/icons/Edit';
-import RefreshIcon from '@material-ui/icons/Refresh';
-import DeveloperModeIcon from '@material-ui/icons/DeveloperMode';
-
-import Table from 'components/Table';
-import Button from 'components/Button';
-import { TextField, SelectField } from 'components/Form';
 import Typography from 'components/Typography';
 import LoadingButton from 'components/LoadingButton';
+import { TextField, SelectField } from 'components/Form';
 
+import { masks } from 'utils';
 import { DeviceType } from 'actions';
-import { masks, formatter } from 'utils';
+
+import PayloadList from './PayloadList';
+import PayloadSample from './PayloadSample';
+import PayloadEditor from './PayloadEditor';
 
 const useStyles = makeStyles(({ spacing }) => ({
   root: {
@@ -45,8 +39,9 @@ const DeviceTypeEditor = () => {
   const history = useHistory();
   const { typeId } = useParams();
 
-  const [deviceType, setDeviceType] = useState({});
   const [loading, setLoading] = useState(false);
+  const [deviceType, setDeviceType] = useState({});
+  const [editorOpen, setEditorOpen] = useState(false);
 
   useEffect(() => {
     setLoading(true);
@@ -71,17 +66,26 @@ const DeviceTypeEditor = () => {
     setSubmitting,
     setErrors,
     resetForm,
-  }) => DeviceType
-    .update(params)
-    .then(() => {
-      resetForm();
-      setSubmitting(false);
-      history.push('/deviceType');
-    })
-    .catch(({ msg }) => {
-      setSubmitting(false);
-      setErrors(msg);
-    });
+  }) => {
+    if (!params.typeId) {
+      params.typeId = shortid.generate();
+      params.createdAt = Date.now();
+    }
+
+    params.updatedAt = Date.now();
+
+    DeviceType
+      .update(params)
+      .then(() => {
+        resetForm();
+        setSubmitting(false);
+        history.push('/deviceType');
+      })
+      .catch(({ msg }) => {
+        setSubmitting(false);
+        setErrors(msg);
+      });
+  };
 
   return (
     <Paper className={classes.root}>
@@ -143,11 +147,10 @@ const DeviceTypeEditor = () => {
               variant="outlined"
               disabled={loading || isSubmitting}
               component={SelectField}
-              options={[{
-                label: 'public', value: 'public',
-              }, {
-                label: 'private', value: 'private',
-              }]}
+              options={[
+                { label: 'public', value: 'public' },
+                { label: 'private', value: 'private' },
+              ]}
               helperText={'The visibility of device type. Selecting "Shared" allows members to use this device type in simulations.'}
             />
 
@@ -189,38 +192,21 @@ const DeviceTypeEditor = () => {
               helperText="How often devices will send data during a simulation (milliseconds) [must be >= 1000]."
             />
 
-            <Box
-              my={2}
-              display="flex"
-              flexDirection="column"
-            >
-              <Typography
-                message="Message Payload"
-              />
+            <PayloadList
+              payload={values.spec.payload}
+              openEditor={() => setEditorOpen(true)}
+            />
 
-              <Typography
-                color="textSecondary"
-                variant="caption"
-                message="Define the message payload that will be simulated for the device."
-              />
-            </Box>
+            <PayloadSample
+              payload={values.spec.payload}
+            />
 
-            <Box
-              my={2}
-              display="flex"
-              flexDirection="column"
-            >
-              <Typography
-                message="Sample Message Payload"
-              />
-
-              <pre>
-                <Typography
-                  variant="caption"
-                  message={JSON.stringify(values.spec.payload, null, 2)}
-                />
-              </pre>
-            </Box>
+            <PayloadEditor
+              open={editorOpen}
+              payload={values.spec.payload}
+              addPayload={setFieldValue}
+              closeEditor={() => setEditorOpen(false)}
+            />
 
             <Box
               display="flex"

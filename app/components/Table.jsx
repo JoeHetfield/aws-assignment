@@ -45,12 +45,9 @@ const useStyles = makeStyles(({
     paddingRight: spacing(2),
   },
   headerCell: {
-    color: palette.text.secondary,
+    // color: palette.text.secondary,
     paddingLeft: spacing(2),
     paddingRight: spacing(2),
-  },
-  headerLabel: {
-    fontWeight: 500,
   },
   numeric: {
     textAlign: 'right',
@@ -152,9 +149,8 @@ const CustomTable = ({
                   dataKey={dataKey}
                   label={label && (
                     <Typography
-                      variant="caption"
+                      variant="subtitle2"
                       message={label}
-                      className={classes.headerLabel}
                     />
                   )}
                   className={classNames(classes.cell, numeric && classes.numeric)}

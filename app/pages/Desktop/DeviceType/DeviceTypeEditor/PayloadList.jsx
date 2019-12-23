@@ -1,186 +1,133 @@
-/* eslint-disable react/prop-types */
-import React, { useState, useEffect } from 'react';
-import { FormattedTime } from 'react-intl';
+import React from 'react';
+import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 
-import { Link } from 'react-router-dom';
 import Box from '@material-ui/core/Box';
-import Chip from '@material-ui/core/Chip';
-import Paper from '@material-ui/core/Paper';
-import Avatar from '@material-ui/core/Avatar';
-import Toolbar from '@material-ui/core/Toolbar';
+import Table from '@material-ui/core/Table';
+import TableRow from '@material-ui/core/TableRow';
+import TableBody from '@material-ui/core/TableBody';
+import TableCell from '@material-ui/core/TableCell';
+import TableHead from '@material-ui/core/TableHead';
+import TableContainer from '@material-ui/core/TableContainer';
 
 import AddIcon from '@material-ui/icons/Add';
-import EditIcon from '@material-ui/icons/Edit';
-import RefreshIcon from '@material-ui/icons/Refresh';
-import DeveloperModeIcon from '@material-ui/icons/DeveloperMode';
+import InfoIcon from '@material-ui/icons/Info';
+import DeleteIcon from '@material-ui/icons/Delete';
 
-import Table from 'components/Table';
 import Button from 'components/Button';
 import Typography from 'components/Typography';
 
-import { DeviceType } from 'actions';
-
-const useStyles = makeStyles(() => ({
-  root: {
-    height: '100%',
-    minHeight: '100%',
+const useStyles = makeStyles(({ spacing }) => ({
+  table: {
+    marginBottom: spacing(4),
+  },
+  actionCell: {
     display: 'flex',
-    flexDirection: 'column',
   },
 }));
 
-const PayloadList = () => {
+const PayloadList = ({
+  payload,
+  openEditor,
+}) => {
   const classes = useStyles();
 
-  const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(false);
-  const page = 0;
-
-  const refresh = () => {
-    setLoading(true);
-    DeviceType
-      .load()
-      .then(setData)
-      .then(() => setLoading(false));
-  };
-
-  useEffect(refresh, []);
-
-  const iconCellRenderer = () => (
-    <Avatar>
-      <DeveloperModeIcon />
-    </Avatar>
-  );
-
-  const chipCellRenderer = ({ cellData }) => (
-    <Chip label={cellData} color="secondary" />
-  );
-
-  const textCellRenderer = ({ rowData, cellData }) => (
-    <Box
-      display="flex"
-      flexDirection="column"
-    >
-
-      <Typography message={cellData} />
-
-      <Typography
-        variant="caption"
-        color="textSecondary"
-        message={rowData.typeId}
-      />
-
-    </Box>
-  );
-
-  const dateCellRenderer = ({ cellData }) => (
-    <Typography
-      message={(
-        <FormattedTime
-          hour12={false}
-          year="numeric"
-          month="numeric"
-          day="numeric"
-          hour="numeric"
-          minute="numeric"
-          second="numeric"
-          value={cellData}
-        />
-      )}
-    />
-  );
-
-  const operationCellRenderer = ({ cellData }) => (
-    <Button
-      size="small"
-      label="Edit"
-      startIcon={<EditIcon />}
-      to={`/deviceType/${cellData}`}
-      component={Link}
-    />
-  );
-
   return (
-    <Paper className={classes.root}>
+    <>
 
-      <Toolbar>
+      <Box
+        display="flex"
+        alignItems="center"
+        justifyContent="space-between"
+      >
+        <Box
+          my={2}
+          display="flex"
+          flexDirection="column"
+        >
+          <Typography
+            message="Message Payload"
+          />
 
-        <Typography
-          variant="h6"
-          message={`Device Types (${data.length})`}
-        />
-
-        <Box flex={1} />
+          <Typography
+            color="textSecondary"
+            variant="caption"
+            message="Define the message payload that will be simulated for the device."
+          />
+        </Box>
 
         <Button
-          label="Add Device Type"
+          label="Add Attribute"
+          variant="outlined"
           startIcon={<AddIcon />}
-          to="/deviceType/new"
-          component={Link}
+          onClick={openEditor}
         />
+      </Box>
 
-        <Box width={24} />
+      <TableContainer className={classes.table}>
 
-        <Button
-          label="Refresh"
-          startIcon={<RefreshIcon />}
-          onClick={() => setLoading(true)}
-        />
+        <Table>
 
-      </Toolbar>
+          <TableHead>
+            <TableRow>
+              <TableCell>Message Attribute</TableCell>
+              <TableCell>Data Type</TableCell>
+              <TableCell>Static Value</TableCell>
+              <TableCell align="right">Actions</TableCell>
+            </TableRow>
+          </TableHead>
 
-      <Table
-        data={data}
-        page={page}
-        count={data.length}
-        loading={loading}
-        rowsPerPage={20}
-        // onChangePage={(event, index) => setPage(index + 1)}
-        rowHeight={72}
-        headerHeight={36}
-        columns={[{
-          dataKey: 'icon',
-          width: 10,
-          flexGrow: 1,
-          cellRenderer: iconCellRenderer,
-        }, {
-          label: 'Device Type',
-          dataKey: 'name',
-          width: 10,
-          flexGrow: 1,
-          cellRenderer: textCellRenderer,
-        }, {
-          label: 'Visibility',
-          dataKey: 'visibility',
-          width: 10,
-          flexGrow: 1,
-          cellRenderer: chipCellRenderer,
-        }, {
-          label: 'Created At',
-          dataKey: 'createdAt',
-          width: 10,
-          flexGrow: 1,
-          numeric: true,
-          cellRenderer: dateCellRenderer,
-        }, {
-          label: 'Last Updated At',
-          dataKey: 'updatedAt',
-          width: 10,
-          flexGrow: 1,
-          numeric: true,
-          cellRenderer: dateCellRenderer,
-        }, {
-          dataKey: 'typeId',
-          width: 10,
-          flexGrow: 1,
-          numeric: true,
-          cellRenderer: operationCellRenderer,
-        }]}
-      />
+          <TableBody>
+            {payload.map((row) => (
+              <TableRow key={row.name}>
 
-    </Paper>
+                <TableCell component="th" scope="row">
+                  {row.name}
+                </TableCell>
+
+                <TableCell>
+                  {row.type.toUpperCase()}
+                </TableCell>
+
+                <TableCell>
+                  {row.static && 'TRUE'}
+                </TableCell>
+
+                <TableCell
+                  align="right"
+                  className={classes.actionCell}
+                >
+
+                  <Button
+                    size="small"
+                    label="Remove"
+                    startIcon={<DeleteIcon />}
+                  />
+
+                  <Box width={16} />
+
+                  <Button
+                    size="small"
+                    label="View Config"
+                    startIcon={<InfoIcon />}
+                  />
+
+                </TableCell>
+
+              </TableRow>
+            ))}
+          </TableBody>
+
+        </Table>
+
+      </TableContainer>
+    </>
   );
+};
+
+PayloadList.propTypes = {
+  payload: PropTypes.object.isRequired,
+  openEditor: PropTypes.func.isRequired,
 };
 
 export default PayloadList;

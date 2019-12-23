@@ -23,6 +23,7 @@ const Summary = () => {
       className={classes.summary}
     >
       <Typography
+        className="pageTitle"
         variant="h5"
         message="Device Types"
       />

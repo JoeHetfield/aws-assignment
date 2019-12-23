@@ -97,12 +97,14 @@ const MenuList = ({
       >
 
         {items.map(({
+          key,
           label,
           path,
           icon,
         }) => (
           <ListItem
-            key={label}
+            id={key}
+            key={key}
             button
             to={path}
             component={Link}
