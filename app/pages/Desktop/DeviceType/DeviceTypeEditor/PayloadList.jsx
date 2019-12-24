@@ -80,6 +80,7 @@ const PayloadList = ({
           variant="outlined"
           startIcon={<AddIcon />}
           onClick={openEditor}
+          className="btnAddAttribute"
         />
       </Box>
 

@@ -105,6 +105,7 @@ const PayloadEditor = ({
               variant="outlined"
               component={TextField}
               helperText="Name of the message attribute."
+              className="inputAttributeName"
             />
 
             <Field
@@ -172,6 +173,7 @@ const PayloadEditor = ({
                 size="large"
                 label="save"
                 color="secondary"
+                buttonClass="btnSaveAttribute"
               />
 
               <LoadingButton

@@ -115,6 +115,7 @@ const DeviceTypeEditor = () => {
               flexDirection="column"
             >
               <Typography
+                className="paperTitle"
                 variant="h6"
                 message="Device Type Definition"
               />
@@ -220,6 +221,7 @@ const DeviceTypeEditor = () => {
                 label="save"
                 color="secondary"
                 isLoading={isSubmitting}
+                buttonClass="btnSaveDeviceType"
               />
 
               <LoadingButton

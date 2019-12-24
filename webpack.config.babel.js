@@ -94,15 +94,10 @@ const developmentConfig = merge([
     ],
     proxy: {
       '/v1': {
-        target: 'http://www.glople.net',
-        onProxyReq: (proxyReq) => {
-          proxyReq.setHeader('Referer', 'https://www.glople.net/');
-        },
         bypass: (req) => {
-          if (!req.url.startsWith('/v1')
-            && !req.url.startsWith('/lang')
+          console.log(req.method)
+          if (!req.url.startsWith('/lang')
             && !req.url.startsWith('/assets')
-            && !req.url.startsWith('/lib')
             && !req.url.startsWith('/workbox')
           ) {
             return '/index.html';
@@ -117,50 +112,10 @@ const developmentConfig = merge([
   parts.generateServiceWorker(),
 ]);
 
-const devOnlineConfig = merge([
-  { mode: 'development' },
-  parts.devServer({
-    contentBase: [
-      path.join(__dirname, 'app'),
-      path.join(__dirname, 'app', 'lib'),
-      path.join(__dirname, 'app', 'i18n'),
-    ],
-    proxy: {
-      '/v1`': {
-        target: 'http://www.glople.net',
-        onProxyReq: (proxyReq) => {
-          proxyReq.setHeader('Referer', 'https://www.glople.net/');
-        },
-        bypass: (req) => {
-          if (!req.url.startsWith('/v1`')
-            && !req.url.startsWith('/lang')
-            && !req.url.startsWith('/assets')
-            && !req.url.startsWith('/lib')
-          ) {
-            return '/index.html';
-          }
-        },
-      },
-      '/ws-proxying': {
-        target: 'ws://ws.glople.net:81',
-        secure: false,
-        ws: true,
-      },
-    },
-  }),
-  parts.generateSourceMaps({ type: 'cheap-module-eval-source-map' }),
-  parts.generateFavicon(),
-  // parts.generatePwaManifest(),
-  parts.generateServiceWorker(),
-]);
-
-
 module.exports = (env) => {
   switch (env) {
     case 'production':
       return merge(commonConfig, productionConfig);
-    case 'dev-online':
-      return merge(commonConfig, devOnlineConfig);
     case 'staging':
       return merge(commonConfig, stagingConfig);
     default:

@@ -120,13 +120,14 @@ const DeviceTypeList = () => {
           startIcon={<AddIcon />}
           to="/deviceType/new"
           component={Link}
+          className="btnAddDeviceType"
         />
 
         <Box width={24} />
 
         <Button
-          color="secondary"
           label="Refresh"
+          color="secondary"
           startIcon={<RefreshIcon />}
           onClick={() => setLoading(true)}
         />
