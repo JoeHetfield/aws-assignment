@@ -53,19 +53,27 @@ const DeviceTypeList = () => {
     </Avatar>
   );
 
-  const chipCellRenderer = ({ cellData }) => (
-    <Chip label={cellData} color={cellData === 'public' ? 'secondary' : 'default'} />
+  const chipCellRenderer = ({ cellData, rowIndex }) => (
+    <Chip
+      id={`labelVisibility-${rowIndex}`}
+      label={cellData}
+      color={cellData === 'public' ? 'secondary' : 'default'}
+    />
   );
 
-  const textCellRenderer = ({ rowData, cellData }) => (
+  const textCellRenderer = ({ rowData, cellData, rowIndex }) => (
     <Box
       display="flex"
       flexDirection="column"
     >
 
-      <Typography message={cellData} />
+      <Typography
+        id={`labelName-${rowIndex}`}
+        message={cellData}
+      />
 
       <Typography
+        id={`labelTypeId-${rowIndex}`}
         variant="caption"
         color="textSecondary"
         message={rowData.typeId}

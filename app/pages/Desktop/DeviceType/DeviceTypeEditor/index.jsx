@@ -68,7 +68,7 @@ const DeviceTypeEditor = () => {
     resetForm,
   }) => {
     if (!params.typeId) {
-      params.typeId = shortid.generate();
+      // params.typeId = shortid.generate();
       params.createdAt = Date.now();
     }
 

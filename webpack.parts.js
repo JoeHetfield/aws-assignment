@@ -61,6 +61,7 @@ exports.devServer = ({
   port,
   contentBase,
   proxy,
+  before,
 }) => ({
   devServer: {
     stats: 'errors-only',
@@ -73,6 +74,7 @@ exports.devServer = ({
     port: port || process.env.PORT,
     contentBase,
     proxy,
+    before,
   },
 });
 

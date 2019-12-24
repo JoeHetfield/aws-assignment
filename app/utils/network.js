@@ -32,13 +32,6 @@ const handleResponse = (response) => {
     });
 };
 
-const getToken = (state) => {
-  const temporary = state.getIn(['session', 'signInVerificationInfo', 'accessToken']);
-  const token = state.getIn(['session', 'token']);
-
-  return temporary || token;
-};
-
 export const init = (localstore) => {
   store = localstore;
 };
@@ -48,7 +41,6 @@ export const get = (url, query = {}) => fetch(url + qs.stringify(query, { addQue
   headers: {
     Accept: 'application/json',
     'Content-Type': 'application/json',
-    'X-Authorization': getToken(store.getState()),
   },
 })
   .then(handleResponse);
@@ -60,7 +52,6 @@ export const post = (url, params = {}) => fetch(url, {
   headers: {
     Accept: 'application/json',
     'Content-Type': 'application/json',
-    'X-Authorization': getToken(store.getState()),
   },
 })
   .then(handleResponse);
@@ -72,7 +63,6 @@ export const put = (url, params = {}) => fetch(url, {
   headers: {
     Accept: 'application/json',
     'Content-Type': 'application/json',
-    'X-Authorization': getToken(store.getState()),
   },
 })
   .then(handleResponse);
@@ -83,7 +73,6 @@ export const del = (url, query = {}) => fetch(url + qs.stringify(query, { addQue
   headers: {
     Accept: 'application/json',
     'Content-Type': 'application/json',
-    'X-Authorization': getToken(store.getState()),
   },
 })
   .then(handleResponse);
@@ -93,11 +82,10 @@ export const upload = (url, file, params = {}) => {
 
   formData.append('file', file);
 
-  Object.keys(params).map(item => formData.append(item, params[item]));
+  Object.keys(params).map((item) => formData.append(item, params[item]));
 
   const headers = new Headers({
     Accept: 'application/json, */*',
-    'X-Authorization': getToken(store.getState()),
   });
 
   return fetch(url, {
