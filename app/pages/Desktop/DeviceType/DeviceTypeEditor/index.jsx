@@ -1,6 +1,5 @@
 /* eslint-disable no-param-reassign */
 import React, { useState, useEffect } from 'react';
-import shortid from 'shortid';
 import { Link, useParams, useHistory } from 'react-router-dom';
 import { Formik, Field } from 'formik';
 import { makeStyles } from '@material-ui/core/styles';
@@ -115,7 +114,7 @@ const DeviceTypeEditor = () => {
               flexDirection="column"
             >
               <Typography
-                className="paperTitle"
+                id="lableEditorTitle"
                 variant="h6"
                 message="Device Type Definition"
               />

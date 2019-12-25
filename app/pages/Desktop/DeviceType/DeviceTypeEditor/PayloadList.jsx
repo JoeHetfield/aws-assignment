@@ -98,18 +98,18 @@ const PayloadList = ({
           </TableHead>
 
           <TableBody>
-            {payload.map((row) => (
+            {payload.map((row, index) => (
               <TableRow key={row.name}>
 
-                <TableCell component="th" scope="row">
+                <TableCell component="th" scope="row" id={`labelAttributeName-${index}`}>
                   {row.name}
                 </TableCell>
 
-                <TableCell>
+                <TableCell id={`labelAttributeType-${index}`}>
                   {row.type.toUpperCase()}
                 </TableCell>
 
-                <TableCell>
+                <TableCell id={`labelAttributeStatic-${index}`}>
                   {row.static && 'TRUE'}
                 </TableCell>
 
@@ -120,6 +120,7 @@ const PayloadList = ({
 
                   <ThemeProvider theme={theme}>
                     <Button
+                      id={`btnRemove-${index}`}
                       size="small"
                       label="Remove"
                       color="primary"
@@ -139,6 +140,7 @@ const PayloadList = ({
                     />
                   ) : (
                     <Button
+                      id={`btnViewConfig-${index}`}
                       color="secondary"
                       size="small"
                       label="View Config"

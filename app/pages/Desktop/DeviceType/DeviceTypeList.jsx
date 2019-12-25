@@ -38,6 +38,7 @@ const DeviceTypeList = () => {
   const page = 0;
 
   const refresh = () => {
+    setData([]);
     setLoading(true);
     DeviceType
       .load()
@@ -99,8 +100,9 @@ const DeviceTypeList = () => {
     />
   );
 
-  const operationCellRenderer = ({ cellData }) => (
+  const operationCellRenderer = ({ cellData, rowIndex }) => (
     <Button
+      id={`btnEditDeviceType-${rowIndex}`}
       size="small"
       label="Edit"
       color="secondary"
@@ -137,7 +139,7 @@ const DeviceTypeList = () => {
           label="Refresh"
           color="secondary"
           startIcon={<RefreshIcon />}
-          onClick={() => setLoading(true)}
+          onClick={refresh}
         />
 
       </Toolbar>

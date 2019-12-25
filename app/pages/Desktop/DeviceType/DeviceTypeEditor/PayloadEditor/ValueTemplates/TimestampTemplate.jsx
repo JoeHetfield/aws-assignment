@@ -10,7 +10,7 @@ const TimestampTemplate = () => (
       label="Timestamp Format"
       required
       fullWidth
-      name="static"
+      name="tsformat"
       margin="normal"
       variant="outlined"
       component={SelectField}

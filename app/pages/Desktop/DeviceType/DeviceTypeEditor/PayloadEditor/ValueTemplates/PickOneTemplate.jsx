@@ -11,7 +11,6 @@ const PickOneTemplate = () => (
       required
       fullWidth
       name="arr"
-      type="number"
       margin="normal"
       variant="outlined"
       component={TextField}

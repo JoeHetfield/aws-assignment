@@ -144,26 +144,6 @@ exports.generateServiceWorker = () => ({
   ],
 });
 
-// exports.generatePwaManifest = () => ({
-//   plugins: [
-//     new WebpackPwaManifest({
-//       name: 'Bitnomic',
-//       short_name: 'Bitnomic',
-//       description: 'Bitnomic -- 最专业的加密货币交易平台',
-//       background_color: '#34344E',
-//       start_url: '/',
-//       ios: true,
-//       // publicPath: '/assets',
-//       icons: [
-//         {
-//           src: './app/assets/favicon.png',
-//           sizes: [96, 128, 144, 192, 256, 384, 512],
-//         },
-//       ],
-//     }),
-//   ],
-// });
-
 exports.defineProductioEnv = env => ({
   plugins: [
     new webpack.DefinePlugin({
