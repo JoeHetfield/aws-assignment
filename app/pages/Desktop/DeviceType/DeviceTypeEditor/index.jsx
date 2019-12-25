@@ -61,6 +61,41 @@ const DeviceTypeEditor = () => {
     },
   };
 
+  const validate = ({
+    name,
+    spec: {
+      topic,
+      duration,
+      interval,
+    },
+  }) => {
+    const errors = {
+      spec: {},
+    };
+
+    if (!name) {
+      errors.name = 'Please enter the name of the Device Type';
+    }
+
+    if (!topic) {
+      errors.spec.topic = 'Please enter the topic for the Device Type';
+    }
+
+    if (!duration) {
+      errors.spec.duration = 'Please enter the duration of the Device Type';
+    } else if (duration < 60000) {
+      errors.spec.duration = 'Value of the duration must equal or greater than 60000';
+    }
+
+    if (!interval) {
+      errors.spec.interval = 'Please enter the interval of the Device Type';
+    } else if (interval < 60000) {
+      errors.spec.interval = 'Value of the interval must equal or greater than 1000';
+    }
+
+    return errors;
+  };
+
   const update = (params, {
     setSubmitting,
     setErrors,
@@ -92,7 +127,7 @@ const DeviceTypeEditor = () => {
       <Formik
         enableReinitialize
         onSubmit={update}
-        // validate={validate}
+        validate={validate}
         initialValues={deviceType.typeId ? deviceType : defaultValue}
       >
         {({
@@ -127,6 +162,7 @@ const DeviceTypeEditor = () => {
             </Box>
 
             <Field
+              id="inputDeviceTypeName"
               label="Device Type Name"
               required
               fullWidth
@@ -155,6 +191,7 @@ const DeviceTypeEditor = () => {
             />
 
             <Field
+              id="inputDataTopic"
               label="Data Topic"
               required
               fullWidth
@@ -167,6 +204,7 @@ const DeviceTypeEditor = () => {
             />
 
             <Field
+              id="inputDuration"
               label="Data Transmission Duration"
               required
               fullWidth
@@ -180,6 +218,7 @@ const DeviceTypeEditor = () => {
             />
 
             <Field
+              id="inputInterval"
               label="Data Transmission Interval"
               required
               fullWidth
@@ -224,6 +263,7 @@ const DeviceTypeEditor = () => {
               />
 
               <LoadingButton
+                id="btnCancel"
                 size="large"
                 label="cancel"
                 to="/deviceType"

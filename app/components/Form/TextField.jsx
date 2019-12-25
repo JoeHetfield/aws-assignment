@@ -5,6 +5,8 @@ import MaskedInput from 'react-text-mask';
 import MuiTextField from '@material-ui/core/TextField';
 import { makeStyles } from '@material-ui/core/styles';
 
+import path from 'ramda/es/path';
+
 import {
   intlShape,
   injectIntl,
@@ -71,12 +73,15 @@ const TextField = ({
     return intl.formatMessage(message, values);
   };
 
+  const pathArr = field.name.split('.');
+  const touchedValue = path(pathArr, touched);
+  const errorsValue = path(pathArr, errors);
+
   // errors
-  const mappedError = touched[field.name] && errors[field.name]
+  const mappedError = touchedValue && errorsValue
     ? {
       error: true,
-      // use label for error display
-      label: (typeof errors[field.name] === 'string') ? errors[field.name] : <FormattedMessage {...errors[field.name]} />,
+      helperText: (typeof errorsValue === 'string') ? errorsValue : <FormattedMessage {...errorsValue} />,
     } : {};
 
   // adornments & mask

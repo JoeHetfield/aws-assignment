@@ -10,15 +10,6 @@ import Typography from 'components/Typography';
 import LoadingButton from 'components/LoadingButton';
 
 const useStyles = makeStyles(({ spacing }) => ({
-  root: {
-    height: '100%',
-    minHeight: '100%',
-    display: 'flex',
-    flexDirection: 'column',
-  },
-  toolbar: {
-    height: spacing(10),
-  },
   paper: {
     padding: spacing(1, 3),
   },
@@ -56,6 +47,7 @@ const PayloadDetail = ({
 
       <pre>
         <Typography
+          id="labelPayloadDetail"
           variant="body2"
           message={JSON.stringify(selectedPayload, null, 2)}
         />
@@ -67,6 +59,7 @@ const PayloadDetail = ({
       >
 
         <LoadingButton
+          id="btnPayloadClose"
           size="large"
           label="cancel"
           onClick={closeDialog}

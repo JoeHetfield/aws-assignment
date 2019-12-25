@@ -25,15 +25,6 @@ import TimestampTemplate from './ValueTemplates/TimestampTemplate';
 import SinusoidalTemplate from './ValueTemplates/SinusoidalTemplate';
 
 const useStyles = makeStyles(({ spacing }) => ({
-  root: {
-    height: '100%',
-    minHeight: '100%',
-    display: 'flex',
-    flexDirection: 'column',
-  },
-  toolbar: {
-    height: spacing(10),
-  },
   form: {
     padding: spacing(1, 3),
   },
@@ -48,6 +39,7 @@ const PayloadEditor = ({
   const classes = useStyles();
 
   const defaultValue = {
+    _id_: shortid.generate(),
     name: shortid.generate(),
     type: 'id',
   };
