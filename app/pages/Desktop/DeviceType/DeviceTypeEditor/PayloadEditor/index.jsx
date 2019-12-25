@@ -12,17 +12,17 @@ import Typography from 'components/Typography';
 import LoadingButton from 'components/LoadingButton';
 import { TextField, SelectField } from 'components/Form';
 
-import BooleanTemplate from './ValueTemplates/BooleanTemplate';
+import UuidTemplate from './ValueTemplates/UuidTemplate';
 import DecayTemplate from './ValueTemplates/DecayTemplate';
 import FloatTemplate from './ValueTemplates/FloatTemplate';
-import IntegerTemplate from './ValueTemplates/IntegerTemplate';
-import LocationTemplate from './ValueTemplates/LocationTemplate';
 import StringTemplate from './ValueTemplates/StringTemplate';
-import SinusoidalTemplate from './ValueTemplates/SinusoidalTemplate';
-import UuidTemplate from './ValueTemplates/UuidTemplate';
 import ShortidTemplate from './ValueTemplates/ShortidTemplate';
-import TimestampTemplate from './ValueTemplates/TimestampTemplate';
+import BooleanTemplate from './ValueTemplates/BooleanTemplate';
+import IntegerTemplate from './ValueTemplates/IntegerTemplate';
 import PickOneTemplate from './ValueTemplates/PickOneTemplate';
+import LocationTemplate from './ValueTemplates/LocationTemplate';
+import TimestampTemplate from './ValueTemplates/TimestampTemplate';
+import SinusoidalTemplate from './ValueTemplates/SinusoidalTemplate';
 
 const useStyles = makeStyles(({ spacing }) => ({
   root: {
@@ -59,6 +59,8 @@ const PayloadEditor = ({
 
   return (
     <Dialog
+      fullWidth
+      maxWidth="sm"
       open={open}
       scroll="body"
       onClose={closeEditor}

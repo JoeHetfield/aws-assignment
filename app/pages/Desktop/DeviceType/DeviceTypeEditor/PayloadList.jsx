@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { createMuiTheme, makeStyles, ThemeProvider } from '@material-ui/core/styles';
 import reject from 'ramda/es/reject';
@@ -19,6 +19,8 @@ import DeleteIcon from '@material-ui/icons/Delete';
 
 import Button from 'components/Button';
 import Typography from 'components/Typography';
+
+import PayloadDetail from './PayloadDetail';
 
 const useStyles = makeStyles(({ spacing }) => ({
   table: {
@@ -44,6 +46,18 @@ const PayloadList = ({
   deletePayload,
 }) => {
   const classes = useStyles();
+
+  const [detailOpen, setDetailOpen] = useState(false);
+  const [selectedPayload, setSelectedPayload] = useState({});
+
+  const openDetailDialog = (payload) => {
+    setSelectedPayload(payload);
+    setDetailOpen(true);
+  };
+
+  const closeDetailDialog = () => {
+    setDetailOpen(false);
+  };
 
   const _deletePayload = (id) => () => {
     const findById = (item) => item._id_ === id;
@@ -145,6 +159,7 @@ const PayloadList = ({
                       size="small"
                       label="View Config"
                       startIcon={<InfoIcon />}
+                      onClick={() => openDetailDialog(row)}
                     />
                   )}
 
@@ -157,6 +172,12 @@ const PayloadList = ({
         </Table>
 
       </TableContainer>
+
+      <PayloadDetail
+        open={detailOpen}
+        closeDialog={closeDetailDialog}
+        selectedPayload={selectedPayload}
+      />
     </>
   );
 };
