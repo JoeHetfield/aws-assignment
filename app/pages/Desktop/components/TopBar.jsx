@@ -1,29 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
-import { FormattedMessage } from 'react-intl';
 import { makeStyles } from '@material-ui/core/styles';
-import { Link, withRouter, useHistory } from 'react-router-dom';
+import { withRouter, useHistory } from 'react-router-dom';
 
 import Box from '@material-ui/core/Box';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import Menu from '@material-ui/core/Menu';
-import MenuItem from '@material-ui/core/MenuItem';
-import ListSubheader from '@material-ui/core/ListSubheader';
 import IconButton from '@material-ui/core/IconButton';
 
 import MenuIcon from '@material-ui/icons/Menu';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
-import HelpIcon from '@material-ui/icons/Help';
-import StarIcon from '@material-ui/icons/Star';
-import ArrowIcon from '@material-ui/icons/ArrowDropDown';
-import WalletIcon from '@material-ui/icons/AccountBalanceWallet';
-import WhatshotIcon from '@material-ui/icons/Whatshot';
-import AccountIcon from '@material-ui/icons/AccountCircle';
 
 import { DrawerMenu } from 'actions';
-import { Common as commonMsgs } from 'messages';
 import { useActions, useMenuToggler } from 'hooks';
 
 const useStyles = makeStyles(({ spacing, transitions, zIndex }) => ({
@@ -111,7 +100,6 @@ const TopBar = ({
         <IconButton
           edge="end"
           color="inherit"
-          onClick={actions.openDrawerMenu}
         >
           <AccountCircleIcon />
         </IconButton>
