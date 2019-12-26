@@ -28,9 +28,9 @@ All morden browser should be fine. Lastest Chrome is recommended.
 - The workflow of "Add Device Type" is implemented.
 - E2E Test is considered and implemented.
 
-[Here](https://github.com/chenglou/react-motion/blob/9cb90eca20ecf56e77feb816d101a4a9110c7d70/src/Types.js)'s the well-annotated public [Flow type](http://flowtype.org) definition file (you don't have to use Flow with React-motion, but the types help document the API below).
+For better frontend engineering, few backend api are mocked in the webpack devSever, that's why you need keep the devServer up while you browsef this App. Besides, the "Device Type" data was stored in the devServer's memory, so your input could be persistent while you switch between different functionality, but they will be vanished after the devServer reboot.
 
-P.S. using TypeScript? [Here](https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/types/react-motion/index.d.ts) are the React-motion TypeScript definitions!
+When you run the E2E tests, a puppeteer controlled Chromnium will start, simulate the interaction between the user and the App; that's because I think it's better way to understand my idea about the test, and I didn't tuning the test for headless browser, so please keep it as it is when you try out the E2E tests.
 
 ---
 
