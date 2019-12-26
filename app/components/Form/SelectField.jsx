@@ -1,21 +1,45 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { FormattedMessage } from 'react-intl';
 import MenuItem from '@material-ui/core/MenuItem';
 import TextField from '@material-ui/core/TextField';
 
+import {
+  intlShape,
+  injectIntl,
+  FormattedMessage,
+} from 'react-intl';
+
 const SelectField = ({
+  intl,
   form: { touched, errors },
   field,
   label,
   labelValues,
+  helperText,
+  helperTextValues,
   options,
   ...props
 }) => {
+  const intlMessage = (message, values) => {
+    if (!message) {
+      return null;
+    }
+
+    if (typeof message === 'string') {
+      return message;
+    }
+
+    if (!values) {
+      return intl.formatMessage(message);
+    }
+
+    return intl.formatMessage(message, values);
+  };
+
   const mappedError = touched[field.name] && errors[field.name]
     ? {
       error: true,
-      label: <FormattedMessage {...errors[field.name]} />,
+      helperText: <FormattedMessage {...errors[field.name]} />,
     } : {};
 
   return (
@@ -23,12 +47,8 @@ const SelectField = ({
       select
       {...field}
       {...props}
-      label={label && label.id ? (
-        <FormattedMessage
-          {...label}
-          values={labelValues}
-        />
-      ) : label}
+      label={intlMessage(label, labelValues)}
+      helperText={intlMessage(helperText, helperTextValues)}
       {...mappedError}
     >
 
@@ -46,13 +66,17 @@ const SelectField = ({
 };
 
 SelectField.propTypes = {
+  // intl
+  intl: intlShape.isRequired,
   // formik
   field: PropTypes.object.isRequired,
   form: PropTypes.object.isRequired,
   // selectField
   label: PropTypes.object.isRequired,
   labelValues: PropTypes.object.isRequired,
+  helperText: PropTypes.object,
+  helperTextValues: PropTypes.object,
   options: PropTypes.array.isRequired,
 };
 
-export default SelectField;
+export default injectIntl(SelectField);

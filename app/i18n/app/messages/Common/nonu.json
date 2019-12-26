@@ -1,12 +1,82 @@
 [
   {
-    "id": "Common.Nonu.ok",
-    "description": "确定",
-    "defaultMessage": "OK"
+    "id": "Common.Nonu.home",
+    "description": "首页",
+    "defaultMessage": "Home"
   },
   {
-    "id": "Common.Nonu.cancel",
-    "description": "取消",
-    "defaultMessage": "Cancel"
+    "id": "Common.Nonu.myMenu",
+    "description": "我的菜单",
+    "defaultMessage": "My Menu"
+  },
+  {
+    "id": "Common.Nonu.myDevice",
+    "description": "我的设备",
+    "defaultMessage": "My Device"
+  },
+  {
+    "id": "Common.Nonu.myProfile",
+    "description": "我的资料",
+    "defaultMessage": "My Profile"
+  },
+  {
+    "id": "Common.Nonu.dashboard",
+    "description": "大盘",
+    "defaultMessage": "Dashboard"
+  },
+  {
+    "id": "Common.Nonu.module",
+    "description": "模块",
+    "defaultMessage": "Module"
+  },
+  {
+    "id": "Common.Nonu.deviceType",
+    "description": "设备类型",
+    "defaultMessage": "Device Type"
+  },
+  {
+    "id": "Common.Nonu.widgets",
+    "description": "小组件",
+    "defaultMessage": "Widgets"
+  },
+  {
+    "id": "Common.Nonu.automotive",
+    "description": "车载设备",
+    "defaultMessage": "Automotive"
+  },
+  {
+    "id": "Common.Nonu.administration",
+    "description": "管理",
+    "defaultMessage": "Administration"
+  },
+  {
+    "id": "Common.Nonu.users",
+    "description": "用户",
+    "defaultMessage": "Users"
+  },
+  {
+    "id": "Common.Nonu.settings",
+    "description": "设置",
+    "defaultMessage": "Settings"
+  },
+  {
+    "id": "Common.Nonu.devices",
+    "description": "设备",
+    "defaultMessage": "Devices"
+  },
+  {
+    "id": "Common.Nonu.simulations",
+    "description": "模拟",
+    "defaultMessage": "Simulations"
+  },
+  {
+    "id": "Common.Nonu.createdAt",
+    "description": "创建日期",
+    "defaultMessage": "Created At"
+  },
+  {
+    "id": "Common.Nonu.updatedAt",
+    "description": "最后更新日期",
+    "defaultMessage": "Last Updated At"
   }
 ]

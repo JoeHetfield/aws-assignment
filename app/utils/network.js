@@ -1,15 +1,8 @@
 import qs from 'qs';
 
-import { Session } from 'actions';
-
 let store;
 
 const handleResponse = (response) => {
-  if (response.status === 401) {
-    store.dispatch(Session.signout());
-    return null;
-  }
-
   if (response.ok) {
     return response
       .json()

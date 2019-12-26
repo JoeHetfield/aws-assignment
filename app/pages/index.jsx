@@ -44,7 +44,6 @@ const Main = () => {
   const muiTheme = useTheme();
   const isMobile = useMediaQuery(muiTheme.breakpoints.down('md'));
 
-  const token = useSelector((state) => state.session.token);
   const locale = useSelector((state) => state.ui.setting.locale);
   const booting = useSelector((state) => state.ui.booting);
   const messages = useSelector((state) => state.ui.messages);
@@ -55,12 +54,6 @@ const Main = () => {
   });
 
   useEffect(actions.bootstrap, []);
-
-  useEffect(() => {
-    if (token && !booting) {
-      actions.loadUser();
-    }
-  }, [token]);
 
   return (
     <IntlProvider

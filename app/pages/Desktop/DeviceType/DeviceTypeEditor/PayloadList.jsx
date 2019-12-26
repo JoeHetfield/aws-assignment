@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import { FormattedTime, FormattedMessage } from 'react-intl';
 import { createMuiTheme, makeStyles, ThemeProvider } from '@material-ui/core/styles';
 import reject from 'ramda/es/reject';
 
@@ -19,6 +20,8 @@ import DeleteIcon from '@material-ui/icons/Delete';
 
 import Button from 'components/Button';
 import Typography from 'components/Typography';
+
+import { DeviceType as msgs, Common as commonMsgs } from 'messages';
 
 import PayloadDetail from './PayloadDetail';
 
@@ -78,19 +81,19 @@ const PayloadList = ({
           flexDirection="column"
         >
           <Typography
-            message="Message Payload"
+            message={msgs.nonu.messagePayload}
           />
 
           <Typography
             color="textSecondary"
             variant="caption"
-            message="Define the message payload that will be simulated for the device."
+            message={msgs.phrase.hintMessagePayload}
           />
         </Box>
 
         <Button
           color="secondary"
-          label="Add Attribute"
+          label={msgs.phrase.addAttribute}
           variant="outlined"
           startIcon={<AddIcon />}
           onClick={openEditor}
@@ -104,10 +107,23 @@ const PayloadList = ({
 
           <TableHead>
             <TableRow>
-              <TableCell>Message Attribute</TableCell>
-              <TableCell>Data Type</TableCell>
-              <TableCell>Static Value</TableCell>
-              <TableCell align="right">Actions</TableCell>
+
+              <TableCell>
+                <FormattedMessage {...msgs.nonu.messageAttribute} />
+              </TableCell>
+
+              <TableCell>
+                <FormattedMessage {...msgs.nonu.dataType} />
+              </TableCell>
+
+              <TableCell>
+                <FormattedMessage {...msgs.nonu.staticValue} />
+              </TableCell>
+
+              <TableCell align="right">
+                <FormattedMessage {...msgs.nonu.actions} />
+              </TableCell>
+
             </TableRow>
           </TableHead>
 
@@ -136,7 +152,7 @@ const PayloadList = ({
                     <Button
                       id={`btnRemove-${index}`}
                       size="small"
-                      label="Remove"
+                      label={commonMsgs.verb.remove}
                       color="primary"
                       startIcon={<DeleteIcon />}
                       onClick={_deletePayload(row._id_)}
@@ -145,23 +161,14 @@ const PayloadList = ({
 
                   <Box width={16} />
 
-                  { row.type === 'object' ? (
-                    <Button
-                      size="small"
-                      label="Add Attribute"
-                      startIcon={<AddIcon />}
-                      onClick={openEditor}
-                    />
-                  ) : (
-                    <Button
-                      id={`btnViewConfig-${index}`}
-                      color="secondary"
-                      size="small"
-                      label="View Config"
-                      startIcon={<InfoIcon />}
-                      onClick={() => openDetailDialog(row)}
-                    />
-                  )}
+                  <Button
+                    id={`btnViewConfig-${index}`}
+                    color="secondary"
+                    size="small"
+                    label={msgs.phrase.viewConfig}
+                    startIcon={<InfoIcon />}
+                    onClick={() => openDetailDialog(row)}
+                  />
 
                 </TableCell>
 

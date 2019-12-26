@@ -31,7 +31,7 @@ const loadMessageFailure = error => ({
 });
 
 const changeLocale = locale => (dispatch, getState) => {
-  const messages = getState().getIn(['ui', 'messages']);
+  const { messages } = getState().ui;
 
   switch (locale) {
     case 'zh-CN':

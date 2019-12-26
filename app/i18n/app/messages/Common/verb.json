@@ -8,5 +8,30 @@
     "id": "Common.Verb.cancel",
     "description": "取消",
     "defaultMessage": "Cancel"
+  },
+  {
+    "id": "Common.Verb.edit",
+    "description": "编辑",
+    "defaultMessage": "Edit"
+  },
+  {
+    "id": "Common.Verb.save",
+    "description": "保存",
+    "defaultMessage": "Save"
+  },
+  {
+    "id": "Common.Verb.remove",
+    "description": "删除",
+    "defaultMessage": "Remove"
+  },
+  {
+    "id": "Common.Verb.close",
+    "description": "关闭",
+    "defaultMessage": "Close"
+  },
+  {
+    "id": "Common.Verb.refresh",
+    "description": "刷新",
+    "defaultMessage": "Refresh"
   }
 ]

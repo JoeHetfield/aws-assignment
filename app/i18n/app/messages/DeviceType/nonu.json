@@ -1,0 +1,77 @@
+[
+  {
+    "id": "DeviceType.Nonu.visibility",
+    "description": "可见性",
+    "defaultMessage": "Visibility"
+  },
+  {
+    "id": "DeviceType.Nonu.deviceTypeDefinition",
+    "description": "设备类型定义",
+    "defaultMessage": "Device Type Definition"
+  },
+  {
+    "id": "DeviceType.Nonu.deviceTypeName",
+    "description": "设备类型名称",
+    "defaultMessage": "Device Type Name"
+  },
+  {
+    "id": "DeviceType.Nonu.dataTopic",
+    "description": "数据主题",
+    "defaultMessage": "Data Topic"
+  },
+  {
+    "id": "DeviceType.Nonu.dataTransmissionDuration",
+    "description": "数据传送时间",
+    "defaultMessage": "Data Transmission Duration"
+  },
+  {
+    "id": "DeviceType.Nonu.dataTransmissionInterval",
+    "description": "数据传送间隔",
+    "defaultMessage": "Data Transmission Interval"
+  },
+  {
+    "id": "DeviceType.Nonu.messagePayload",
+    "description": "消息负载",
+    "defaultMessage": "Message Payload"
+  },
+  {
+    "id": "DeviceType.Nonu.messageAttribute",
+    "description": "消息属性",
+    "defaultMessage": "Message Attribute"
+  },
+  {
+    "id": "DeviceType.Nonu.dataType",
+    "description": "数据类型",
+    "defaultMessage": "Data Type"
+  },
+  {
+    "id": "DeviceType.Nonu.staticValue",
+    "description": "静态值",
+    "defaultMessage": "Static Value"
+  },
+  {
+    "id": "DeviceType.Nonu.actions",
+    "description": "操作",
+    "defaultMessage": "Actions"
+  },
+  {
+    "id": "DeviceType.Nonu.sampleMessagePayload",
+    "description": "消息负载样本",
+    "defaultMessage": "Sample Message Payload"
+  },
+  {
+    "id": "DeviceType.Nonu.payloadConfig",
+    "description": "负载配置",
+    "defaultMessage": "Payload Config"
+  },
+  {
+    "id": "DeviceType.Nonu.attributeName",
+    "description": "属性名称",
+    "defaultMessage": "Attribute name"
+  },
+  {
+    "id": "DeviceType.Nonu.attributeDataType",
+    "description": "属性数据类型",
+    "defaultMessage": "Attribute data type"
+  }
+]

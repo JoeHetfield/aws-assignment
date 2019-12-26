@@ -1,2 +1,2 @@
-export { default as User } from './User';
 export { default as Common } from './Common';
+export { default as DeviceType } from './DeviceType';

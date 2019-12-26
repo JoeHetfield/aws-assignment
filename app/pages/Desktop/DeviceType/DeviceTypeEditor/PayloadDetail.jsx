@@ -9,6 +9,8 @@ import Slide from 'components/Slide';
 import Typography from 'components/Typography';
 import LoadingButton from 'components/LoadingButton';
 
+import { DeviceType as msgs, Common as commonMsgs } from 'messages';
+
 const useStyles = makeStyles(({ spacing }) => ({
   paper: {
     padding: spacing(1, 3),
@@ -41,7 +43,7 @@ const PayloadDetail = ({
       >
         <Typography
           variant="h6"
-          message="Payload Config"
+          message={msgs.nonu.payloadConfig}
         />
       </Box>
 
@@ -61,7 +63,7 @@ const PayloadDetail = ({
         <LoadingButton
           id="btnPayloadClose"
           size="large"
-          label="cancel"
+          label={commonMsgs.verb.close}
           onClick={closeDialog}
         />
 

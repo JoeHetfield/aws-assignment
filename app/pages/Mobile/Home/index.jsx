@@ -5,7 +5,6 @@ import { makeStyles, useTheme } from '@material-ui/core/styles';
 
 import Box from '@material-ui/core/Box';
 
-import { Session } from 'actions';
 import { useActions } from 'hooks';
 
 const useStyles = makeStyles(() => ({
@@ -19,13 +18,6 @@ const regex = /invitation\/(\d+)/;
 
 const Home = () => {
   const { pathname } = useLocation();
-  const token = useSelector((state) => state.session.token);
-
-  const actions = useActions({
-    switchTab: Session.switchTab,
-    invitation: Session.invitation,
-    openSignInDialog: Session.openSignInDialog,
-  });
 
   const classes = useStyles();
   const theme = useTheme();

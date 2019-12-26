@@ -11,6 +11,8 @@ import teal from '@material-ui/core/colors/teal';
 
 import Typography from 'components/Typography';
 
+import { Common as commonMsgs } from 'messages';
+
 const useStyles = makeStyles(({ spacing }) => ({
   summary: {
     padding: spacing(2, 3),
@@ -43,7 +45,7 @@ const Summary = () => {
           gutterBottom
           variant="h5"
           className="pageTitle"
-          message="Device Types"
+          message={commonMsgs.nonu.deviceType}
         />
 
         <Breadcrumbs>
@@ -87,12 +89,12 @@ const Summary = () => {
         <Typography
           gutterBottom
           variant="subtitle2"
-          message="Devices"
+          message={commonMsgs.nonu.devices}
         />
         <Typography
           color="secondary"
           variant="h6"
-          message="5 Total"
+          message={commonMsgs.phrase.totalDevices}
         />
       </Box>
 
@@ -104,11 +106,11 @@ const Summary = () => {
         <Typography
           gutterBottom
           variant="subtitle2"
-          message="Simulations"
+          message={commonMsgs.nonu.simulations}
         />
         <Typography
           variant="h6"
-          message="3 Running"
+          message={commonMsgs.phrase.runningSimulations}
           className={classes.runningLabel}
         />
       </Box>

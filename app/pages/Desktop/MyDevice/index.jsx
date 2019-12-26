@@ -2,6 +2,8 @@ import React from 'react';
 
 import Box from '@material-ui/core/Box';
 
+import { Common as commonMsgs } from 'messages';
+
 import Typography from 'components/Typography';
 import Layout from '../components/ContentLayout';
 
@@ -24,7 +26,7 @@ const MyDevice = () => (
         gutterBottom
         color="textSecondary"
         variant="h4"
-        message="Under Construction..."
+        message={commonMsgs.phrase.underConstruction}
       />
 
     </Box>

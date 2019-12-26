@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import React, { useState, useEffect } from 'react';
-import { FormattedTime } from 'react-intl';
+import { FormattedTime, FormattedMessage } from 'react-intl';
 import { makeStyles } from '@material-ui/core/styles';
 
 import { Link } from 'react-router-dom';
@@ -20,6 +20,7 @@ import Button from 'components/Button';
 import Typography from 'components/Typography';
 
 import { DeviceType } from 'actions';
+import { DeviceType as msgs, Common as commonMsgs } from 'messages';
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -57,8 +58,10 @@ const DeviceTypeList = () => {
   const chipCellRenderer = ({ cellData, rowIndex }) => (
     <Chip
       id={`labelVisibility-${rowIndex}`}
-      label={cellData}
       color={cellData === 'public' ? 'secondary' : 'default'}
+      label={(
+        <FormattedMessage {...msgs.adjective[cellData]} />
+      )}
     />
   );
 
@@ -104,7 +107,7 @@ const DeviceTypeList = () => {
     <Button
       id={`btnEditDeviceType-${rowIndex}`}
       size="small"
-      label="Edit"
+      label={commonMsgs.verb.edit}
       color="secondary"
       startIcon={<EditIcon />}
       to={`/deviceType/${cellData}`}
@@ -119,14 +122,15 @@ const DeviceTypeList = () => {
 
         <Typography
           variant="h6"
-          message={`Device Types (${data.length})`}
+          message={msgs.phrase.deviceTypeCount}
+          values={{ value: data.length }}
         />
 
         <Box flex={1} />
 
         <Button
           color="secondary"
-          label="Add Device Type"
+          label={msgs.phrase.addDeviceType}
           startIcon={<AddIcon />}
           to="/deviceType/new"
           component={Link}
@@ -136,7 +140,7 @@ const DeviceTypeList = () => {
         <Box width={24} />
 
         <Button
-          label="Refresh"
+          label={commonMsgs.verb.refresh}
           color="secondary"
           startIcon={<RefreshIcon />}
           onClick={refresh}
@@ -159,26 +163,26 @@ const DeviceTypeList = () => {
           flexGrow: 1,
           cellRenderer: iconCellRenderer,
         }, {
-          label: 'Device Type',
+          label: commonMsgs.nonu.deviceType,
           dataKey: 'name',
           width: 10,
           flexGrow: 1,
           cellRenderer: textCellRenderer,
         }, {
-          label: 'Visibility',
+          label: msgs.nonu.visibility,
           dataKey: 'visibility',
           width: 10,
           flexGrow: 1,
           cellRenderer: chipCellRenderer,
         }, {
-          label: 'Created At',
+          label: commonMsgs.nonu.createdAt,
           dataKey: 'createdAt',
           width: 10,
           flexGrow: 1,
           numeric: true,
           cellRenderer: dateCellRenderer,
         }, {
-          label: 'Last Updated At',
+          label: commonMsgs.nonu.updatedAt,
           dataKey: 'updatedAt',
           width: 10,
           flexGrow: 1,

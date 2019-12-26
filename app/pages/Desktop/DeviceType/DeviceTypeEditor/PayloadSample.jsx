@@ -7,6 +7,8 @@ import Box from '@material-ui/core/Box';
 
 import Typography from 'components/Typography';
 
+import { DeviceType as msgs } from 'messages';
+
 const PayloadList = ({
   payload,
 }) => {
@@ -23,7 +25,7 @@ const PayloadList = ({
       flexDirection="column"
     >
       <Typography
-        message="Sample Message Payload"
+        message={msgs.nonu.sampleMessagePayload}
       />
 
       <pre>

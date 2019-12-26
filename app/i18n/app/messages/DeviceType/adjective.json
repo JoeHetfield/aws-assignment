@@ -1,0 +1,12 @@
+[
+  {
+    "id": "Common.Adjective.public",
+    "description": "公开",
+    "defaultMessage": "Public"
+  },
+  {
+    "id": "Common.Adjective.private",
+    "description": "私有",
+    "defaultMessage": "Private"
+  }
+]

@@ -13,6 +13,7 @@ import { TextField, SelectField } from 'components/Form';
 
 import { masks } from 'utils';
 import { DeviceType } from 'actions';
+import { DeviceType as msgs, Common as commonMsgs } from 'messages';
 
 import PayloadList from './PayloadList';
 import PayloadSample from './PayloadSample';
@@ -151,19 +152,19 @@ const DeviceTypeEditor = () => {
               <Typography
                 id="lableEditorTitle"
                 variant="h6"
-                message="Device Type Definition"
+                message={msgs.nonu.deviceTypeDefinition}
               />
 
               <Typography
                 color="textSecondary"
                 variant="caption"
-                message="Customize how device data of this customized type is sent to AWS IoT."
+                message={msgs.phrase.hintDeviceTypeDefinition}
               />
             </Box>
 
             <Field
               id="inputDeviceTypeName"
-              label="Device Type Name"
+              label={msgs.nonu.deviceTypeName}
               required
               fullWidth
               name="name"
@@ -171,11 +172,11 @@ const DeviceTypeEditor = () => {
               variant="outlined"
               disabled={loading || isSubmitting || deviceType.typeId}
               component={TextField}
-              helperText="The common name of the device type."
+              helperText={msgs.phrase.helperDeviceTypeDefinition}
             />
 
             <Field
-              label="Visibility"
+              label={msgs.nonu.visibility}
               required
               fullWidth
               name="visibility"
@@ -187,12 +188,12 @@ const DeviceTypeEditor = () => {
                 { label: 'public', value: 'public' },
                 { label: 'private', value: 'private' },
               ]}
-              helperText={'The visibility of device type. Selecting "Shared" allows members to use this device type in simulations.'}
+              helperText={msgs.phrase.helperVisibility}
             />
 
             <Field
               id="inputDataTopic"
-              label="Data Topic"
+              label={msgs.nonu.dataTopic}
               required
               fullWidth
               name="spec.topic"
@@ -200,12 +201,12 @@ const DeviceTypeEditor = () => {
               variant="outlined"
               disabled={loading || isSubmitting}
               component={TextField}
-              helperText="The topic where individual sensor data is sent."
+              helperText={msgs.phrase.helperDataTopic}
             />
 
             <Field
               id="inputDuration"
-              label="Data Transmission Duration"
+              label={msgs.nonu.dataTransmissionDuration}
               required
               fullWidth
               name="spec.duration"
@@ -214,12 +215,12 @@ const DeviceTypeEditor = () => {
               variant="outlined"
               disabled={loading || isSubmitting}
               component={TextField}
-              helperText="How long the device will simulate sending data to the defined data topic (milliseconds) [must be >= 60000]."
+              helperText={msgs.phrase.helperDataTransmissionDuration}
             />
 
             <Field
               id="inputInterval"
-              label="Data Transmission Interval"
+              label={msgs.nonu.dataTransmissionInterval}
               required
               fullWidth
               name="spec.interval"
@@ -228,7 +229,7 @@ const DeviceTypeEditor = () => {
               variant="outlined"
               disabled={loading || isSubmitting}
               component={TextField}
-              helperText="How often devices will send data during a simulation (milliseconds) [must be >= 1000]."
+              helperText={msgs.phrase.helperDataTransmissionInterval}
             />
 
             <PayloadList
@@ -256,7 +257,7 @@ const DeviceTypeEditor = () => {
               <LoadingButton
                 type="submit"
                 size="large"
-                label="save"
+                label={commonMsgs.verb.save}
                 color="secondary"
                 isLoading={isSubmitting}
                 buttonClass="btnSaveDeviceType"
@@ -265,7 +266,7 @@ const DeviceTypeEditor = () => {
               <LoadingButton
                 id="btnCancel"
                 size="large"
-                label="cancel"
+                label={commonMsgs.verb.cancel}
                 to="/deviceType"
                 component={Link}
                 disabled={isSubmitting}

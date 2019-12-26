@@ -1,0 +1,17 @@
+[
+  {
+    "id": "Common.Phrase.underConstruction",
+    "description": "建设中……",
+    "defaultMessage": "Under Construction..."
+  },
+  {
+    "id": "Common.Phrase.totalDevices",
+    "description": "共 5 台",
+    "defaultMessage": "5 Total"
+  },
+  {
+    "id": "Common.Phrase.runningSimulations",
+    "description": "共 3 组运行中",
+    "defaultMessage": "3 Running"
+  }
+]

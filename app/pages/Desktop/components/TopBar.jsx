@@ -1,18 +1,17 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { useSelector } from 'react-redux';
 import { makeStyles } from '@material-ui/core/styles';
-import { withRouter, useHistory } from 'react-router-dom';
 
 import Box from '@material-ui/core/Box';
+import Menu from '@material-ui/core/Menu';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
+import MenuItem from '@material-ui/core/MenuItem';
 import IconButton from '@material-ui/core/IconButton';
 
 import MenuIcon from '@material-ui/icons/Menu';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 
-import { DrawerMenu } from 'actions';
+import { DrawerMenu, Setting } from 'actions';
 import { useActions, useMenuToggler } from 'hooks';
 
 const useStyles = makeStyles(({ spacing, transitions, zIndex }) => ({
@@ -39,44 +38,24 @@ const useStyles = makeStyles(({ spacing, transitions, zIndex }) => ({
   },
 }));
 
-const languageMap = {
-  'zh-CN': '中文',
-  'en-US': 'English',
-};
-
-const TopBar = ({
-  offset,
-  location,
-}) => {
-  const token = useSelector((state) => state.session.token);
-  const locale = useSelector((state) => state.ui.setting.locale);
-  // const profile = useSelector((state) => state.entities.user.profile);
-
+const TopBar = () => {
   const actions = useActions({
+    changeLocale: Setting.changeLocale,
     openDrawerMenu: DrawerMenu.toggle,
   });
 
   const [
-    languageMenuAnchorEl,
-    openLanguageMenu,
-    closeLanguageMenu,
+    menuAnchorEl,
+    openMenu,
+    closeMenu,
   ] = useMenuToggler();
 
-  const [
-    campaignMenuAnchorEl,
-    openCampaignMenu,
-    closeCampaignMenu,
-  ] = useMenuToggler();
-
-  const [
-    nomickyMenuAnchorEl,
-    openNomickyMenu,
-    closeNomickyMenu,
-  ] = useMenuToggler();
-
-  const history = useHistory();
   const classes = useStyles();
 
+  const changeLanguage = (lang) => () => {
+    actions.changeLocale(lang);
+    closeMenu();
+  };
 
   return (
     <AppBar
@@ -100,9 +79,21 @@ const TopBar = ({
         <IconButton
           edge="end"
           color="inherit"
+          onClick={openMenu}
         >
           <AccountCircleIcon />
         </IconButton>
+
+        <Menu
+          id="simple-menu"
+          anchorEl={menuAnchorEl}
+          keepMounted
+          open={Boolean(menuAnchorEl)}
+          onClose={closeMenu}
+        >
+          <MenuItem onClick={changeLanguage('zh-CN')}>中文</MenuItem>
+          <MenuItem onClick={changeLanguage('en-US')}>English</MenuItem>
+        </Menu>
 
       </Toolbar>
 
@@ -110,14 +101,4 @@ const TopBar = ({
   );
 };
 
-TopBar.propTypes = {
-  // state
-  offset: PropTypes.number,
-  location: PropTypes.object.isRequired,
-};
-
-TopBar.defaultProps = {
-  offset: 0,
-};
-
-export default withRouter(TopBar);
+export default TopBar;

@@ -24,6 +24,8 @@ import LocationTemplate from './ValueTemplates/LocationTemplate';
 import TimestampTemplate from './ValueTemplates/TimestampTemplate';
 import SinusoidalTemplate from './ValueTemplates/SinusoidalTemplate';
 
+import { DeviceType as msgs, Common as commonMsgs } from 'messages';
+
 const useStyles = makeStyles(({ spacing }) => ({
   form: {
     padding: spacing(1, 3),
@@ -86,24 +88,24 @@ const PayloadEditor = ({
             >
               <Typography
                 variant="h6"
-                message="Message Attribute"
+                message={msgs.nonu.messageAttribute}
               />
             </Box>
 
             <Field
-              label="Attribute name"
+              label={msgs.nonu.attributeName}
               required
               fullWidth
               name="name"
               margin="normal"
               variant="outlined"
               component={TextField}
-              helperText="Name of the message attribute."
+              helperText={msgs.phrase.helperAttributeName}
               className="inputAttributeName"
             />
 
             <Field
-              label="Attribute data type"
+              label={msgs.nonu.attributeDataType}
               required
               fullWidth
               name="type"
@@ -125,7 +127,7 @@ const PayloadEditor = ({
                 { label: 'UTC Timestamp', value: 'timestamp' },
                 { label: 'Pick one from array', value: 'pickOne' },
               ]}
-              helperText="Data type of the message attribute."
+              helperText={msgs.phrase.helperAttributeDataType}
             />
 
             {(() => {
@@ -165,14 +167,14 @@ const PayloadEditor = ({
               <LoadingButton
                 type="submit"
                 size="large"
-                label="save"
+                label={commonMsgs.verb.save}
                 color="secondary"
                 buttonClass="btnSaveAttribute"
               />
 
               <LoadingButton
                 size="large"
-                label="cancel"
+                label={commonMsgs.verb.cancel}
                 onClick={closeEditor}
               />
 

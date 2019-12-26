@@ -1,0 +1,12 @@
+[
+  {
+    "id": "DeviceType.Verb.ok",
+    "description": "确定",
+    "defaultMessage": "OK"
+  },
+  {
+    "id": "DeviceType.Verb.cancel",
+    "description": "取消",
+    "defaultMessage": "Cancel"
+  }
+]

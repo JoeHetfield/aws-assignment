@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { FormattedMessage } from 'react-intl';
 import { Link, withRouter, useHistory } from 'react-router-dom';
 
 import Box from '@material-ui/core/Box';
@@ -24,58 +25,58 @@ import Typography from 'components/Typography';
 import { Common as commonMsgs } from 'messages';
 
 const menus = [{
-  subheader: '',
+  // subheader: '',
   items: [{
-    label: 'Home',
+    label: commonMsgs.nonu.home,
     path: '/home',
     icon: <HomeIcon />,
   }],
 }, {
-  subheader: 'My Menu',
+  subheader: commonMsgs.nonu.myMenu,
   items: [{
     key: 'dashboard',
-    label: 'Dashboard',
+    label: commonMsgs.nonu.dashboard,
     path: '/dashboard',
     icon: <DashboardIcon />,
   }, {
     key: 'myDevice',
-    label: 'My Device',
+    label: commonMsgs.nonu.myDevice,
     path: 'myDevice',
     icon: <DevicesOtherIcon />,
   }, {
     key: 'myProfile',
-    label: 'My Profile',
+    label: commonMsgs.nonu.myProfile,
     path: '/myProfile',
     icon: <ContactMailIcon />,
   }],
 }, {
-  subheader: 'Modules',
+  subheader: commonMsgs.nonu.module,
   items: [{
     key: 'deviceType',
-    label: 'Device Type',
+    label: commonMsgs.nonu.deviceType,
     path: '/deviceType',
     icon: <DeveloperModeIcon />,
   }, {
     key: 'widgets',
-    label: 'Widgets',
+    label: commonMsgs.nonu.widgets,
     path: '/widgets',
     icon: <WidgetsIcon />,
   }, {
     key: 'automotive',
-    label: 'Automotive',
+    label: commonMsgs.nonu.automotive,
     path: '/automotive',
     icon: <DriveEtaIcon />,
   }],
 }, {
-  subheader: 'Administration',
+  subheader: commonMsgs.nonu.administration,
   items: [{
     key: 'users',
-    label: 'Users',
+    label: commonMsgs.nonu.users,
     path: '/users',
     icon: <GroupIcon />,
   }, {
     key: 'settings',
-    label: 'Settings',
+    label: commonMsgs.nonu.settings,
     path: '/settings',
     icon: <SettingsIcon />,
   }],
@@ -91,7 +92,7 @@ const MenuList = ({
         key={subheader}
         subheader={open && subheader && (
           <ListSubheader>
-            {subheader}
+            <FormattedMessage {...subheader} />
           </ListSubheader>
         )}
       >
