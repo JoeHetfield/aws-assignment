@@ -63,9 +63,9 @@ P.S. using TypeScript? [Here](https://github.com/DefinitelyTyped/DefinitelyTyped
 
   - `hooks`: Customized common React hooks are placed here, extract from App logic.
 
-  - `i18n`: React-intl build target folder, generate final language bundle. Not used in coding.
+  - `i18n`: React-intl build target folder, generate final language bundles. Not used in coding.
 
-  - `message`: Message definitions, splited by business module accordingly. Used by React-intl as language bundle sources.
+  - `message`: Message definitions, splited by business module accordingly. Used by React-intl as language bundles sources.
 
   - `pages`: Main body of the App, splited as Desktop and Mobile for the flexibility of customizing the appearance for different divices.
 
@@ -73,7 +73,7 @@ P.S. using TypeScript? [Here](https://github.com/DefinitelyTyped/DefinitelyTyped
 
   - `theme`: Material-UI theme definiton, splited as Desktop and Mobile, for the subtle difference between device.
 
-  - `utils`: Common functions, helper, format... etc.
+  - `utils`: Common functions, helper, formatter... etc.
 
   - `index.jsx`: Start point of App & Webpack entrance.
 
@@ -93,25 +93,12 @@ P.S. using TypeScript? [Here](https://github.com/DefinitelyTyped/DefinitelyTyped
 
 - `.gitignore`: Git ignore descriptor.
 
-- `package.json`: You knew, refer here for more info about libs that been used.
+- `package.json`: What you think of it, refer here for more info about libs that been used.
 
 - `README.md`: What you reading now ;)
 
 - `webpack.config.babel.js`: Webpack configuation file, modulized and managed with `webpack.part.js`.
 
-- `webpack.parts.js`: Webpack configuation file, splited by loaders/plugins which been used.
+- `webpack.parts.js`: Webpack configuation file, splited by loaders / plugins which been used.
 
-
-##### - spring: (val: number, config?: SpringHelperConfig) => OpaqueConfig
-Used in conjunction with the components below. Specifies the how to animate to the destination value, e.g. `spring(10, {stiffness: 120, damping: 17})` means "animate to value 10, with a spring of stiffness 120 and damping 17".
-
-- `val`: the value.
-- `config`: optional, for further adjustments. Possible fields:
-  - `stiffness`: optional, defaults to `170`.
-  - `damping`: optional, defaults to `26`.
-  - `precision`: optional, defaults to `0.01`. Specifies both the rounding of the interpolated value and the speed (internal).
-
-  It's normal not to feel how stiffness and damping affect your spring; use [Spring Parameters Chooser](http://chenglou.github.io/react-motion/demos/demo5-spring-parameters-chooser) to get a feeling. **Usually**, you'd just use the list of tasteful stiffness/damping presets below.
-
-##### - Presets for `{stiffness, damping}`
-Commonly used spring configurations used like so: `spring(10, presets.wobbly)` or `spring(20, {...presets.gentle, precision: 0.1})`. [See here](https://github.com/chenglou/react-motion/blob/9cb90eca20ecf56e77feb816d101a4a9110c7d70/src/presets.js).
+### Hope you like it and give me a high score! I love AWS and REALLY REALLY want get the position!
