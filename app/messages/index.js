@@ -1,10 +1,2 @@
-export { default as Otc } from './Otc';
-export { default as Cfd } from './Cfd';
-export { default as Spot } from './Spot';
 export { default as User } from './User';
-export { default as Home } from './Home';
-export { default as Help } from './Help';
-export { default as Asset } from './Asset';
 export { default as Common } from './Common';
-export { default as Components } from './Components';
-export { default as SignInDialog } from './SignInDialog';

@@ -8,7 +8,7 @@ This is my aws-assignment for aws technical interview. Appreciate this opportuni
 
 - Install: `npm install`
 
-- Try the demo locally: `npm start dev`
+- Start DevServer for local demo: `npm start dev`
 
 - Run E2E test: `npm test`
 
@@ -20,7 +20,7 @@ Start the server with `npm run dev`, then head to `http://localhost:8080` to see
 
 ### Browser Compatibility
 
-All morden browser should be fine. Lastest Chrome is recommended.
+All morden browsers should be fine. Lastest Chrome is recommended.
 
 ## About This Project
 
@@ -28,10 +28,13 @@ All morden browser should be fine. Lastest Chrome is recommended.
 - The workflow of "Add Device Type" is implemented.
 - E2E Test is considered and implemented.
 
-For better frontend engineering, few backend api are mocked in the webpack devSever, that's why you need keep the devServer up while you browsef this App. Besides, the "Device Type" data was stored in the devServer's memory, so your input could be persistent while you switch between different functionality, but they will be vanished after the devServer reboot.
+This App is trying to reproduce the aws iot-simulator console as faithful as possible.
+
+For better frontend engineering, few backend apis are mocked in the webpack devSever, that's why you need keep the devServer up while you browse this App. Besides, the "Device Type" data was stored in the devServer's memory, so your input could be persistent while you switch between different functionality, but they will be vanished after the devServer reboot.
 
 When you run the E2E tests, a puppeteer controlled Chromnium will start, simulate the interaction between the user and the App; that's because I think it's better way to understand my idea about the test, and I didn't tuning the test for headless browser, so please keep it as it is when you try out the E2E tests.
 
+I have few ideas about better UX/UE and UI logic, let's talk about it during the interview!
 ---
 
 ### Tech Stack
@@ -101,4 +104,4 @@ When you run the E2E tests, a puppeteer controlled Chromnium will start, simulat
 
 - `webpack.parts.js`: Webpack configuation file, splited by loaders / plugins which been used.
 
-### Hope you like it and give me a high score! I love AWS and REALLY REALLY want get the position!
+### Thanks for your review, hope you like it and give me a high score! I love AWS and REALLY REALLY want get the position!
