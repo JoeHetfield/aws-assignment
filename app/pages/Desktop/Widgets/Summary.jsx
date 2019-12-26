@@ -11,6 +11,8 @@ import teal from '@material-ui/core/colors/teal';
 
 import Typography from 'components/Typography';
 
+import { Common as commonMsgs } from 'messages';
+
 const useStyles = makeStyles(({ spacing }) => ({
   summary: {
     padding: spacing(2, 3),
@@ -43,7 +45,7 @@ const Summary = () => {
           gutterBottom
           variant="h5"
           className="pageTitle"
-          message="Widgets"
+          message={commonMsgs.nonu.widgets}
         />
 
         <Breadcrumbs>

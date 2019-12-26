@@ -1,0 +1,22 @@
+[
+  {
+    "id": "DeviceType.Nonu.documentation",
+    "description": "文档",
+    "defaultMessage": "Documentation"
+  },
+  {
+    "id": "DeviceType.Nonu.overview",
+    "description": "解决方案概览",
+    "defaultMessage": "Solution Overview"
+  },
+  {
+    "id": "DeviceType.Nonu.guide",
+    "description": "解决方案实现指南",
+    "defaultMessage": "Solution Implementation Guide"
+  },
+  {
+    "id": "DeviceType.Nonu.repository",
+    "description": "GitHub 仓库",
+    "defaultMessage": "GitHub Repository"
+  }
+]

@@ -9,7 +9,7 @@ addLocaleData([
 ]);
 
 const supportedLanguages = ['zh-CN', 'en-US'];
-const defaultLanguage = 'zh-CN';
+const defaultLanguage = 'en-US';
 
 const currencySymbolMap = {
   'zh-CN': 'CNY',
@@ -22,8 +22,8 @@ const currencySymbolMap = {
 // eslint-disable-next-line import/prefer-default-export
 export const getPreference = () => {
   const cookieLanguage = Cookies.get('locale');
-  const browserLanguage = navigator.languages ? navigator.languages.filter((lang) => supportedLanguages.includes(lang)) : navigator.language;
-  return cookieLanguage || browserLanguage[0] || defaultLanguage;
+  // const browserLanguage = navigator.languages ? navigator.languages.filter((lang) => supportedLanguages.includes(lang)) : navigator.language;
+  return cookieLanguage || defaultLanguage;
 };
 
 export const getCurrencySymbol = (locale) => currencySymbolMap[locale] || 'CNY';
