@@ -1,0 +1,12 @@
+[
+  {
+    "id": "Common.Nonu.ok",
+    "description": "确定",
+    "defaultMessage": "OK"
+  },
+  {
+    "id": "Common.Nonu.cancel",
+    "description": "取消",
+    "defaultMessage": "Cancel"
+  }
+]

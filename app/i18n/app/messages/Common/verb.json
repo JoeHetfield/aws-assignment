@@ -1,0 +1,12 @@
+[
+  {
+    "id": "Common.Verb.ok",
+    "description": "确定",
+    "defaultMessage": "OK"
+  },
+  {
+    "id": "Common.Verb.cancel",
+    "description": "取消",
+    "defaultMessage": "Cancel"
+  }
+]
