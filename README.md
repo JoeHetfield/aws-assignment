@@ -53,13 +53,13 @@ P.S. using TypeScript? [Here](https://github.com/DefinitelyTyped/DefinitelyTyped
 
 - `app`: The folder where all the App program reside. Splited as these sub directories below:
 
-  - `actions`: All actions that interact with backend are located here, App-wide actions (e.g. expand or collapse the side navigation menu) also included.
+  - `actions`: All actions (may or may not relate to redux) that interact with backend are located here, App-wide actions (e.g. expand or collapse the side navigation menu) also included.
 
   - `assets`: Static resources are located here, such as images, favicon, font etc.
 
   - `compnents`: Common UI Components which used in this App globally.
 
-  - `config`: Global configurations affect that affect App behavior, such as backend url, app store url, brand name etc.
+  - `config`: Global configurations that affect App behavior, such as backend url, app store url, brand name etc.
 
   - `hooks`: Customized common React hooks are placed here, extract from App logic.
 
@@ -67,23 +67,40 @@ P.S. using TypeScript? [Here](https://github.com/DefinitelyTyped/DefinitelyTyped
 
   - `message`: Message definitions, splited by business module accordingly. Used by React-intl as language bundle sources.
 
-  - `pages`
+  - `pages`: Main body of the App, splited as Desktop and Mobile for the flexibility of customizing the appearance for different divices.
 
+  - `reducer`: Redux reducers are located here. Calculate App-wide state.
 
+  - `theme`: Material-UI theme definiton, splited as Desktop and Mobile, for the subtle difference between device.
 
+  - `utils`: Common functions, helper, format... etc.
 
-- `templates`
-- `tests`
-- `tools`
-- `.bablerc`
-- `.editorconfig`
-- `.eslintignore`
-- `.eslintrc.js`
-- `.gitignore`
-- `package.json`
-- `README.md`
-- `webpack.config.babel.js`
-- `webpack.parts.js`
+  - `index.jsx`: Start point of App & Webpack entrance.
+
+- `templates`: The App SPA host HTML file, will servered as static resource by web server.
+
+- `tests`: E2E Tests are recorded here.
+
+- `tools`: Tools for build.
+
+- `.bablerc`: Babel configuration file.
+
+- `.editorconfig`: Editor configuration file.
+
+- `.eslintignore`: Eslint ignore descriptor.
+
+- `.eslintrc.js`: Esslint configuration file.
+
+- `.gitignore`: Git ignore descriptor.
+
+- `package.json`: You knew, refer here for more info about libs that been used.
+
+- `README.md`: What you reading now ;)
+
+- `webpack.config.babel.js`: Webpack configuation file, modulized and managed with `webpack.part.js`.
+
+- `webpack.parts.js`: Webpack configuation file, splited by loaders/plugins which been used.
+
 
 ##### - spring: (val: number, config?: SpringHelperConfig) => OpaqueConfig
 Used in conjunction with the components below. Specifies the how to animate to the destination value, e.g. `spring(10, {stiffness: 120, damping: 17})` means "animate to value 10, with a spring of stiffness 120 and damping 17".
