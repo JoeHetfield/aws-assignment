@@ -2,7 +2,7 @@
 
 Hi, My name is ZhouDing (周鼎).
 
-This is my aws-assignment for aws technical interview. Appreciate this opportunity provided, and I'll be greate honnored if I have chance to work in AWS.
+This is my aws-assignment for aws technical interview. Appreciate this opportunity provided, and I'll be greate honnored if I had chance to work in AWS.
 
 ## Getting Start
 
@@ -51,39 +51,25 @@ P.S. using TypeScript? [Here](https://github.com/DefinitelyTyped/DefinitelyTyped
 
 ### Project Architecture
 
-- `app`
+- `app`: The folder where all the App program reside. Splited as these sub directories below:
 
-  The folder where all the App program reside. Splited as these sub directories below:
+  - `actions`: All actions that interact with backend are located here, App-wide actions (e.g. expand or collapse the side navigation menu) also included.
 
-  - `actions`
+  - `assets`: Static resources are located here, such as images, favicon, font etc.
 
-    All actions that interact with backend are located here, App-wide actions (e.g. expand or collapse the side navigation menu) also included.
+  - `compnents`: Common UI Components which used in this App globally.
 
-  - `assets`
+  - `config`: Global configurations affect that affect App behavior, such as backend url, app store url, brand name etc.
 
-    Static resources are located here, such as images, favicon, font etc.
+  - `hooks`: Customized common React hooks are placed here, extract from App logic.
 
-  - `compnents`
+  - `i18n`: React-intl build target folder, generate final language bundle. Not used in coding.
 
-    Common UI Components which used in this App globally.
-
-  - `config`
-
-    Global configurations affect that affect App behavior, such as backend url, app store url, brand name etc.
-
-  - `hooks`
-
-    Customized common React hooks are placed here, extract from App logic.
-
-  - `i18n`
-
-    React-intl build target folder, generate final language bundle. Not used in coding.
-
-  - `message`
-
-    Message definitions, splited by business module accordingly. Used by React-intl as language bundle sources.
+  - `message`: Message definitions, splited by business module accordingly. Used by React-intl as language bundle sources.
 
   - `pages`
+
+
 
 
 - `templates`
