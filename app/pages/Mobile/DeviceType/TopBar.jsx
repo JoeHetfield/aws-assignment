@@ -11,30 +11,20 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import TranslateIcon from '@material-ui/icons/Translate';
 
+import Link from 'components/Link';
+import Button from 'components/Button';
+import Typography from 'components/Typography';
+
 import { DrawerMenu, Setting } from 'actions';
 import { useActions, useMenuToggler } from 'hooks';
+import { Home as msgs, Common as commonMsgs } from 'messages';
 
-const useStyles = makeStyles(({ spacing, transitions, zIndex }) => ({
-  appBar: {
-    zIndex: zIndex.drawer + 1,
-    transition: transitions.create(['width', 'margin'], {
-      easing: transitions.easing.sharp,
-      duration: transitions.duration.leavingScreen,
-    }),
+const useStyles = makeStyles(({ spacing }) => ({
+  menuButton: {
+    marginRight: spacing(2),
   },
-  logo: {
-    height: spacing(8),
-    marginLeft: spacing(2),
-    marginRight: spacing(6),
-  },
-  spring: {
-    flex: 1,
-  },
-  icon: {
-    marginRight: spacing(1),
-  },
-  arrow: {
-    marginLeft: spacing(1),
+  title: {
+    flexGrow: 1,
   },
 }));
 
@@ -70,11 +60,16 @@ const TopBar = () => {
           edge="start"
           color="inherit"
           onClick={actions.openDrawerMenu}
+          className={classes.menuButton}
         >
           <MenuIcon />
         </IconButton>
 
-        <Box flex={1} />
+        <Typography
+          variant="h6"
+          message={commonMsgs.nonu.deviceType}
+          className={classes.title}
+        />
 
         <IconButton
           edge="end"

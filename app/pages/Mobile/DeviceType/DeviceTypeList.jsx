@@ -1,33 +1,23 @@
 /* eslint-disable react/prop-types */
 import React, { useState, useEffect } from 'react';
-import { FormattedTime, FormattedMessage } from 'react-intl';
 import { makeStyles } from '@material-ui/core/styles';
 
-import { Link } from 'react-router-dom';
-import Box from '@material-ui/core/Box';
-import Chip from '@material-ui/core/Chip';
-import Paper from '@material-ui/core/Paper';
 import Avatar from '@material-ui/core/Avatar';
-import Toolbar from '@material-ui/core/Toolbar';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemText from '@material-ui/core/ListItemText';
+import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 
-import AddIcon from '@material-ui/icons/Add';
-import EditIcon from '@material-ui/icons/Edit';
-import RefreshIcon from '@material-ui/icons/Refresh';
 import DeveloperModeIcon from '@material-ui/icons/DeveloperMode';
 
-import Table from 'components/Table';
-import Button from 'components/Button';
-import Typography from 'components/Typography';
+import List from 'components/List';
 
 import { DeviceType } from 'actions';
-import { DeviceType as msgs, Common as commonMsgs } from 'messages';
 
-const useStyles = makeStyles(() => ({
-  root: {
+const useStyles = makeStyles(({ palette }) => ({
+  item: {
+    width: '100%',
     height: '100%',
-    minHeight: '100%',
-    display: 'flex',
-    flexDirection: 'column',
+    borderBottom: `1px solid ${palette.divider}`,
   },
 }));
 
@@ -49,155 +39,44 @@ const DeviceTypeList = () => {
 
   useEffect(refresh, []);
 
-  const iconCellRenderer = () => (
-    <Avatar>
-      <DeveloperModeIcon />
-    </Avatar>
-  );
+  const rowRenderer = ({
+    index,
+    key,
+    style,
+  }) => {
+    const device = data[index];
 
-  const chipCellRenderer = ({ cellData, rowIndex }) => (
-    <Chip
-      id={`labelVisibility-${rowIndex}`}
-      color={cellData === 'public' ? 'secondary' : 'default'}
-      label={(
-        <FormattedMessage {...commonMsgs.adjective[cellData]} />
-      )}
-    />
-  );
+    return (
+      <ListItem
+        key={key}
+        style={style}
+        className={classes.item}
+      >
+        <ListItemAvatar>
+          <Avatar>
+            <DeveloperModeIcon />
+          </Avatar>
+        </ListItemAvatar>
 
-  const textCellRenderer = ({ rowData, cellData, rowIndex }) => (
-    <Box
-      display="flex"
-      flexDirection="column"
-    >
-
-      <Typography
-        id={`labelName-${rowIndex}`}
-        message={cellData}
-      />
-
-      <Typography
-        id={`labelTypeId-${rowIndex}`}
-        variant="caption"
-        color="textSecondary"
-        message={rowData.typeId}
-      />
-
-    </Box>
-  );
-
-  const dateCellRenderer = ({ cellData }) => (
-    <Typography
-      message={(
-        <FormattedTime
-          hour12={false}
-          year="numeric"
-          month="numeric"
-          day="numeric"
-          hour="numeric"
-          minute="numeric"
-          second="numeric"
-          value={cellData}
+        <ListItemText
+          primary={device.name}
+          secondary={device.typeId}
         />
-      )}
-    />
-  );
 
-  const operationCellRenderer = ({ cellData, rowIndex }) => (
-    <Button
-      id={`btnEditDeviceType-${rowIndex}`}
-      size="small"
-      label={commonMsgs.verb.edit}
-      color="secondary"
-      startIcon={<EditIcon />}
-      to={`/deviceType/${cellData}`}
-      component={Link}
-    />
-  );
+      </ListItem>
+    );
+  };
 
   return (
-    <Paper className={classes.root}>
-
-      <Toolbar>
-
-        <Typography
-          variant="h6"
-          message={msgs.phrase.deviceTypeCount}
-          values={{ value: data.length }}
-        />
-
-        <Box flex={1} />
-
-        <Button
-          color="secondary"
-          label={msgs.phrase.addDeviceType}
-          startIcon={<AddIcon />}
-          to="/deviceType/new"
-          component={Link}
-          className="btnAddDeviceType"
-        />
-
-        <Box width={24} />
-
-        <Button
-          label={commonMsgs.verb.refresh}
-          color="secondary"
-          startIcon={<RefreshIcon />}
-          onClick={refresh}
-        />
-
-      </Toolbar>
-
-      <Table
-        data={data}
-        page={page}
-        count={data.length}
-        loading={loading}
-        rowsPerPage={20}
-        // onChangePage={(event, index) => setPage(index + 1)}
-        rowHeight={72}
-        headerHeight={36}
-        columns={[{
-          dataKey: 'icon',
-          width: 10,
-          flexGrow: 1,
-          cellRenderer: iconCellRenderer,
-        }, {
-          label: commonMsgs.nonu.deviceType,
-          dataKey: 'name',
-          width: 10,
-          flexGrow: 1,
-          cellRenderer: textCellRenderer,
-        }, {
-          label: msgs.nonu.visibility,
-          dataKey: 'visibility',
-          width: 10,
-          flexGrow: 1,
-          cellRenderer: chipCellRenderer,
-        }, {
-          label: commonMsgs.nonu.createdAt,
-          dataKey: 'createdAt',
-          width: 10,
-          flexGrow: 1,
-          numeric: true,
-          cellRenderer: dateCellRenderer,
-        }, {
-          label: commonMsgs.nonu.updatedAt,
-          dataKey: 'updatedAt',
-          width: 10,
-          flexGrow: 1,
-          numeric: true,
-          cellRenderer: dateCellRenderer,
-        }, {
-          dataKey: 'typeId',
-          width: 10,
-          flexGrow: 1,
-          numeric: true,
-          cellRenderer: operationCellRenderer,
-        }]}
-      />
-
-    </Paper>
+    <List
+      data={data}
+      page={page}
+      count={data.length}
+      loading={loading}
+      rowsPerPage={20}
+      rowHeight={72}
+      rowRenderer={rowRenderer}
+    />
   );
 };
 

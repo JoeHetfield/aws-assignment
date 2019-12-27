@@ -3,9 +3,7 @@ import { Switch, Route, useRouteMatch } from 'react-router-dom';
 
 import Box from '@material-ui/core/Box';
 
-import Layout from '../components/ContentLayout';
-
-import Summary from './Summary';
+import TopBar from './TopBar';
 import DeviceTypeList from './DeviceTypeList';
 import DeviceTypeEditor from './DeviceTypeEditor';
 
@@ -13,23 +11,13 @@ const DeviceType = () => {
   const { url } = useRouteMatch();
 
   return (
-    <Layout>
+    <>
 
-      <Summary />
+      <TopBar />
 
-      <Box p={2} flex={1}>
+      <DeviceTypeList />
 
-        <Switch>
-
-          <Route path={`${url}/:typeId`} component={DeviceTypeEditor} />
-
-          <Route path={`${url}/`} component={DeviceTypeList} />
-
-        </Switch>
-
-      </Box>
-
-    </Layout>
+    </>
   );
 };
 

@@ -14,7 +14,7 @@ import MyDevice from './MyDevice';
 import Settings from './Settings';
 import Dashboard from './Dashboard';
 import MyProfile from './MyProfile';
-// import DeviceType from './DeviceType';
+import DeviceType from './DeviceType';
 import Automotive from './Automotive';
 
 const Mobile = () => (
@@ -40,7 +40,7 @@ const Mobile = () => (
 
         <Route path="/myProfile" component={MyProfile} />
 
-        {/* <Route path="/deviceType" component={DeviceType} /> */}
+        <Route path="/deviceType" component={DeviceType} />
 
         <Route path="/widgets" component={Widgets} />
 

@@ -1,7 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 
-import Box from '@material-ui/core/Box';
 import Menu from '@material-ui/core/Menu';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -11,13 +10,11 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import TranslateIcon from '@material-ui/icons/Translate';
 
-import Link from 'components/Link';
-import Button from 'components/Button';
 import Typography from 'components/Typography';
 
 import { DrawerMenu, Setting } from 'actions';
+import { Home as msgs } from 'messages';
 import { useActions, useMenuToggler } from 'hooks';
-import { Home as msgs, Common as commonMsgs } from 'messages';
 
 const useStyles = makeStyles(({ spacing }) => ({
   menuButton: {
