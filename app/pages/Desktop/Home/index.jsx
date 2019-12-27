@@ -188,6 +188,20 @@ const Home = () => {
                   <Typography
                     gutterBottom
                     variant="subtitle2"
+                    message={msgs.phrase.additional}
+                  />
+
+                  <Typography
+                    gutterBottom
+                    variant="body2"
+                    message={msgs.phrase.additionalContent}
+                  />
+                </Box>
+
+                <Box mb={3}>
+                  <Typography
+                    gutterBottom
+                    variant="subtitle2"
                     message={msgs.phrase.greeting}
                   />
                 </Box>

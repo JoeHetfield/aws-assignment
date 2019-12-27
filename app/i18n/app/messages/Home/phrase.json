@@ -41,13 +41,13 @@
   },
   {
     "id": "DeviceType.Phrase.goalContent",
-    "description": "希望这个 App 能够尽可能忠实地重现 aws iot 模拟器应用程序。",
-    "defaultMessage": "This App is trying to reproduce the aws iot-simulator console as faithful as possible."
+    "description": "希望这个 App 能够尽可能忠实地重现 aws iot 模拟器应用程序。我花了相当一段时间来建造这个 App，希望它能全面地展示我的技能和对前端工程的理解。因为我没能以全职的方式来完成这个任务，所以一些细节不得不忽略掉了。但它依然是我能在指定的期限内完成的最好作品。",
+    "defaultMessage": "This App is trying to reproduce the aws iot-simulator console as faithful as possible. I worked on it quite a while, hope it could help to demostrate my skills and the understanding about front-end engineering comprehensively. Because I couldn't do it with full-time manner, so some details and subtles are ommited. but it's still my best shot within designated time window."
   },
   {
     "id": "DeviceType.Phrase.usage",
     "description": "使用注意",
-    "defaultMessage": "Not on Usage"
+    "defaultMessage": "Note on Usage"
   },
   {
     "id": "DeviceType.Phrase.usageContent",
@@ -63,6 +63,16 @@
     "id": "DeviceType.Phrase.testContent",
     "description": "当运行 E2E 测试时，Puppeteer 会启动一个由它控制的 Chromium，模拟用户和 App 的交互过程；我认为这能更方便地理解我测试的想法，同时我没有针对 headless 浏览器调整测试用例（时间所限），所以请照此配置运行 E2E 测试",
     "defaultMessage": "When you run the E2E tests, a puppeteer controlled Chromium will start, simulate the interaction between the user and the App; that's because I think it's better way to understand my idea about the test, and I didn't tuning the test for headless browser (due to the time limitation), so please keep it as it is when you try out the E2E tests."
+  },
+  {
+    "id": "DeviceType.Phrase.additional",
+    "description": "其他特性",
+    "defaultMessage": "Additional Feature"
+  },
+  {
+    "id": "DeviceType.Phrase.additionalContent",
+    "description": "这个应用程序的默认语言为英语，你可以使用右上角的按钮来切换到中文。而且这个应用支持移动设备显示，但只是一个 App 骨架，业务功能没有在此移动版本上实现。（试一下吧，我觉得挺好看的）",
+    "defaultMessage": "The default language of this App is English, you switch to Chinese with the button on the upper right coner. And this App can be viewed on mobile phone, but just a App skeleton, no busines function avaliable. (Try it out, I think it's looking good.)"
   },
   {
     "id": "DeviceType.Phrase.greeting",
