@@ -17,6 +17,7 @@
   "Common.Nonu.updatedAt": "Last Updated At",
   "Common.Nonu.users": "Users",
   "Common.Nonu.widgets": "Widgets",
+  "Common.Phrase.noRecords": "No Records found",
   "Common.Phrase.runningSimulations": "3 Running",
   "Common.Phrase.totalDevices": "5 Total",
   "Common.Phrase.underConstruction": "Under Construction...",

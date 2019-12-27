@@ -17,6 +17,7 @@
   "Common.Nonu.updatedAt": "最后更新日期",
   "Common.Nonu.users": "用户",
   "Common.Nonu.widgets": "小组件",
+  "Common.Phrase.noRecords": "暂无数据",
   "Common.Phrase.runningSimulations": "共 3 组运行中",
   "Common.Phrase.totalDevices": "共 5 台",
   "Common.Phrase.underConstruction": "建设中……",

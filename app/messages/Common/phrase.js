@@ -3,6 +3,11 @@ import { defineMessages } from 'react-intl';
 const prefix = 'Common.Phrase';
 
 const definedMessages = defineMessages({
+  noRecords: {
+    id: `${prefix}.noRecords`,
+    description: '暂无数据',
+    defaultMessage: 'No Records found',
+  },
   underConstruction: {
     id: `${prefix}.underConstruction`,
     description: '建设中……',

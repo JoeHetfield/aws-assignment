@@ -89,12 +89,12 @@ const Summary = () => {
         <Typography
           gutterBottom
           variant="subtitle2"
-          message="Devices"
+          message={commonMsgs.nonu.devices}
         />
         <Typography
           color="secondary"
           variant="h6"
-          message="5 Total"
+          message={commonMsgs.phrase.totalDevices}
         />
       </Box>
 
@@ -106,11 +106,11 @@ const Summary = () => {
         <Typography
           gutterBottom
           variant="subtitle2"
-          message="Simulations"
+          message={commonMsgs.nonu.simulations}
         />
         <Typography
           variant="h6"
-          message="3 Running"
+          message={commonMsgs.phrase.runningSimulations}
           className={classes.runningLabel}
         />
       </Box>

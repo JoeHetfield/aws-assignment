@@ -83,7 +83,7 @@ const Placeholder = ({
               className={messageClass}
             >
               <FormattedMessage
-                {...commonMsgs.noRecords}
+                {...commonMsgs.phrase.noRecords}
               />
             </Typography>
           </>

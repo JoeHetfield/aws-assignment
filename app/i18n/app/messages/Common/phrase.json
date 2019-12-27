@@ -1,5 +1,10 @@
 [
   {
+    "id": "Common.Phrase.noRecords",
+    "description": "暂无数据",
+    "defaultMessage": "No Records found"
+  },
+  {
     "id": "Common.Phrase.underConstruction",
     "description": "建设中……",
     "defaultMessage": "Under Construction..."
