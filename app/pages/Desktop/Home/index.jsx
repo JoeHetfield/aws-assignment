@@ -17,8 +17,6 @@ import Layout from '../components/ContentLayout';
 const useStyles = makeStyles(({ spacing }) => ({
   paper: {
     minWidth: 400,
-    // height: '100%',
-    // minHeight: '100%',
     padding: spacing(3, 4),
     display: 'flex',
     flexDirection: 'column',
