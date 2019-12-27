@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useParams, useHistory } from 'react-router-dom';
 import { Formik, Field } from 'formik';
 import { makeStyles } from '@material-ui/core/styles';
+import assocPath from 'ramda/es/assocPath';
 
 import Box from '@material-ui/core/Box';
 import Paper from '@material-ui/core/Paper';
@@ -70,28 +71,26 @@ const DeviceTypeEditor = () => {
       interval,
     },
   }) => {
-    const errors = {
-      spec: {},
-    };
+    let errors = {};
 
     if (!name) {
       errors.name = 'Please enter the name of the Device Type';
     }
 
     if (!topic) {
-      errors.spec.topic = 'Please enter the topic for the Device Type';
+      errors = assocPath(['spec', 'topic'], 'Please enter the topic for the Device Type', errors);
     }
 
     if (!duration) {
-      errors.spec.duration = 'Please enter the duration of the Device Type';
+      errors = assocPath(['spec', 'duration'], 'Please enter the duration of the Device Type', errors);
     } else if (duration < 60000) {
-      errors.spec.duration = 'Value of the duration must equal or greater than 60000';
+      errors = assocPath(['spec', 'duration'], 'Value of the duration must equal or greater than 60000', errors);
     }
 
     if (!interval) {
-      errors.spec.interval = 'Please enter the interval of the Device Type';
-    } else if (interval < 60000) {
-      errors.spec.interval = 'Value of the interval must equal or greater than 1000';
+      errors = assocPath(['spec', 'interval'], 'Please enter the interval of the Device Type', errors);
+    } else if (interval < 1000) {
+      errors = assocPath(['spec', 'interval'], 'Value of the interval must equal or greater than 1000', errors);
     }
 
     return errors;
@@ -103,7 +102,6 @@ const DeviceTypeEditor = () => {
     resetForm,
   }) => {
     if (!params.typeId) {
-      // params.typeId = shortid.generate();
       params.createdAt = Date.now();
     }
 

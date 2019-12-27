@@ -27,12 +27,13 @@ All morden browsers should be fine. Lastest Chrome is recommended.
 - Left side menu navigation is implemented.
 - The workflow of "Add Device Type" is implemented.
 - E2E Test is considered and implemented.
+- Multilingual: English & Chinese version.
 
 This App is trying to reproduce the aws iot-simulator console as faithful as possible.
 
 For better frontend engineering, few backend apis are mocked in the webpack devSever, that's why you need keep the devServer up while you browse this App. Besides, the "Device Type" data was stored in the devServer's memory, so your input could be persistent while you switch between different functionality, but they will be vanished after the devServer reboot.
 
-When you run the E2E tests, a puppeteer controlled Chromnium will start, simulate the interaction between the user and the App; that's because I think it's better way to understand my idea about the test, and I didn't tuning the test for headless browser, so please keep it as it is when you try out the E2E tests.
+When you run the E2E tests, a puppeteer controlled Chromium will start, simulate the interaction between the user and the App; that's because I think it's better way to understand my idea about the test, and I didn't tuning the test for headless browser, so please keep it as it is when you try out the E2E tests.
 
 I have few ideas about better UX/UE and UI logic, let's talk about it during the interview!
 ---

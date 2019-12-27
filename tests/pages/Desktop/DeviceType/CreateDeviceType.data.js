@@ -42,8 +42,8 @@ export const fakeDeviceType = {
       name: faker.random.word(),
       type: 'location',
       radius: faker.random.number({ min: 0 }),
-      lat: faker.address.latitude(),
-      long: faker.address.longitude(),
+      lat: Number(faker.address.latitude()),
+      long: Number(faker.address.longitude()),
     }, {
       name: faker.random.word(),
       type: 'object',
@@ -101,7 +101,7 @@ export const invalidDeviceType = {
   spec: {
     topic: 'invalid',
     duration: '59999',
-    interval: '1999',
+    interval: '999',
     payload: [],
   },
 };

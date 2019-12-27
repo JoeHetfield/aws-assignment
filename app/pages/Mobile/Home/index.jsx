@@ -5,7 +5,11 @@ import { makeStyles, useTheme } from '@material-ui/core/styles';
 
 import Box from '@material-ui/core/Box';
 
-import { useActions } from 'hooks';
+import Link from 'components/Link';
+import Button from 'components/Button';
+import Typography from 'components/Typography';
+
+import TopBar from './TopBar';
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -14,37 +18,14 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-const regex = /invitation\/(\d+)/;
-
 const Home = () => {
-  const { pathname } = useLocation();
-
   const classes = useStyles();
-  const theme = useTheme();
-
-  // console.log(theme)
-
-  useEffect(() => {
-    const match = pathname.match(regex);
-
-    if (match && match.length === 2) {
-      actions.invitation(match[1]);
-      actions.openSignInDialog();
-      actions.switchTab(4);
-    }
-  }, [pathname]);
 
   return (
-    <Box
-      py={3}
-      px={4}
-      flex="1"
-      className={classes.root}
-    >
-
-      Hello
-
-    </Box>
+    <>
+      <TopBar />
+      <Typography message="123" />
+    </>
   );
 };
 

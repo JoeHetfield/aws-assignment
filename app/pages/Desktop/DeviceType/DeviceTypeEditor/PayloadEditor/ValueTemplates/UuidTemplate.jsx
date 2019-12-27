@@ -25,7 +25,6 @@ const UuidTemplate = () => (
       label="Default Value (Optional)"
       fullWidth
       name="default"
-      type="number"
       margin="normal"
       variant="outlined"
       component={TextField}

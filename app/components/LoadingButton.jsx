@@ -50,10 +50,6 @@ const LoadingButton = ({
         className={classNames(style.button, buttonClass)}
       >
         {(() => {
-          if (isLoading) {
-            return <FormattedMessage {...commonMsgs.pleaseWait} />;
-          }
-
           if ((typeof label === 'string') || React.isValidElement(label)) {
             return label;
           }

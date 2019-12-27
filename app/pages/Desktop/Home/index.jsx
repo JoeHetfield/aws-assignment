@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
+import { Link as RouterLink } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 
 import Box from '@material-ui/core/Box';
@@ -9,9 +10,9 @@ import Link from 'components/Link';
 import Button from 'components/Button';
 import Typography from 'components/Typography';
 
-import Layout from '../components/ContentLayout';
-
 import { Home as msgs, Common as commonMsgs } from 'messages';
+
+import Layout from '../components/ContentLayout';
 
 const useStyles = makeStyles(({ spacing }) => ({
   paper: {
@@ -91,6 +92,8 @@ const Home = () => {
               variant="contained"
               color="secondary"
               label={msgs.phrase.createDeviceType}
+              to="/deviceType"
+              component={RouterLink}
             />
 
             <Box width={16} />
@@ -99,6 +102,8 @@ const Home = () => {
               variant="contained"
               color="secondary"
               label={msgs.phrase.createDevice}
+              to="/myDevice"
+              component={RouterLink}
             />
 
           </Box>
@@ -114,9 +119,7 @@ const Home = () => {
         justifyContent="space-between"
       >
 
-        <Box
-          flex={1}
-        >
+        <Box flex={1}>
 
           <Paper
             className={classes.paper}
@@ -127,7 +130,73 @@ const Home = () => {
               message={msgs.phrase.about}
             />
 
-            <img alt="start" width="100%" src="/assets/img/iot-ds.png" />
+            <Box display="flex">
+
+              <Box flex="1">
+
+                <Box mb={3}>
+                  <Typography
+                    gutterBottom
+                    variant="subtitle2"
+                    message={msgs.phrase.goal}
+                  />
+
+                  <Typography
+                    gutterBottom
+                    variant="body2"
+                    message={msgs.phrase.goalContent}
+                  />
+                </Box>
+
+                <Box>
+                  <Typography
+                    gutterBottom
+                    variant="subtitle2"
+                    message={msgs.phrase.usage}
+                  />
+
+                  <Typography
+                    gutterBottom
+                    variant="body2"
+                    message={msgs.phrase.usageContent}
+                  />
+                </Box>
+
+              </Box>
+
+              <Box
+                mx={3}
+                border={1}
+                borderColor="divider"
+              />
+
+              <Box flex="1">
+
+                <Box mb={3}>
+                  <Typography
+                    gutterBottom
+                    variant="subtitle2"
+                    message={msgs.phrase.test}
+                  />
+
+                  <Typography
+                    gutterBottom
+                    variant="body2"
+                    message={msgs.phrase.testContent}
+                  />
+                </Box>
+
+                <Box mb={3}>
+                  <Typography
+                    gutterBottom
+                    variant="subtitle2"
+                    message={msgs.phrase.greeting}
+                  />
+                </Box>
+
+              </Box>
+
+            </Box>
           </Paper>
 
           <Box height={32} />

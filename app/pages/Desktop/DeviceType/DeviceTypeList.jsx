@@ -60,7 +60,7 @@ const DeviceTypeList = () => {
       id={`labelVisibility-${rowIndex}`}
       color={cellData === 'public' ? 'secondary' : 'default'}
       label={(
-        <FormattedMessage {...msgs.adjective[cellData]} />
+        <FormattedMessage {...commonMsgs.adjective[cellData]} />
       )}
     />
   );

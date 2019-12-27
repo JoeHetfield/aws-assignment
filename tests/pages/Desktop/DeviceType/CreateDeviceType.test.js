@@ -31,7 +31,7 @@ beforeAll(async () => {
 
 // This function occurs after the result of each tests, it closes the browser
 afterAll(() => {
-  browser.close();
+  // browser.close();
 });
 
 describe('Device Type workflow', () => {
@@ -48,7 +48,7 @@ describe('Device Type workflow', () => {
     await page.waitForSelector('.pageTitle');
 
     const html = await page.$eval('.pageTitle', (e) => e.innerHTML);
-    expect(html).toBe('Device Types');
+    expect(html).toBe('Device Type');
   });
 
   test('Navtigate to Add Device Type', async () => {
@@ -79,7 +79,7 @@ describe('Device Type workflow', () => {
     expect(labelTypeId).toBe(response.typeId);
 
     const labelVisibility = await page.$eval('#labelVisibility-0', (e) => e.innerText);
-    expect(labelVisibility).toBe(fakeDeviceType.visibility);
+    expect(labelVisibility.toLowerCase()).toBe(fakeDeviceType.visibility);
   }, 180000);
 
   test('Device Type data displayed correctly', async () => {
@@ -153,6 +153,8 @@ describe('Device Type workflow', () => {
   }, 180000);
 
   test('NG by Device Type with empty fields', async () => {
+    await page.waitForSelector('.btnAddDeviceType');
+
     await page.click('.btnAddDeviceType');
     await page.waitForSelector('#lableEditorTitle');
 
@@ -181,6 +183,8 @@ describe('Device Type workflow', () => {
   }, 180000);
 
   test('NG by Device Type with invalid fields', async () => {
+    await page.waitForSelector('.btnAddDeviceType');
+
     await page.click('.btnAddDeviceType');
     await page.waitForSelector('#lableEditorTitle');
 

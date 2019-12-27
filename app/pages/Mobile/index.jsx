@@ -5,8 +5,7 @@ import { MuiThemeProvider } from '@material-ui/core/styles';
 
 import theme from 'theme';
 
-// import DrawerMenu from './components/DrawerMenu';
-// import BottomMenu from './components/BottomMenu';
+import DrawerMenu from './components/DrawerMenu';
 
 import Home from './Home';
 
@@ -29,9 +28,7 @@ const Mobile = () => (
 
       </Switch>
 
-      {/* <DrawerMenu />
-
-      <BottomMenu /> */}
+      <DrawerMenu />
 
     </MuiThemeProvider>
 
