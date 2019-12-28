@@ -27,6 +27,7 @@ import { Common as commonMsgs } from 'messages';
 const menus = [{
   // subheader: '',
   items: [{
+    key: 'home',
     label: commonMsgs.nonu.home,
     path: '/home',
     icon: <HomeIcon />,

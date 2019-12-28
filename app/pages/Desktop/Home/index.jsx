@@ -50,6 +50,7 @@ const Home = () => {
             gutterBottom
             variant="h3"
             message={msgs.phrase.iotSimulator}
+            className="pageTitle"
           />
 
           <Typography

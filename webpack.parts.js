@@ -20,8 +20,6 @@ exports.generateHtml = ({ title, appMountId }) => ({
     new HtmlWebpackPlugin({
       title,
       appMountId,
-      // mobile: true,
-      // inject: false,
       favicon: './app/assets/favicon.ico',
       template: './templates/index.html',
       meta: {
