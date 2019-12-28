@@ -35,6 +35,7 @@ const Home = () => {
         color="common.white"
         bgcolor="primary.main"
         display="flex"
+        flexShrink={0}
         justifyContent="space-between"
       >
 

@@ -1,3 +1,4 @@
+/* eslint-disable react/no-array-index-key */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { FormattedMessage } from 'react-intl';
@@ -20,6 +21,7 @@ import ContactMailIcon from '@material-ui/icons/ContactMail';
 import DevicesOtherIcon from '@material-ui/icons/DevicesOther';
 import DeveloperModeIcon from '@material-ui/icons/DeveloperMode';
 
+import Container from 'components/Container';
 import Typography from 'components/Typography';
 
 import { Common as commonMsgs } from 'messages';
@@ -86,11 +88,11 @@ const menus = [{
 const MenuList = ({
   open,
 }) => (
-  <Box flex={1} overflow="auto">
+  <Container>
 
-    {menus.map(({ subheader, items }) => (
+    {menus.map(({ subheader, items }, index) => (
       <List
-        key={subheader}
+        key={index}
         subheader={open && subheader && (
           <ListSubheader>
             <FormattedMessage {...subheader} />
@@ -129,7 +131,7 @@ const MenuList = ({
 
       </List>
     ))}
-  </Box>
+  </Container>
 );
 
 MenuList.propTypes = {
