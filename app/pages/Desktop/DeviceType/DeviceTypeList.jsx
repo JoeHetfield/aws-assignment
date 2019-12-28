@@ -24,6 +24,7 @@ import { DeviceType as msgs, Common as commonMsgs } from 'messages';
 
 const useStyles = makeStyles(() => ({
   root: {
+    flex: 1,
     height: '100%',
     minHeight: '100%',
     display: 'flex',

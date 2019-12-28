@@ -34,8 +34,8 @@ class Container extends React.Component {
           return (
             <Scrollbars
               autoHide
-              autoHeight
-              autoHeightMax="100%"
+              // autoHeight
+              // autoHeightMax="100%"
               className={className}
               onScroll={this.handleScroll}
               renderView={({ style, ...props }) => (
