@@ -1,25 +1,10 @@
 /* eslint-disable no-await-in-loop */
 import faker from 'faker';
-import puppeteer from 'puppeteer';
 
 import { inputHelper } from '../../../utils';
 import { fakeDeviceType, emptyDeviceType, invalidDeviceType } from './CreateDeviceType.data';
 
-// create global variables to be used in the beforeAll function
-let browser;
-let page;
-
 beforeAll(async () => {
-  // launch browser
-  browser = await puppeteer.launch({
-    headless: false, // headless mode set to false so browser opens up with visual feedback
-    slowMo: 50, // how slow actions should be
-    // devtools: true,
-    args: ['--start-fullscreen'],
-  });
-  // creates a new page in the opened browser
-  page = await browser.newPage();
-
   page.emulate({
     viewport: {
       width: 1920,
@@ -29,11 +14,6 @@ beforeAll(async () => {
   });
 });
 
-// This function occurs after the result of each tests, it closes the browser
-afterAll(() => {
-  // browser.close();
-});
-
 describe('Device Type workflow', () => {
   test('Page opens correctly', async () => {
     await page.goto('http://localhost:8080');
@@ -41,7 +21,7 @@ describe('Device Type workflow', () => {
 
     const title = await page.title();
     expect(title).toBe('Device Simulator');
-  });
+  }, 10000);
 
   test('Navtigate to Device Type management', async () => {
     await page.click('#deviceType');
@@ -49,7 +29,7 @@ describe('Device Type workflow', () => {
 
     const html = await page.$eval('.pageTitle', (e) => e.innerHTML);
     expect(html).toBe('Device Type');
-  });
+  }, 10000);
 
   test('Navtigate to Add Device Type', async () => {
     await page.click('.btnAddDeviceType');
@@ -57,7 +37,7 @@ describe('Device Type workflow', () => {
 
     const html = await page.$eval('#lableEditorTitle', (e) => e.innerHTML);
     expect(html).toBe('Device Type Definition');
-  });
+  }, 10000);
 
   test('Create New Device Type', async () => {
     await page.waitForSelector('[class*=form]');

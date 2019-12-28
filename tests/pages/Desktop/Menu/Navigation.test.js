@@ -1,21 +1,4 @@
-/* eslint-disable no-await-in-loop */
-import puppeteer from 'puppeteer';
-
-// create global variables to be used in the beforeAll function
-let browser;
-let page;
-
 beforeAll(async () => {
-  // launch browser
-  browser = await puppeteer.launch({
-    headless: false, // headless mode set to false so browser opens up with visual feedback
-    slowMo: 50, // how slow actions should be
-    // devtools: true,
-    args: ['--start-fullscreen'],
-  });
-  // creates a new page in the opened browser
-  page = await browser.newPage();
-
   page.emulate({
     viewport: {
       width: 1920,
@@ -25,11 +8,6 @@ beforeAll(async () => {
   });
 });
 
-// This function occurs after the result of each tests, it closes the browser
-afterAll(() => {
-  // browser.close();
-});
-
 describe.only('Navigate through all pages', () => {
   test('Page opens correctly', async () => {
     await page.goto('http://localhost:8080');
@@ -37,7 +15,7 @@ describe.only('Navigate through all pages', () => {
 
     const title = await page.title();
     expect(title).toBe('Device Simulator');
-  });
+  }, 10000);
 
   test('Navtigate to Dashboard', async () => {
     await page.click('#dashboard');
@@ -48,7 +26,7 @@ describe.only('Navigate through all pages', () => {
 
     const html = await page.$eval('.pageTitle', (e) => e.innerHTML);
     expect(html).toBe('Dashboard');
-  });
+  }, 10000);
 
   test('Navtigate to MyDevice', async () => {
     await page.click('#myDevice');
@@ -59,7 +37,7 @@ describe.only('Navigate through all pages', () => {
 
     const html = await page.$eval('.pageTitle', (e) => e.innerHTML);
     expect(html).toBe('My Device');
-  });
+  }, 10000);
 
   test('Navtigate to MyProfile', async () => {
     await page.click('#myProfile');
@@ -70,7 +48,7 @@ describe.only('Navigate through all pages', () => {
 
     const html = await page.$eval('.pageTitle', (e) => e.innerHTML);
     expect(html).toBe('My Profile');
-  });
+  }, 10000);
 
   test('Navtigate to DeviceType', async () => {
     await page.click('#deviceType');
@@ -81,7 +59,7 @@ describe.only('Navigate through all pages', () => {
 
     const html = await page.$eval('.pageTitle', (e) => e.innerHTML);
     expect(html).toBe('Device Type');
-  });
+  }, 10000);
 
   test('Navtigate to Widgets', async () => {
     await page.click('#widgets');
@@ -92,7 +70,7 @@ describe.only('Navigate through all pages', () => {
 
     const html = await page.$eval('.pageTitle', (e) => e.innerHTML);
     expect(html).toBe('Widgets');
-  });
+  }, 10000);
 
   test('Navtigate to Automotive', async () => {
     await page.click('#automotive');
@@ -103,7 +81,7 @@ describe.only('Navigate through all pages', () => {
 
     const html = await page.$eval('.pageTitle', (e) => e.innerHTML);
     expect(html).toBe('Automotive');
-  });
+  }, 10000);
 
   test('Navtigate to Users', async () => {
     await page.click('#users');
@@ -114,7 +92,7 @@ describe.only('Navigate through all pages', () => {
 
     const html = await page.$eval('.pageTitle', (e) => e.innerHTML);
     expect(html).toBe('Users');
-  });
+  }, 10000);
 
   test('Navtigate to Settings', async () => {
     await page.click('#settings');
@@ -125,7 +103,7 @@ describe.only('Navigate through all pages', () => {
 
     const html = await page.$eval('.pageTitle', (e) => e.innerHTML);
     expect(html).toBe('Settings');
-  });
+  }, 10000);
 
   test('Navtigate to Home', async () => {
     await page.click('#home');
@@ -136,5 +114,5 @@ describe.only('Navigate through all pages', () => {
 
     const html = await page.$eval('.pageTitle', (e) => e.innerHTML);
     expect(html).toBe('IoT Device Simulator');
-  });
+  }, 10000);
 });

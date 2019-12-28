@@ -42,7 +42,7 @@ const useStyles = makeStyles(({ breakpoints }) => ({
 const Main = () => {
   const classes = useStyles();
   const muiTheme = useTheme();
-  const isMobile = useMediaQuery(muiTheme.breakpoints.down('md'));
+  const isMobile = useMediaQuery(muiTheme.breakpoints.down('sm'));
 
   const locale = useSelector((state) => state.ui.setting.locale);
   const booting = useSelector((state) => state.ui.booting);
