@@ -10,7 +10,7 @@
     "profile": "webpack --config webpack.config.babel.js --profile --json > stats.json",
     "message": "babel-node ./tools/mergeMessage.js",
     "lint:js": "eslint . --ext .js,.jsx --fix",
-    "test": "jest"
+    "test": "jest --runInBand"
   },
   "keywords": [],
   "author": "",
