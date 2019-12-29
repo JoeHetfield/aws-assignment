@@ -100,6 +100,10 @@ I have few ideas about better UX/UE and UI logic, let's talk about it during the
 
 - `.gitignore`: Git ignore descriptor.
 
+- `jest-puppeteer.config`: Puppeteer configuration.
+
+- `jest.config.js`: Jest configuration.
+
 - `package.json`: What you think of it, refer here for more info about libs that been used.
 
 - `README.md`: What you reading now ;)
