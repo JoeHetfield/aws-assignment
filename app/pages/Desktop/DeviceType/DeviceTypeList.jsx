@@ -155,7 +155,6 @@ const DeviceTypeList = () => {
         count={data.length}
         loading={loading}
         rowsPerPage={20}
-        // onChangePage={(event, index) => setPage(index + 1)}
         rowHeight={72}
         headerHeight={36}
         columns={[{

@@ -1,7 +1,6 @@
 /* eslint-disable no-console */
 import '@babel/polyfill';
 import React from 'react';
-import moment from 'moment';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 import { Route, Switch, Router } from 'react-router-dom';
@@ -9,15 +8,13 @@ import { createStore, applyMiddleware, compose } from 'redux';
 import thunkMiddleware from 'redux-thunk';
 import rootReducer from 'reducers';
 
-import { network, history } from 'utils';
+import { history } from 'utils';
 
 import Main from 'pages';
 
-moment.locale('zh-CN');
-moment.defaultFormat = 'YYYY/MM/DD HH:mm:ss';
-
 let store;
 
+// create redux store
 if (process.env.NODE_ENV === 'production') {
   store = createStore(
     rootReducer,
@@ -26,9 +23,8 @@ if (process.env.NODE_ENV === 'production') {
     ),
   );
 } else {
-  // eslint-disable-next-line no-underscore-dangle
+  // insert redux devtools in dev mode
   const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-
   store = createStore(
     rootReducer,
     composeEnhancers(applyMiddleware(
@@ -37,8 +33,7 @@ if (process.env.NODE_ENV === 'production') {
   );
 }
 
-network.init(store);
-
+// register service worker
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
     navigator.serviceWorker.register('/service-worker.js').then((registration) => {
@@ -49,6 +44,7 @@ if ('serviceWorker' in navigator) {
   });
 }
 
+// App root element
 const App = () => (
   <Provider store={store}>
     <Router history={history}>
@@ -59,6 +55,7 @@ const App = () => (
   </Provider>
 );
 
+// ployfill intl on older browser, start App
 if (!global.Intl) {
   require.ensure([
     'intl',

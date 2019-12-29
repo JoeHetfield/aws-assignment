@@ -29,6 +29,7 @@ const Home = () => {
   return (
     <Layout>
 
+      {/* head hero unit */}
       <Box
         px={3}
         py={4}
@@ -39,6 +40,7 @@ const Home = () => {
         justifyContent="space-between"
       >
 
+        {/* product solgan and description */}
         <Box>
 
           <Typography
@@ -69,6 +71,7 @@ const Home = () => {
 
         <Box width={32} />
 
+        {/* My Device card */}
         <Paper
           className={classes.paper}
         >
@@ -112,6 +115,7 @@ const Home = () => {
 
       </Box>
 
+      {/* page content */}
       <Box
         p={3}
         display="flex"
@@ -119,6 +123,7 @@ const Home = () => {
         justifyContent="space-between"
       >
 
+        {/* About this Application */}
         <Box flex={1}>
 
           <Paper
@@ -215,6 +220,7 @@ const Home = () => {
 
           <Box height={32} />
 
+          {/* Getting Started */}
           <Paper
             className={classes.paper}
           >
@@ -231,6 +237,7 @@ const Home = () => {
 
         <Box width={32} />
 
+        {/* Documentations */}
         <Paper
           className={classes.paper}
         >

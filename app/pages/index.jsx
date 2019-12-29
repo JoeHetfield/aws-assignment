@@ -15,6 +15,7 @@ import Placeholder from 'components/Placeholder';
 import Mobile from './Mobile';
 import Desktop from './Desktop';
 
+// define global style
 const useStyles = makeStyles(({ breakpoints }) => ({
   '@global': {
     '@font-face': {
@@ -40,8 +41,11 @@ const useStyles = makeStyles(({ breakpoints }) => ({
 }));
 
 const Main = () => {
+  // render the global style
   const classes = useStyles();
   const muiTheme = useTheme();
+
+  // the screenes smaller than 'sm' breakpoint are considered as 'Mobile'
   const isMobile = useMediaQuery(muiTheme.breakpoints.down('sm'));
 
   const locale = useSelector((state) => state.ui.setting.locale);
@@ -50,9 +54,9 @@ const Main = () => {
 
   const actions = useActions({
     bootstrap: Bootstrap.start,
-    loadUser: Bootstrap.loadUser,
   });
 
+  // start bootstrap
   useEffect(actions.bootstrap, []);
 
   return (
@@ -76,6 +80,7 @@ const Main = () => {
             );
           }
 
+          // switch App appearance by screen size
           return isMobile ? <Mobile /> : <Desktop />;
         })()}
 

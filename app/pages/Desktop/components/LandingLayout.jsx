@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 
 import Box from '@material-ui/core/Box';
 
-import Footer from './Footer';
-
 const LandingLayout = ({
   className,
   children,
@@ -14,8 +12,6 @@ const LandingLayout = ({
     <Box flex={1} className={className}>
       {children}
     </Box>
-
-    <Footer />
 
   </>
 );

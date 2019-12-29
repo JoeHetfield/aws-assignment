@@ -24,15 +24,18 @@ const failure = (error) => ({
   payload: error,
 });
 
+// bootstrap app, all initializations will be execute here
 const start = () => (dispatch) => {
   dispatch(request());
 
   const preference = locale.getPreference();
 
+  // initialization tasks, insert any initial operations in this array
   const tasks = [
     dispatch(Setting.changeLocale(preference)),
   ];
 
+  // run all tasks, notify bootstrap state to redux store
   Promise.all(tasks)
     .then(() => dispatch(success()))
     .catch((error) => dispatch(failure(error)));

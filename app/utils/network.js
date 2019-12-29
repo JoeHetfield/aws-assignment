@@ -1,7 +1,5 @@
 import qs from 'qs';
 
-let store;
-
 const handleResponse = (response) => {
   if (response.ok) {
     return response
@@ -23,10 +21,6 @@ const handleResponse = (response) => {
     .then((result) => {
       throw result;
     });
-};
-
-export const init = (localstore) => {
-  store = localstore;
 };
 
 export const get = (url, query = {}) => fetch(url + qs.stringify(query, { addQueryPrefix: true }), {
