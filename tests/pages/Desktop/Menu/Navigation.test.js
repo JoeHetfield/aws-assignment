@@ -15,6 +15,8 @@ describe.only('Navigate through all pages', () => {
 
     const title = await page.title();
     expect(title).toBe('Device Simulator');
+
+    await page.screenshot({ path: './tests/screenshots/PageOpen.png' });
   }, 10000);
 
   test('Navtigate to Dashboard', async () => {
@@ -26,6 +28,8 @@ describe.only('Navigate through all pages', () => {
 
     const html = await page.$eval('.pageTitle', (e) => e.innerHTML);
     expect(html).toBe('Dashboard');
+
+    await page.screenshot({ path: './tests/screenshots/Dashboard.png' });
   }, 10000);
 
   test('Navtigate to MyDevice', async () => {
@@ -37,6 +41,8 @@ describe.only('Navigate through all pages', () => {
 
     const html = await page.$eval('.pageTitle', (e) => e.innerHTML);
     expect(html).toBe('My Device');
+
+    await page.screenshot({ path: './tests/screenshots/MyDevice.png' });
   }, 10000);
 
   test('Navtigate to MyProfile', async () => {
@@ -48,6 +54,8 @@ describe.only('Navigate through all pages', () => {
 
     const html = await page.$eval('.pageTitle', (e) => e.innerHTML);
     expect(html).toBe('My Profile');
+
+    await page.screenshot({ path: './tests/screenshots/MyProfile.png' });
   }, 10000);
 
   test('Navtigate to DeviceType', async () => {
@@ -59,6 +67,8 @@ describe.only('Navigate through all pages', () => {
 
     const html = await page.$eval('.pageTitle', (e) => e.innerHTML);
     expect(html).toBe('Device Type');
+
+    await page.screenshot({ path: './tests/screenshots/DeviceType.png' });
   }, 10000);
 
   test('Navtigate to Widgets', async () => {
@@ -70,6 +80,8 @@ describe.only('Navigate through all pages', () => {
 
     const html = await page.$eval('.pageTitle', (e) => e.innerHTML);
     expect(html).toBe('Widgets');
+
+    await page.screenshot({ path: './tests/screenshots/Widgets.png' });
   }, 10000);
 
   test('Navtigate to Automotive', async () => {
@@ -81,6 +93,8 @@ describe.only('Navigate through all pages', () => {
 
     const html = await page.$eval('.pageTitle', (e) => e.innerHTML);
     expect(html).toBe('Automotive');
+
+    await page.screenshot({ path: './tests/screenshots/Automotive.png' });
   }, 10000);
 
   test('Navtigate to Users', async () => {
@@ -92,6 +106,8 @@ describe.only('Navigate through all pages', () => {
 
     const html = await page.$eval('.pageTitle', (e) => e.innerHTML);
     expect(html).toBe('Users');
+
+    await page.screenshot({ path: './tests/screenshots/Users.png' });
   }, 10000);
 
   test('Navtigate to Settings', async () => {
@@ -103,6 +119,8 @@ describe.only('Navigate through all pages', () => {
 
     const html = await page.$eval('.pageTitle', (e) => e.innerHTML);
     expect(html).toBe('Settings');
+
+    await page.screenshot({ path: './tests/screenshots/Settings.png' });
   }, 10000);
 
   test('Navtigate to Home', async () => {
@@ -114,5 +132,7 @@ describe.only('Navigate through all pages', () => {
 
     const html = await page.$eval('.pageTitle', (e) => e.innerHTML);
     expect(html).toBe('IoT Device Simulator');
+
+    await page.screenshot({ path: './tests/screenshots/Home.png' });
   }, 10000);
 });
